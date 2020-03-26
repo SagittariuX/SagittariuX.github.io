@@ -1,22 +1,121 @@
-<html>
+<!DOCTYPE html>
+  
+  <head>
+    <title>Aaron's Web</title>
+    
+    <!-- Add this in later -->
+    <meta name="description" content="Aaron's Web" />
+    <meta name="keywords" content="Aaron, An, Aaron An, Business, Computer Science, Job"/>
+    <meta http-equiv="author" content="Aaron An" />
+    <meta http-equiv="pragma" content="no-cache" /> 
+    
+    <link href="css/stylesheet.css" type="text/css" rel="stylesheet"/>
+  
+  </head>
+  <body>
+  <!--Header will contain the introduction-->
+  <div class="header">
+    <h1 id = "top">Aaron's Web</h1>
+    
+  </div>
 
-<head>
-    <title>Hello World This Is My Website</title>
-</head>
+  
+  <ul class="navBar">
+    <li><a href="#top">Top</a></li>
+    <li><a href="#goToAboutMe">About Me</a></li>
+    <li><a href="#goToCompSci">Computer Science</a></li>
+    <li><a href="#goToBusiness">Business</a></li>
+    <li><a href="#goToEducation">Education</a></li>
 
-<body>
+  </ul>
+  
 
-<!---top title here-->
-<!-- contact and general info here -->
+  
+  <!---Simple introduction-->
+  <h1 id = "goToAboutMe">About Me</h1>
+  <div class="aboutMe">
+    <embed class ="aboutMeText" src="text/aboutme1.txt"/>
+    <embed class ="aboutMeText" src="text/aboutme1.txt"/> 
+    <object class ="aboutMeText" data="text/aboutme1.txt"></object> 
+  </div>
 
-<!-- experiences -->
+  <!---Computer Slider for all my languages and knowledge-->
+  <h1 id = "goToCompSci">Computer Science</h1>
+  <div class="compSci">
+    
+    <div class="compSciSlidesFrame">
 
-<!-- cool projects -->
+      <!---Button Previous-->
+      <a id="btnPre" onclick="moveSlides(-1)">&#10094;</a>
+      <!---Picture should be sandwiched in between both buttons-->
+      <div class="compSciSlide">
+       <img class = "compSciPics fadeCompSci" src="pics/placeholder0.png"/>
+       <img class = "compSciPics fadeCompSci" src="pics/placeholder1.png"/>
+      </div>  
+      <!---Button next-->
+      
+      <a id="btnNext" onclick="moveSlides(1)">&#10095;</a>
 
-<!-- school -->
+    </div>
+    <div class="compSciTextFrame">
+      <div id="compSciText"></div>
+    </div>
+  </div>
 
-<!-- footer -->
 
-</body>
 
+
+  <!--- Quick overview over business interests etc-->
+  <h1 id = "goToBusiness">Business</h1>
+  <div class="businessInfo">
+    <div id="businessText">Uh Oh</div>
+    <div class="pictureFrame">
+      <img class="pictures" id="businessPic" src="pics/placeholder0.png" alt="Placeholder"/>
+    </div>
+  </div>
+  <div id="dotsRow">
+    <span class="dots active" onclick="businessSlideShow(0), shiftBusinessInfo(-1)"></span>
+    <span class="dots" onclick="businessSlideShow(1), shiftBusinessInfo(1)"></span>
+  </div>
+<!---
+  <div id = "testarea">
+    <div class = "testsquare"> </div>
+    
+    <div class = "testsquare"> </div>
+    <div class = "testsquare"> </div>
+    <div class = "testsquare"> </div>
+    
+  </div>
+-->
+
+
+  <!---simple education-->
+  <h1 id = "goToEducation">Education</h1>
+  <div class="education">
+    
+    <div class="pictureFrame">
+      <img class="pictures" src="pics/placeholder0.png" alt="Placeholder"/>
+    </div>
+    <div id="educationText" >Uh Oh</div>
+
+  </div>
+
+  
+
+  
+
+  
+  </body>
+  <footer>
+      <div class="contactInfo">
+          <p class="contactInfoParagraph">Phone: 1-248-358-456</p>
+          <p class="contactInfoParagraph">Email: <a href="mailto:aaronan1996@gmail.com">aaronan1996@gmail.com</a></p>
+        </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="jscript/script.js"></script>
+  <script src="jscript/query.js"></script>
+  
+  
+  
 </html>

@@ -1,0 +1,195 @@
+
+body{font-family:Arial, Helvetica, sans-serif;}
+
+h1{
+  width: 100%;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: left;
+  color: orange;
+}
+
+
+
+.header{border: none; width: 100%;}
+
+.pictureFrame{display: inline-block; width: 40%;}
+
+.contactInfo{
+  border:none; width: 100%;
+  display: flex; justify-content: space-around;
+}
+
+.aboutMe {border: none; width: 100%; }
+
+.aboutMeText{display: inline-block; width: 33%;}
+
+
+/* NavBar*/
+
+.navBar{
+  position: sticky;
+  position: -webkit-sticky;
+  /*top: 0;*/
+  list-style-type: none;
+  background-color: rgb(248, 195, 96);
+  overflow: hidden;
+}
+
+
+.navBar li a{
+  float: left;
+  text-decoration: none;
+  padding: 20px 15px;
+  color: white;
+}
+
+.navBar li a:hover{
+  background-color: rgb(218, 131, 2);
+
+}
+
+
+
+/* All compsci related things*/
+.compSci {border: none; width: 100%;}
+.compSciSlidesFrame{
+  border: none; margin:auto;
+  position: relative;
+  height: 300px;
+  width: 90%;                   
+}
+
+.compSciSlide{
+  text-align: center;
+  height: 100%;
+}
+
+.compSciPics{
+  height: 300px;
+}
+
+#btnNext , #btnPre{
+  cursor: pointer;
+  position: absolute;
+  padding: 20px;
+  top: 40%;
+  width: auto;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+#btnNext{
+  right: 0%;
+  border-radius: 3px 0 0 3px;
+}
+
+#btnPre:hover, #btnNext:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.compSciTextFrame{
+  border: none; margin:auto;
+  height: 200px; width:90%
+  
+}
+
+#compSciText{
+  border: none; border-color: red;
+  height: 200px;width: 30%;
+  text-align: center;
+  margin: auto;
+}
+
+.fadeCompSci {
+  animation-name: fadeCompSci;
+  animation-duration: 1.5s;
+  -webkit-animation-name: fadeCompSci;
+  -webkit-animation-duration: 1.5s;
+}
+
+@keyframes fadeCompSci{
+  from{opacity: 0}
+  to{opacity: 1}
+}
+
+@-webkit-keyframes fadeCompSci{
+  from{opacity: 0}
+  to{opacity: 1}
+}
+
+
+
+/* All business related things*/
+.businessInfo {
+  display: flex;
+  border: solid; width: 100%;
+  justify-content: space-evenly;
+}
+#businessText{
+  display: inline-block;
+  border: solid;border-color: blue; 
+  width: 20%;
+  padding: 0% 10% 0% 10%;
+}
+#dotsRow{
+  width: 100%; 
+  text-align: center;
+  margin-top: 20px;
+}
+.dots{
+  cursor: pointer;
+  display: inline-block;
+  height: 15px; width: 15px;
+  border-radius: 50%;
+  margin: 0px 3px;
+  transition: background-color 0.5s;
+  background-color: gray;
+}
+
+.dots:hover, .active{
+  background-color: black;
+}
+
+#testarea{
+  height: 50px;
+}
+
+.testsquare{
+  display: inline-block;
+  position: relative;
+  left: 100px;
+  height: 15px; width: 15px;
+  background-color: red;
+}
+
+.shiftRight{
+  animation-name: shiftRight;
+  animation-duration: 1s;
+  -webkit-animation-name: shiftRight;
+  -webkit-animation-duration: 1s;
+
+}
+
+
+/* All education related things*/
+.education{border: none; width: 100%;}
+#educationText{
+  border: solid;border-color: blue; 
+  width: 20%;
+  padding: 0% 10% 0% 10%;
+}
+
+
+.pictureFrame{
+  border: solid; border-color: red;
+  text-align: center;
+}
+
+
+
+
+
