@@ -11,12 +11,9 @@ $(document).ready(function (){
     $('#educationText').load("text/aboutme0.txt");
 
     //sets up intial slides
-    $.each(compSciPics, function(index, value){
+    $.each(compSciSlides, function(index, value){
         value.hide()
     });
-
-
-
 
     compSciSlideShow(compSciSlide);
     businessSlideShow(businessSlide);
