@@ -1,26 +1,23 @@
 
-function slideShowText(n){
-    var path = "text/aboutme" + n +".txt";
-    $('#compSciText').load(path);
-}
-
-function changeBusinessInfo (n){
-    var path = "pics/placeholder" + n + ".png";
-    $("#businessPic").prop("src", path);
-    path = "text/aboutme" + n +".txt";
-    $('#businessText').load(path);
-
-}
-
-
 
 
 $(document).ready(function (){
-
     //Loads initial information
+    $('$aboutMeText0').load("text/aboutme0.txt");
+    $('$aboutMeText1').load("text/aboutme0.txt");
+    $('$aboutMeText2').load("text/aboutme0.txt");
     $('#compSciText').load("text/aboutme0.txt");
     $('#businessText').load("text/aboutme0.txt");
     $('#educationText').load("text/aboutme0.txt");
 
+    //sets up intial slides
+    $.each(compSciPics, function(index, value){
+        value.hide()
+    });
 
+
+
+
+    compSciSlideShow(compSciSlide);
+    businessSlideShow(businessSlide);
 });

@@ -26,7 +26,6 @@
     <li><a href="#goToCompSci">Computer Science</a></li>
     <li><a href="#goToBusiness">Business</a></li>
     <li><a href="#goToEducation">Education</a></li>
-
   </ul>
   
 
@@ -34,13 +33,13 @@
   <!---Simple introduction-->
   <h1 id = "goToAboutMe">About Me</h1>
   <div class="aboutMe">
-    <embed class ="aboutMeText" src="text/aboutme1.txt"/>
-    <embed class ="aboutMeText" src="text/aboutme1.txt"/> 
-    <object class ="aboutMeText" data="text/aboutme1.txt"></object> 
+    <div id = "aboutMeText0"></div>
+    <div id = "aboutMeText1"></div>
+    <div id = "aboutMeText2"></div>
   </div>
 
   <!--Experiences-->
-  <h1 id = "goToExperience"></h1>
+  <h1 id = "goToExperience">My Work Experience</h1>
   <div class = "experience">
 
   </div>
@@ -53,7 +52,7 @@
     <div class="compSciSlidesFrame">
 
       <!---Button Previous-->
-      <a id="btnPre" onclick="moveSlides(-1)">&#10094;</a>
+      <a id="btnPre" onclick="moveCompSciSlides(-1)">&#10094;</a>
       <!---Picture should be sandwiched in between both buttons-->
       <div class="compSciSlide">
        <img class = "compSciPics fadeCompSci" src="pics/placeholder0.png"/>
@@ -61,7 +60,7 @@
       </div>  
       <!---Button next-->
       
-      <a id="btnNext" onclick="moveSlides(1)">&#10095;</a>
+      <a id="btnNext" onclick="moveCompSciSlides(1)">&#10095;</a>
 
     </div>
     <div class="compSciTextFrame">

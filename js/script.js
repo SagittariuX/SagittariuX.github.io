@@ -1,38 +1,32 @@
 
-var slideIndex = 0;
-slideShow(slideIndex);
+//tracks which slide is currently in use
+var currentCompSciSlide = 0; 
+var currentBusinessSlide = 0;
 
-var businessSlide = 0;
-businessSlideShow(businessSlide);
+//list of slide show pics
+var compSciSlides = document.getElementsByClassName("compSciPics"); 
+
 //compsci slideshow
-function slideShow(n){
-    var i;
-    var slides = document.getElementsByClassName("compSciPics"); // list of slides
-    var text = document.getElementById("compSciText");
-    if (n > slides.length - 1)  {slideIndex = 0}
-    if (n < 0) {slideIndex = slides.length - 1}
-    for (i = 0; i < slides.length; i++){
-        slides[i].style.display = "none"; //set everything to nothing
+function compSciSlideShow(n){
+    //allows wrap arounds
+    if(n < 0) {
+        n = compSciSlides.length-1;
     }
-    slides[slideIndex].style.display = "";
+    else if (n > compSciSlides.length-1){
+        n = 0;
+    }
+    compSciSlides[currentCompSciSlide].style.display = "none";
+    compSciSlides[n].style.display = "";
 
-    
-    /*
-    setTimeout(function(){
-        moveSlides(1);
-    }, 5000);
-    */
+    var path = "text/aboutme" + n +".txt";
+    $('#compSciText').load(path);
 }
 
-function moveSlides(n){
-    slideShow(slideIndex += n);
-    slideShowText(slideIndex);
+function moveCompSciSlide(n){
+    compSciSlideShow(currentCompSciSlide += n);
 }
 
-
-//Business slideshow
-
-
+//business slideshow
 function businessSlideShow(n){
     var dots = document.getElementsByClassName("dots");
     var i;
@@ -43,9 +37,15 @@ function businessSlideShow(n){
     changeBusinessInfo(n);
 }
 
+// change the text documents on the left side of the business pic
+function changeBusinessInfo (n){
+    var path = "pics/placeholder" + n + ".png";
+    $("#businessPic").prop("src", path);
+    path = "text/aboutme" + n +".txt";
+    $('#businessText').load(path);
+}
+
 //experiments
-
-
 function shiftBusinessInfo(n){
     var squares = document.getElementsByClassName("testsquare");
     var s; var str;
