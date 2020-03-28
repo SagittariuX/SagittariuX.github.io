@@ -3,28 +3,22 @@
 var currentCompSciSlide = 0; 
 var currentBusinessSlide = 0;
 
-//list of slide show pics
-var compSciSlides = document.getElementsByClassName("compSciPics"); 
-
 //compsci slideshow
 function compSciSlideShow(n){
+    currentCompSciSlide += n;
     //allows wrap arounds
-    if(n < 0) {
-        n = compSciSlides.length-1;
+    if(currentCompSciSlide < 0) {
+        currentCompSciSlide = compSciSlides.length-1;
     }
-    else if (n > compSciSlides.length-1){
-        n = 0;
+    else if (currentCompSciSlide > compSciSlides.length-1){
+        currentCompSciSlide = 0;
     }
-    compSciSlides[currentCompSciSlide].style.display = "none";
-    compSciSlides[n].style.display = "";
-
-    var path = "text/aboutme" + n +".txt";
+    var path = "pics/placeholder"+ n +".png";
+    $('#compSciPic').prop('src',path);
+    path = "text/aboutme"+ n +".txt";
     $('#compSciText').load(path);
 }
 
-function moveCompSciSlide(n){
-    compSciSlideShow(currentCompSciSlide += n);
-}
 
 //business slideshow
 function businessSlideShow(n){

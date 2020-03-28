@@ -1,6 +1,4 @@
 
-
-
 $(document).ready(function (){
     //Loads initial information
     $('#aboutMeText0').load("text/aboutme1.txt");
@@ -9,12 +7,4 @@ $(document).ready(function (){
     $('#compSciText').load("text/aboutme0.txt");
     $('#businessText').load("text/aboutme0.txt");
     $('#educationText').load("text/aboutme0.txt");
-
-    //sets up intial slides
-    $.each(compSciSlides, function(index, value){
-        value.hide();
-    });
-
-    compSciSlideShow(compSciSlide);
-    businessSlideShow(businessSlide);
 });

@@ -52,15 +52,14 @@
     <div class="compSciSlidesFrame">
 
       <!---Button Previous-->
-      <a id="btnPre" onclick="moveCompSciSlides(-1)">&#10094;</a>
+      <a id="btnPre" onclick="compSciSlideShow(-1)">&#10094;</a>
       <!---Picture should be sandwiched in between both buttons-->
       <div class="compSciSlide">
-       <img class = "compSciPics fadeCompSci" src="pics/placeholder0.png"/>
-       <img class = "compSciPics fadeCompSci" src="pics/placeholder1.png"/>
+       <img class = "compSciPic fadeCompSci" id = "compSciPic" src="pics/placeholder0.png"/>
       </div>  
       <!---Button next-->
       
-      <a id="btnNext" onclick="moveCompSciSlides(1)">&#10095;</a>
+      <a id="btnNext" onclick="compSciSlideShow(1)">&#10095;</a>
 
     </div>
     <div class="compSciTextFrame">
