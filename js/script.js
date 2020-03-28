@@ -1,26 +1,36 @@
-
+const fs = require('fs');
+const compSciDir = './pics/compSci';
 //tracks which slide is currently in use
 var currentCompSciSlide = 0; 
 var currentBusinessSlide = 0;
+
+var numOfCompSciSlides = 0;
+fs.readdir(compSciDir, (err, files) => {
+    numOfCompSciSlides = files.length;
+});
 
 //compsci slideshow
 function compSciSlideShow(n){
     currentCompSciSlide += n;
     //allows wrap arounds
     if(currentCompSciSlide < 0) {
-        currentCompSciSlide = compSciSlides.length-1;
+        currentCompSciSlide = numOfCompSciSlides-1;
     }
-    else if (currentCompSciSlide > compSciSlides.length-1){
+    else if (currentCompSciSlide > numOfCompSciSlides-1){
         currentCompSciSlide = 0;
     }
-    var path = "pics/placeholder"+ n +".png";
+    changeCompSciInfo(currentCompSciSlide);
+}
+
+function changeCompSciInfo(n){
+    var path = "pics/compSci/placeholder"+ n +".png";
     $('#compSciPic').prop('src',path);
     path = "text/aboutme"+ n +".txt";
     $('#compSciText').load(path);
 }
 
 
-//business slideshow
+//business slideshow setting up and checks 
 function businessSlideShow(n){
     var dots = document.getElementsByClassName("dots");
     var i;
@@ -33,7 +43,7 @@ function businessSlideShow(n){
 
 // change the text documents on the left side of the business pic
 function changeBusinessInfo (n){
-    var path = "pics/placeholder" + n + ".png";
+    var path = "pics/business/placeholder" + n + ".png";
     $("#businessPic").prop("src", path);
     path = "text/aboutme" + n +".txt";
     $('#businessText').load(path);
