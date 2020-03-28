@@ -1,13 +1,9 @@
-const fs = require('fs');
-const compSciDir = './pics/compSci';
+
 //tracks which slide is currently in use
 var currentCompSciSlide = 0; 
 var currentBusinessSlide = 0;
 
-var numOfCompSciSlides = 0;
-fs.readdir(compSciDir, (err, files) => {
-    numOfCompSciSlides = files.length;
-});
+const numOfCompSciSlides = 2;
 
 //compsci slideshow
 function compSciSlideShow(n){
