@@ -154,11 +154,11 @@ h1{
 
 /* All education related things*/
 .education{border: none; width: 100%;}
-#educationText{
-  border: solid;border-color: blue; 
-  height: 100%; width: 20%;
-  padding: 0% 10% 0% 10%;
+.educationSectional{
+  display: inline-block;
+  width: 50%;
 }
+
 
 
 .pictureFrame{
