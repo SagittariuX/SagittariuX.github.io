@@ -21,7 +21,7 @@ function compSciSlideShow(n){
 function changeCompSciInfo(n){
     var path = "pics/compSci/placeholder"+ n +".png";
     $('#compSciPic').prop('src',path);
-    path = "text/aboutme"+ n +".txt";
+    path = "text/compSci/aboutme"+ n +".txt";
     $('#compSciText').load(path);
 }
 
@@ -41,34 +41,6 @@ function businessSlideShow(n){
 function changeBusinessInfo (n){
     var path = "pics/business/placeholder" + n + ".png";
     $("#businessPic").prop("src", path);
-    path = "text/aboutme" + n +".txt";
+    path = "text/business/aboutme" + n +".txt";
     $('#businessText').load(path);
 }
-
-//experiments
-function shiftBusinessInfo(n){
-    var squares = document.getElementsByClassName("testsquare");
-    var s; var str;
-    var dx = 2;
-    if(n == 1){
-        console.log("shiftRight");
-    }
-    else {
-        console.log("shiftLeft");
-    }
-    while(dx > 0){
-        
-        for(s = 0 ; s < squares.length ; s++){
-            str = squares[s].style.left;
-            
-            console.log(str);
-            squares[s].style.left = "200px";
-            
-        }
-        dx -= 2;
-    }
-}
-
-
-
-

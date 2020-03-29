@@ -23,9 +23,7 @@ h1{
 
 .aboutMeText{display: inline-block; width: 33%;}
 
-
 /* NavBar*/
-
 .navBar{
   position: sticky;
   position: -webkit-sticky;
@@ -124,15 +122,15 @@ h1{
 
 
 /* All business related things*/
-.businessInfo {
-  display: flex;
-  border: solid; width: 100%;
-  justify-content: space-evenly;
+.business {
+  border:none;
+  width: 100%;
 }
 #businessText{
   display: inline-block;
-  border: solid;border-color: blue; 
-  width: 20%;
+  border: solid;
+  border-color: blue; 
+  height: 100%; width: 50%;
   padding: 0% 10% 0% 10%;
 }
 #dotsRow{
@@ -154,38 +152,18 @@ h1{
   background-color: black;
 }
 
-#testarea{
-  height: 50px;
-}
-
-.testsquare{
-  display: inline-block;
-  position: relative;
-  left: 100px;
-  height: 15px; width: 15px;
-  background-color: red;
-}
-
-.shiftRight{
-  animation-name: shiftRight;
-  animation-duration: 1s;
-  -webkit-animation-name: shiftRight;
-  -webkit-animation-duration: 1s;
-
-}
-
-
 /* All education related things*/
 .education{border: none; width: 100%;}
 #educationText{
   border: solid;border-color: blue; 
-  width: 20%;
+  height: 100%; width: 20%;
   padding: 0% 10% 0% 10%;
 }
 
 
 .pictureFrame{
   border: solid; border-color: red;
+  width: 50%;
   text-align: center;
 }
 
