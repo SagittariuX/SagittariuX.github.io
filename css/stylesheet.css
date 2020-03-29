@@ -156,8 +156,8 @@ h1{
 .education{border: none; width: 100%;}
 .educationSectional{
   display: inline-block;
-  width: 50%;
-  padding: 10% 10% 10% 10%;
+  width: 49%;
+  padding: 10% 0% 10% 0%;
   text-align: center;
 }
 
