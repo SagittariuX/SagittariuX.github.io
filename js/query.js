@@ -4,9 +4,9 @@ $(document).ready(function (){
     $('#aboutMeText0').load("text/intro/aboutme1.txt");
     $('#aboutMeText1').load("text/intro/aboutme1.txt");
     $('#aboutMeText2').load("text/intro/aboutme1.txt");
-    $('#compSciText').load("text/compSci/aboutme0.txt");
-    $('#businessText').load("text/business/aboutme0.txt");
-    $('#educationText').load("text/education/aboutme0.txt");
+    $('#compSciText').load("text/compSci/aboutme1.txt");
+    $('#businessText').load("text/business/aboutme1.txt");
+    $('#educationText').load("text/education/aboutme1.txt");
 
     //Loads inital pics
     $('#compSciPic').prop('src', 'pics/compSci/placeholder0.png');
