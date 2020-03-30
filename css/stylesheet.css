@@ -123,16 +123,20 @@ h1{
 
 /* All business related things*/
 .business {
-  border:none;
+  display: flex;
   width: 100%;
 }
-#businessText{
-  display: inline-block;
-  border: solid;
-  border-color: blue; 
-  height: 100%; width: 50%;
-  padding: 0% 10% 0% 10%;
+.businessSectional{
+  flex: 1;
+  width: 50%;
+  padding: 10% 0% 10% 0%;
+  text-align: center;
 }
+#businessPic{
+  max-width: 100%;
+  height: auto;
+}
+
 #dotsRow{
   width: 100%; 
   text-align: center;
@@ -153,10 +157,10 @@ h1{
 }
 
 /* All education related things*/
-.education{border: none; width: 100%;}
+.education{display: flex; width: 100%;}
 .educationSectional{
-  display: inline-block;
-  width: 49%;
+  flex: 1;
+  width: 50%;
   padding: 10% 0% 10% 0%;
   text-align: center;
 }
@@ -164,12 +168,6 @@ h1{
 #educationPic{
   max-width: 100%;
   height: auto;
-}
-
-.pictureFrame{
-  border: solid; border-color: red;
-  width: 50%;
-  text-align: center;
 }
 
 
