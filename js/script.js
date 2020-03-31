@@ -43,4 +43,4 @@ function changeBusinessInfo (n){
     $("#businessPic").prop("src", path);
     path = "text/business/aboutme" + n +".txt";
     $('#businessText').load(path);
-}
+} 
