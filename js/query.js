@@ -9,7 +9,6 @@ $(document).ready(function (){
     $('#educationText').load("text/education/aboutme1.txt");
 
     //Loads inital pics
-    $('#bannerPic').prop('src', 'pics/banner/banner.png');
     $('#compSciPic').prop('src', 'pics/compSci/placeholder0.png');
     $('#businessPic').prop('src', 'pics/business/placeholder0.png');
     $('#educationPic').prop('src', 'pics/education/placeholder0.png');
