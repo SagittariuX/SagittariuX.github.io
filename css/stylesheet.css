@@ -9,7 +9,7 @@ h1{
   width: 100%;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: 100;
-  margin:0 10vw 0 10vw;
+  padding:10vh 5vw 10vh 5vw;
   color: orange;
 }
 h1.bannerText{
