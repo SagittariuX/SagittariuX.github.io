@@ -9,6 +9,7 @@ h1{
   width: 100%;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: 100;
+  margin:10vw;
   color: orange;
 }
 h1.bannerText{
@@ -32,9 +33,15 @@ h1.bannerText{
   display: flex; justify-content: space-around;
 }
 
-.aboutMe {border: none; width: 100%; }
+.aboutMe {
+  width: 100%;
+  display: flex;
+}
 
-.aboutMeText{display: inline-block; width: 33%;}
+.aboutMeText{
+ width: 33%;
+ flex: 1;
+}
 
 
 /* All compsci related things*/
