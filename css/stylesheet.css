@@ -18,12 +18,11 @@ h1.bannerText{
 }
 
 #banner{
-  width: 100%;
+  width: inherit;
   height: 100vh;
 }
 .bannerTextBox{
-  width:100%;
-  height: auto;
+  width:inherit;
   text-align: center;
 }
 
@@ -33,7 +32,7 @@ h1.bannerText{
 }
 
 .aboutMe {
-  width: 100%;
+  width: inherit;
   display: flex;
   padding: 0 5vw 0 5vw;
 }
