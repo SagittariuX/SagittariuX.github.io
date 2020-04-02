@@ -59,25 +59,22 @@ h1.bannerText{
   }
 }
 
-
-
-
 /* All compsci related things*/
 .compSci {border: none; width: 100%;}
 .compSciSlidesFrame{
-  border: none; margin:auto;
   position: relative;
-  height: 300px;
-  width: 90%;                   
+  width: 90%;
+  height: 50vh;
+  margin:auto;                   
 }
 
 .compSciSlide{
   text-align: center;
-  height: 100%;
+  height: inherit;
 }
 
 .compSciPic{
-  height: 300px;
+  height: inherit;
 }
 
 #btnNext , #btnPre{
