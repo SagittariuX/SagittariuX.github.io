@@ -75,13 +75,13 @@ h1.bannerText{
   height: inherit;
 }
 
-.compSciPic{
+#compSciPic{
   width: auto;
   height: inherit;
 }
 
 @media only screen and (max-width: 900px){
-  .compSciPic {
+  #compSciPic {
     width:60vw;
     height: inherit;
   }
@@ -122,25 +122,6 @@ h1.bannerText{
   text-align: center;
   margin: auto;
 }
-
-.fadeCompSci {
-  animation-name: fadeCompSci;
-  animation-duration: 1.5s;
-  -webkit-animation-name: fadeCompSci;
-  -webkit-animation-duration: 1.5s;
-}
-
-@keyframes fadeCompSci{
-  from{opacity: 0}
-  to{opacity: 1}
-}
-
-@-webkit-keyframes fadeCompSci{
-  from{opacity: 0}
-  to{opacity: 1}
-}
-
-
 
 /* All business related things*/
 .business {
