@@ -8,7 +8,8 @@ html, body{
 h1{
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: 100;
-  padding:5vh 5vw 5vh 5vw;
+  padding:5vh 0 5vh 0;
+  text-align: center;
   color: orange;
 }
 h1.bannerText{
@@ -36,11 +37,25 @@ h1.bannerText{
   display: flex;
   padding: 0 5vw 0 5vw;
 }
-
 .aboutMeText{
  width: 33%;
  flex: 1;
 }
+
+/* Changes aboutMe to be vertically centered */
+@media only screen and (max-width: 900px){
+  .aboutMe{
+    width: inherit;
+    display: block;
+    padding: 0 1vw 0 1vw;
+    text-align: center;
+  }
+  .aboutMeText{
+    margin: auto;
+  }
+}
+
+
 
 
 /* All compsci related things*/
