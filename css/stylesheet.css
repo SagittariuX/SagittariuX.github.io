@@ -40,6 +40,7 @@ h1.bannerText{
 .aboutMeText{
  width: 33%;
  flex: 1;
+ text-align: justify;
 }
 
 /* Changes aboutMe to be vertically centered */
@@ -47,10 +48,12 @@ h1.bannerText{
   .aboutMe{
     width: inherit;
     display: block;
-    padding: 0 1vw 0 1vw;
-    text-align: center;
+    padding: 0 10vw 0 10vw;
+    text-align: justify;
   }
   .aboutMeText{
+    width:inherit;
+    padding: 0vh 0vw 2vh 0vw;
     margin: auto;
   }
 }
