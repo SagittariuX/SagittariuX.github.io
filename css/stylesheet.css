@@ -60,10 +60,12 @@ h1.bannerText{
 }
 
 /* All compsci related things*/
-.compSci {border: none; width: 100%;}
+.compSci {
+  width: 100%;
+}
 .compSciSlidesFrame{
   position: relative;
-  width: 90%;
+  width: 100%;
   height: 50vh;
   margin:auto;                   
 }
@@ -84,7 +86,6 @@ h1.bannerText{
     height: inherit;
   }
 }
-
 
 #btnNext , #btnPre{
   cursor: pointer;
