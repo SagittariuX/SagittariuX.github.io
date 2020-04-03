@@ -111,9 +111,9 @@ h1.bannerText{
 }
 
 .compSciTextFrame{
-  border: none; margin:auto;
-  height: 200px; width:90%
-  
+  width:90%;
+  margin: auto;
+  padding: 5vh 0vw 0vh 0vw;
 }
 
 #compSciText{
