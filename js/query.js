@@ -1,9 +1,6 @@
 
 $(document).ready(function (){
     //Loads initial information
-    // $('#aboutMeText0').load("text/intro/aboutme1.txt");
-    // $('#aboutMeText1').load("text/intro/aboutme1.txt");
-    // $('#aboutMeText2').load("text/intro/aboutme1.txt");
     $('.aboutMeText').each(function(index, element){
         $(element).load("text/intro/aboutme1.txt");
     });
