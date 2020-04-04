@@ -17,3 +17,7 @@ $(document).ready(function (){
     $('#businessPicMobile').prop('src', 'pics/business/placeholder0.png');
     $('#educationPic').prop('src', 'pics/education/placeholder0.png');
 });
+
+$(window).on('beforeunload', function() {
+    $(window).scrollTop(0);
+});
