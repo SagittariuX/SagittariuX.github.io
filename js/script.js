@@ -41,6 +41,8 @@ function businessSlideShow(n){
 function changeBusinessInfo (n){
     var path = "pics/business/placeholder" + n + ".png";
     $("#businessPic").prop("src", path);
+    $("#businessPicMobile").prop("src", path);
     path = "text/business/aboutme" + n +".txt";
     $('#businessText').load(path);
+    $('#businessTextMobile').load(path);
 } 

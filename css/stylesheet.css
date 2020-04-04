@@ -125,15 +125,27 @@ h1.bannerText{
   display: flex;
   width: 100%;
 }
+.businessMobile{
+  display: none;
+  width: 100%;
+}
 .businessSectional{
   flex: 1;
   width: 50%;
   padding: 10% 0% 10% 0%;
-  text-align: center;
 }
-#businessPic{
+.businessSectionalMobile{
+  display: none;
+  max-width: 100%;
+  padding: 10% 10% 0% 10%;
+}
+
+#businessPic, #businessPicMobile{
   max-width: 100%;
   height: auto;
+}
+#businessText, #businessTextMobile{
+  text-align: justify;
 }
 
 #dotsRow{
@@ -153,6 +165,15 @@ h1.bannerText{
 
 .dots:hover, .active{
   background-color: black;
+}
+
+@media only screen and (max-width: 900px){
+  .business{
+    display:none;
+  }
+  .businessMobile{
+    display: block;
+  }
 }
 
 /* All education related things*/
