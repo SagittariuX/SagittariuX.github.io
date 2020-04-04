@@ -1,5 +1,7 @@
 
 $(document).ready(function (){
+    $(this).scrollTop(0);
+    
     //Loads initial information
     $('.aboutMeText').each(function(index, element){
         $(element).load("text/intro/aboutme1.txt");

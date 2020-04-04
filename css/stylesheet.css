@@ -117,10 +117,7 @@ h1.bannerText{
 }
 
 #compSciText{
-  border: none; border-color: red;
-  height: 200px;width: 30%;
-  text-align: center;
-  margin: auto;
+  text-align: justify;
 }
 
 /* All business related things*/
