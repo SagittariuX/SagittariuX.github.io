@@ -46,3 +46,4 @@ function changeBusinessInfo (n){
     $('#businessText').load(path);
     $('#businessTextMobile').load(path);
 } 
+

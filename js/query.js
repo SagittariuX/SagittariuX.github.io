@@ -23,3 +23,13 @@ $(document).ready(function (){
 $(window).on('beforeunload', function() {
     $(window).scrollTop(0);
 });
+
+var navbarOffset = $('#navbar').offset().top; //original distance from top
+$(window).on('scroll', function(){
+    if ($(window).offset().top > navbarOffset){
+        $('#navbar').addClass('sticky');
+    }
+    else {
+        $('#navbar').removeClass('sticky');
+    }
+});
