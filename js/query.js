@@ -26,7 +26,7 @@ $(window).on('beforeunload', function() {
 
 var navbarOffset = $('#navbar').offset().top; //original distance from top
 $(window).on('scroll', function(){
-    if ($(window).offset().top > navbarOffset){
+    if ($(window).scrollTop() > navbarOffset){
         $('#navbar').addClass('sticky');
     }
     else {
