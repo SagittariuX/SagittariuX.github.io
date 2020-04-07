@@ -6,6 +6,7 @@ html, body{
 }
 
 #navbar{
+  display:block;
   max-width: 100%;
   height: 5vh;
   background-color: orange;
@@ -16,12 +17,15 @@ html, body{
   height:5vh;
   background-color: green;
 }
+
+
+
 @media only screen and (max-width: 900px){
   #navbar{
     display: none;
   }
   #navbarMobile{
-    display: '';
+    display: block;
   }
 }
 .sticky{
@@ -91,24 +95,24 @@ h1.bannerText{
 .compSciSlidesFrame{
   position: relative;
   width: 100%;
-  height: 50vh;
-  margin:auto;                   
+  height: auto;
+  margin: auto;                   
 }
 
 .compSciSlide{
   text-align: center;
-  height: inherit;
+  height: auto;
 }
 
 #compSciPic{
   width: auto;
-  height: inherit;
+  height: auto;
 }
 
 @media only screen and (max-width: 900px){
   #compSciPic {
-    width:60vw;
-    height: inherit;
+    width:auto;
+    height: auto;
   }
 }
 

@@ -33,7 +33,6 @@ $(window).on('scroll', function(){
     else {
         $('#navbar').removeClass('sticky');
     }
-
     if ($(window).scrollTop() > navbarMobileOffset){
         $('#navbarMobile').addClass('sticky');
     }
