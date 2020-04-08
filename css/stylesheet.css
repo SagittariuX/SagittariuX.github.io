@@ -5,7 +5,7 @@ html, body{
   padding: 0;
 }
 
-ul.navbar{
+ul#navbar{
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -13,27 +13,22 @@ ul.navbar{
   background-color: orange;
   text-align: center;
 }
-ul.navbar li{
+ul#navbar li{
   display:inline-block;
   padding: 20px;
 }
-ul.navbar li a{
+ul#navbar li a{
   color: white;
   text-decoration: none;
 }
-ul.navbar li a:hover{
+ul#navbar li a:hover{
   background-color: orangered;
 }
 
 @media only screen and (max-width: 900px){
   #navbar{
-    background-color: green;
+    display: none;
   }
-  ul.navbar li{
-    display: block;
-    padding: 20px;
-  }
-
 }
 .sticky{
   top:0;
