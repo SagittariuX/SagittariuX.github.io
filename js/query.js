@@ -28,10 +28,10 @@ var navbarOffset = $('#navbar').offset().top; //original distance from top
 var navbarMobileOffset = $('#navbarMobile').offset().top;
 $(window).on('scroll', function(){
     if ($(window).scrollTop() > navbarOffset){
-        $('#navbar').addClass('sticky');
+        $('#desktopNavbar').addClass('sticky');
     }
     else {
-        $('#navbar').removeClass('sticky');
+        $('#desktopNavbar').removeClass('sticky');
     }
     if ($(window).scrollTop() > navbarMobileOffset){
         $('#navbarMobile').addClass('sticky');
