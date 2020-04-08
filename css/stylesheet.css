@@ -9,22 +9,28 @@ html, body{
   display:block;
   max-width: 100%;
   height: 5vh;
+  overflow: hidden;
   background-color: orange;
+}
+#navbarMobile{
+  display: none;
+  max-width: 100%;
+  height:5vh;
+  overflow: hidden;
+  background-color: green;
 }
 ul.navbar{
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-
-
-#navbarMobile{
-  display: none;
-  max-width: 100%;
-  height:5vh;
-  background-color: green;
+li a{
+  display:block;
+  color: white;
+  text-align: center;
+  padding: 10px 15px;
+  text-decoration: none;
 }
-
 
 
 @media only screen and (max-width: 900px){
