@@ -21,7 +21,9 @@ ul.navbar li a{
   color: white;
   text-decoration: none;
 }
-
+ul.navbar li a:hover{
+  background-color: orangered;
+}
 
 @media only screen and (max-width: 900px){
   #navbar{
