@@ -24,19 +24,12 @@ $(window).on('beforeunload', function() {
     $(window).scrollTop(0);
 });
 
-var navbarOffset = $('#desktopNavbar').offset().top; //original distance from top
-var navbarMobileOffset = $('#navbarMobile').offset().top;
+var navbarOffset = $('#navbar').offset().top; //original distance from top
 $(window).on('scroll', function(){
     if ($(window).scrollTop() > navbarOffset){
-        $('#desktopNavbar').addClass('sticky');
+        $('#navbar').addClass('sticky');
     }
     else {
-        $('#desktopNavbar').removeClass('sticky');
-    }
-    if ($(window).scrollTop() > navbarMobileOffset){
-        $('#navbarMobile').addClass('sticky');
-    }
-    else {
-        $('#navbarMobile').removeClass('sticky');
+        $('#navbar').removeClass('sticky');
     }
 });
