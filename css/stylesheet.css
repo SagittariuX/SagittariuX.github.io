@@ -21,7 +21,7 @@ ul#navbar li a{
   color: white;
   text-decoration: none;
 }
-ul#navbar li a:hover{
+ul#navbar li:hover{
   background-color: orangered;
 }
 
