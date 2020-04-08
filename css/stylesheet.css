@@ -5,8 +5,6 @@ html, body{
   padding: 0;
 }
 
-
-
 ul.navbar{
   list-style-type: none;
   padding: 0;
@@ -19,7 +17,7 @@ ul.navbar li{
   display:inline-block;
   padding: 20px;
 }
-li a{
+ul.navbar li a{
   color: white;
   text-decoration: none;
 }
@@ -27,11 +25,13 @@ li a{
 
 @media only screen and (max-width: 900px){
   #navbar{
-    display: none;
+    background-color: green;
   }
-  #navbarMobile{
+  ul.navbar li{
     display: block;
+    padding: 20px;
   }
+
 }
 .sticky{
   top:0;
