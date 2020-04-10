@@ -25,12 +25,31 @@ ul#navbar li a{
 ul#navbar li a:hover{
   background-color: orangered;
 }
-
 @media only screen and (max-width: 900px){
   #navbar{
     display: none;
   }
 }
+
+ul#navbarMobile{
+  display:none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: green;
+  text-align: center;
+}
+
+@media only screen and (max-width: 900px){
+  #navbarMobile{
+    display: block;
+  }
+}
+
+
+
+
 .sticky{
   top:0;
   position:sticky;
