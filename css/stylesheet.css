@@ -26,7 +26,7 @@ ul#navbar li a:hover{
   background-color: orangered;
 }
 @media only screen and (max-width: 900px){
-  #navbar{
+  ul#navbar{
     display: none;
   }
 }
@@ -41,8 +41,18 @@ ul#navbarMobile{
   text-align: center;
 }
 
+ul#navbarMobile li{
+  padding: 20px;
+}
+
+ul#navbarMobile li a{
+  padding:20px;
+  color: white;
+  text-decoration: none;
+}
+
 @media only screen and (max-width: 900px){
-  #navbarMobile{
+  ul#navbarMobile{
     display: block;
   }
 }
