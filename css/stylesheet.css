@@ -69,6 +69,8 @@ ul#navbarMobileDropDown li:hover{
 
 ul#navbarMobile:hover ul#navbarMobileDropDown{
   display:block;
+  animation: slideInDown 1s;
+  -webkit-animation: slideInDown 1s;
 }
 
 @media only screen and (max-width: 900px){
