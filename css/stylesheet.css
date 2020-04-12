@@ -52,13 +52,17 @@ ul#navbarMobile li a{
 }
 
 ul#navbarMobileDropDown{
-  display:block;
+  display:none;
   list-style-type: none;
   padding: 0;
   margin: 0;
   overflow: hidden;
   background-color: blue;
   text-align: center;
+}
+
+ul#navbarMobile:hover ul#navbarMobileDropDown{
+  display:block;
 }
 
 @media only screen and (max-width: 900px){
