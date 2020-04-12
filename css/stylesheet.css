@@ -60,6 +60,7 @@ ul#navbarMobileDropDown{
   overflow: hidden;
   background-color: blue;
   text-align: center;
+  z-index: 1;
 }
 
 ul#navbarMobileDropDown li:hover{
@@ -75,9 +76,6 @@ ul#navbarMobile:hover ul#navbarMobileDropDown{
     display: block;
   }
 }
-
-
-
 
 .sticky{
   top:0;
