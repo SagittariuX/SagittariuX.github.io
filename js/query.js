@@ -43,12 +43,3 @@ $(window).on('scroll', function(){
     }
 });
 
-// enables animation everytime hover happens
-// $("#navbarMobile").hover(
-//     function(){
-//         $("#navbarMobileDropDown").addClass("wow slideInDown");
-//     }, 
-//     function(){
-//         $("#navbarMobileDropDown").removeClass("wow slideInDown")
-//     }
-// );
