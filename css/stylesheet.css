@@ -45,12 +45,9 @@ ul#navbarMobile:hover{
   background-color: lightgreen;
 }
 
-ul#navbarMobile li{
-  padding: 20px;
-}
-
 ul#navbarMobile li a{
-  padding:20px;
+  display:block;
+  padding:20px 0;
   color: white;
   text-decoration: none;
 }
@@ -65,7 +62,7 @@ ul#navbarMobileDropDown{
   text-align: center;
 }
 
-ul#navbarMobileDropDown li{
+ul#navbarMobileDropDown li:hover{
   background-color: lightblue;
 }
 
