@@ -154,7 +154,15 @@ h1.bannerText{
 .experienceMobile {
   display:none;
   max-width: inherit;
-  background-color: red;
+  border:solid;
+  text-align: center;
+}
+
+h3.experienceMobileTitle {
+  color: orange;
+}
+h3.experienceMobileLocation {
+  color: #dd6b4f;
 }
 
 @media only screen and (max-width: 900px){
