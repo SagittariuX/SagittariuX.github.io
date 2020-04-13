@@ -14,6 +14,9 @@ $(document).ready(function (){
 
     //Loads inital pics
     $('#compSciPic').prop('src', 'pics/compSci/placeholder0.png');
+    $('.experienceMobilePicture').each(function(index, element){
+        $(element).prop('src', 'pics/experience/placeholder'+index+'.png');
+    });
     $('#businessPic').prop('src', 'pics/business/placeholder0.png');
     $('#businessPicMobile').prop('src', 'pics/business/placeholder0.png');
     $('#educationPic').prop('src', 'pics/education/placeholder0.png');
