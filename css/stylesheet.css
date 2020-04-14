@@ -158,11 +158,21 @@ h1.bannerText{
   text-align: center;
 }
 
+.experienceMobileItem{
+  margin: 20px 0;
+}
+
 h3.experienceMobileTitle {
+  margin: 0;
   color: orange;
 }
 h3.experienceMobileLocation {
+  margin: 0;
   color: #dd6b4f;
+}
+div.experienceMobileText{
+  margin-top: 20px;
+  text-align: justify;
 }
 
 @media only screen and (max-width: 900px){
@@ -170,6 +180,7 @@ h3.experienceMobileLocation {
     display:block;
   }
 }
+
 
 /* All compsci related things*/
 .compSci {
