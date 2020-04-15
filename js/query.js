@@ -15,7 +15,12 @@ $(document).ready(function (){
         $(element).load('text/experience/aboutme'+index+'.txt');
     });
     $('.experienceMobileItem').each(function(index, element){
-        $(element).addClass("wow fadeInLeft");
+        if(index%2){
+            $(element).addClass("wow fadeInLeft");
+        }
+        else{
+            $(element).addClass("wow fadeInRight");
+        }
     });
 
     //loads compsci info
