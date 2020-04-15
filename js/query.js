@@ -14,6 +14,9 @@ $(document).ready(function (){
     $('.experienceMobileText').each(function(index, element){
         $(element).load('text/experience/aboutme'+index+'.txt');
     });
+    $('.experienceMobileItem').each(function(index, element){
+        $(element).addClass("wow fadeInLeft");
+    });
 
     //loads compsci info
     $('#compSciText').load("text/compSci/aboutme1.txt");
