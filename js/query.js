@@ -17,12 +17,12 @@ $(document).ready(function (){
         var title;
         var location;
         var text;
-        $.getJSON("experience/test.json", function(json){
+        $.getJSON("text/experience/test.json", function(json){
             title = json.title;
             location = json.location;
             text = json.text;
         });
-        $(element).parseHTML(text);
+        $(element).html(text);
     });
     $('.experienceMobileText').each(function(index, element){
         $(element).load('text/experience/aboutme'+index+'.txt');
