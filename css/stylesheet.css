@@ -148,13 +148,17 @@ h1.bannerText{
 /* All Experiences */
 
 .experience {
-  display:none;
+  display:block;
+}
+
+.experienceItem{
+  display:flex;
+  margin: 20px auto;
 }
 
 .experienceMobile {
   display:none;
   max-width: inherit;
-  border:solid;
   text-align: center;
 }
 
@@ -171,16 +175,20 @@ h3.experienceMobileLocation {
   color: #dd6b4f;
 }
 div.experienceMobileText{
-  margin-top: 20px;
+  max-width: 80%;
+  margin: 20px auto;
   text-align: justify;
 }
 
 @media only screen and (max-width: 900px){
+  .experience{
+    display:none;
+  }
+
   .experienceMobile { 
     display:block;
   }
 }
-
 
 /* All compsci related things*/
 .compSci {
