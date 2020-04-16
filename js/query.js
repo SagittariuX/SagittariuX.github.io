@@ -22,6 +22,7 @@ $(document).ready(function (){
             location = json.location;
             text = json.text;
         });
+        console.log(text)
         $(element).html(text);
     });
     $('.experienceMobileText').each(function(index, element){
