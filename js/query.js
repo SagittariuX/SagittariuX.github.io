@@ -21,8 +21,9 @@ $(document).ready(function (){
             title = json.title;
             location = json.location;
             text = json.text;
+            console.log(text);
         });
-        console.log(text)
+        
         $(element).html(text);
     });
     $('.experienceMobileText').each(function(index, element){
