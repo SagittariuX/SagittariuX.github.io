@@ -176,7 +176,7 @@ div.experienceMobileText{
 }
 
 @media only screen and (max-width: 900px){
-  .experienceMobile {
+  .experienceMobile { 
     display:block;
   }
 }
