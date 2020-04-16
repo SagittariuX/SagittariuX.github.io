@@ -46,7 +46,7 @@ $(window).on('beforeunload', function() {
     $(window).scrollTop(0);
 });
 
-//var navbarOffset = $('#navbar').offset().top; //original distance from top
+var navbarOffset = $('#navbar').offset().top; //original distance from top
 var navbarMobileOffset = $('#navbarMobile').offset().top; //original distance from top
 $(window).on('scroll', function(){
     if ($(window).scrollTop() > navbarOffset){
