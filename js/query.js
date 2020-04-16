@@ -8,8 +8,14 @@ $(document).ready(function (){
     });
 
     //loads experience info
+    $('.experiencePicture').each(function(index, element){
+        $(element).prop('src', 'pics/experience/placeholder'+index+'.png');
+    });
     $('.experienceMobilePicture').each(function(index, element){
         $(element).prop('src', 'pics/experience/placeholder'+index+'.png');
+    });
+    $('.experienceText').each(function(index, element){
+        $(element).load('text/experience/aboutme'+index+'.txt');
     });
     $('.experienceMobileText').each(function(index, element){
         $(element).load('text/experience/aboutme'+index+'.txt');

@@ -156,6 +156,10 @@ h1.bannerText{
   margin: 20px auto;
 }
 
+.experienceItemSplit{
+  flex:1;
+}
+
 .experienceMobile {
   display:none;
   max-width: inherit;
@@ -166,15 +170,15 @@ h1.bannerText{
   margin: 20px 0;
 }
 
-h3.experienceMobileTitle {
+h3.experienceTitle {
   margin: 0;
   color: orange;
 }
-h3.experienceMobileLocation {
+h3.experienceLocation {
   margin: 0;
   color: #dd6b4f;
 }
-div.experienceMobileText{
+div.experienceMobileText, div.experienceText{
   max-width: 80%;
   margin: 20px auto;
   text-align: justify;
