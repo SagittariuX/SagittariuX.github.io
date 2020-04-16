@@ -1,6 +1,5 @@
 
 $(document).ready(function (){
-    $(this).scrollTop(0);
     
     //Loads aboutme info
     $('.aboutMeText').each(function(index, element){
@@ -49,7 +48,7 @@ $(document).ready(function (){
 // Makes sure to rewind viewing history to top so animations could playout
 // Only chrome needs to have this explicit command
 $(window).on('beforeunload', function() {
-    $(window).scrollTop(0);
+    $(this).scrollTop(0);
 });
 
 var navbarOffset = $('#navbar').offset().top; //original distance from top
