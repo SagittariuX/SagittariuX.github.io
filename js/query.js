@@ -14,7 +14,15 @@ $(document).ready(function (){
         $(element).prop('src', 'pics/experience/placeholder'+index+'.png');
     });
     $('.experienceText').each(function(index, element){
-        $(element).load('text/experience/aboutme'+index+'.txt');
+        var title;
+        var location;
+        var text;
+        $.getJSON("experience/test.json", function(json){
+            title = json.title;
+            location = json.location;
+            text = json.text;
+        });
+        $(element).parseHTML(text);
     });
     $('.experienceMobileText').each(function(index, element){
         $(element).load('text/experience/aboutme'+index+'.txt');
