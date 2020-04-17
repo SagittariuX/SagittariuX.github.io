@@ -17,7 +17,7 @@ $(document).ready(function (){
     $('.experienceItem').each(function(index, element){
         
         var json = $.getJSON("text/experience/test.json");
-        console.log(json);
+        console.log(json.text);
             
         
     });
