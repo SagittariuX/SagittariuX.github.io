@@ -15,20 +15,15 @@ $(document).ready(function (){
         $(element).prop('src', 'pics/experience/placeholder'+index+'.png');
     });
     $('.experienceItem').each(function(index, element){
-        $.getJSON("text/experience/test.json", function(json){
+        $.getJSON("text/experience/experience"+index+".json", function(json){
             loadInExperience(json, index);
         });
     });
-    $('.experienceMobileText').each(function(index, element){
-        $(element).load('text/experience/aboutme'+index+'.txt');
-    });
-    $('.experienceMobileItem').each(function(index, element){
-        if(index%2){
-            $(element).addClass("wow fadeInLeft");
-        }
-        else{
-            $(element).addClass("wow fadeInRight");
-        }
+    $
+    $('.experienceMobile').each(function(index, element){
+        $.getJSON("text/experience/experience"+index+".json", function(json){
+            loadInExperienceMobile(json, index);
+        });
     });
 
     //loads compsci info
