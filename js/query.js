@@ -1,9 +1,5 @@
-// global vars
-var gExperimentTitle;
-var gExperimentLocation;
-var gExperimentText;
 
-
+//getting the site ready
 $(document).ready(function (){
     $(this).scrollTop();
     //Loads aboutme info
@@ -20,10 +16,10 @@ $(document).ready(function (){
     });
     $('.experienceItem').each(function(index, element){
         
-        $.getJSON("text/experience/test.json", function(json){
-            gExperimentText = json.text;
-        });
-        console.log(gExperimentText);
+        var json = $.getJSON("text/experience/test.json");
+        console.log(json);
+            
+        
     });
     $('.experienceMobileText').each(function(index, element){
         $(element).load('text/experience/aboutme'+index+'.txt');
