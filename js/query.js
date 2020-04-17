@@ -42,6 +42,7 @@ $(document).ready(function (){
     $('#educationTextMobile').load("text/education/aboutme1.txt");
     $('#educationPic').prop('src', 'pics/education/placeholder0.png');
     $('#educationPicMobile').prop('src', 'pics/education/placeholder0.png');
+    new WOW().init();
 });
 
 // Makes sure to rewind viewing history to top so animations could playout
