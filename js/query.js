@@ -20,7 +20,7 @@ $(document).ready(function (){
         });
     });
     $
-    $('.experienceMobile').each(function(index, element){
+    $('.experienceMobileItem').each(function(index, element){
         $.getJSON("text/experience/experience"+index+".json", function(json){
             loadInExperienceMobile(json, index);
         });
