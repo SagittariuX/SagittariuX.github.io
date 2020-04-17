@@ -72,9 +72,9 @@ $(window).on('scroll', function(){
 });
 
 function loadInExperience(json, index){
-    $('#experienceTitle').get(index).html(json.title);
-    $('#experienceLocation').get(index).html(json.location);
-    $('#experienceText').get(index).html(json.text);
+    $('.experienceTitle').get(index).html(json.title);
+    $('.experienceLocation').get(index).html(json.location);
+    $('.experienceText').get(index).html(json.text);
     return null;
 }
 
