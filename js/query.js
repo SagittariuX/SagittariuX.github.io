@@ -18,12 +18,13 @@ $(document).ready(function (){
         $.getJSON("text/experience/experience"+index+".json", function(json){
             loadInExperience(json, index);
         });
+        $(element).addClass('animated fadeInLeft');
     });
-    $
     $('.experienceMobileItem').each(function(index, element){
         $.getJSON("text/experience/experience"+index+".json", function(json){
             loadInExperienceMobile(json, index);
         });
+        $(element).addClass('wow fadeInLeft');
     });
 
     //loads compsci info
