@@ -18,7 +18,7 @@ $(document).ready(function (){
         $.getJSON("text/experience/experience"+index+".json", function(json){
             loadInExperience(json, index);
         });
-        $(element).addClass('animated fadeInLeft');
+        $(element).addClass('wow fadeInLeft');
     });
     $('.experienceMobileItem').each(function(index, element){
         $.getJSON("text/experience/experience"+index+".json", function(json){
