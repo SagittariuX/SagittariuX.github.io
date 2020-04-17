@@ -78,4 +78,11 @@ function loadInExperience(json, index){
     return null;
 }
 
+function loadInExperienceMobile(json, index){
+    $('.experienceMobileTitle').eq(index).html(json.title);
+    $('.experienceMobileLocation').eq(index).html(json.location);
+    $('.experienceMobileText').eq(index).html(json.text);
+    return null;
+}
+
 
