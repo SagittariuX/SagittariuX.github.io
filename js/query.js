@@ -1,3 +1,8 @@
+// global vars
+var gExperimentTitle;
+var gExperimentLocation;
+var gExperimentText;
+
 
 $(document).ready(function (){
     $(this).scrollTop();
@@ -13,12 +18,12 @@ $(document).ready(function (){
     $('.experienceMobilePicture').each(function(index, element){
         $(element).prop('src', 'pics/experience/placeholder'+index+'.png');
     });
-    $('.experienceText').each(function(index, element){
-        var text;
+    $('.experienceItem').each(function(index, element){
+        
         $.getJSON("text/experience/test.json", function(json){
-            text = json.text;
+            gExperimentText = json.text;
         });
-        console.log(text);
+        console.log(gExperimentText);
     });
     $('.experienceMobileText').each(function(index, element){
         $(element).load('text/experience/aboutme'+index+'.txt');
