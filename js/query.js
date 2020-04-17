@@ -15,11 +15,9 @@ $(document).ready(function (){
         $(element).prop('src', 'pics/experience/placeholder'+index+'.png');
     });
     $('.experienceItem').each(function(index, element){
-        
-        var json = $.getJSON("text/experience/test.json");
-        console.log(json.text);
-            
-        
+        $.getJSON("text/experience/test.json", function(json){
+            loadInExperience(json, index);
+        });
     });
     $('.experienceMobileText').each(function(index, element){
         $(element).load('text/experience/aboutme'+index+'.txt');
@@ -72,4 +70,12 @@ $(window).on('scroll', function(){
         $('#navbarMobile').removeClass('sticky');
     }
 });
+
+function loadInExperience(json, index){
+    $('#experienceTitle').get(index).html(json.title);
+    $('#experienceLocation').get(index).html(json.location);
+    $('#experienceText').get(index).html(json.text);
+    return null;
+}
+
 

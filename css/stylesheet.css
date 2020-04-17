@@ -171,11 +171,11 @@ h1.bannerText{
   margin: 20px 0;
 }
 
-h3.experienceTitle {
+h3.experienceTitle, h3.experienceMobileTitle {
   margin: 0;
   color: orange;
 }
-h3.experienceLocation {
+h3.experienceLocation, h3.experienceMobileLocation {
   margin: 0;
   color: #dd6b4f;
 }
