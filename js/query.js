@@ -47,9 +47,9 @@ $(document).ready(function (){
 
 // Makes sure to rewind viewing history to top so animations could playout
 // Only chrome needs to have this explicit command
-window.onbeforeunload = function () {
-    window.scrollTo(0,0);
-};
+$(window).on('beforeunload', function() {
+    $(this).scrollTop(0);
+});
 
 var navbarOffset = $('#navbar').offset().top; //original distance from top
 var navbarMobileOffset = $('#navbarMobile').offset().top; //original distance from top
