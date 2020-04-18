@@ -18,13 +18,25 @@ $(document).ready(function (){
         $.getJSON("text/experience/experience"+index+".json", function(json){
             loadInExperience(json, index);
         });
-        $(element).addClass('wow fadeInLeft');
+    });
+    $('.experienceItemSplit').each(function(index, element){
+        if (index%2){
+            $(element).addClass('wow fadeInLeft');
+        }
+        else{
+            $(element).addClass('wow fadeInRight');
+        }
     });
     $('.experienceMobileItem').each(function(index, element){
         $.getJSON("text/experience/experience"+index+".json", function(json){
             loadInExperienceMobile(json, index);
         });
-        $(element).addClass('wow fadeInLeft');
+        if (index%2){
+            $(element).addClass('wow fadeInLeft');
+        }
+        else{
+            $(element).addClass('wow fadeInRight');
+        }
     });
 
     //loads compsci info
