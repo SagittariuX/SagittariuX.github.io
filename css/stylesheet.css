@@ -175,9 +175,15 @@ h3.experienceTitle, h3.experienceMobileTitle {
   margin: 0;
   color: orange;
 }
+h3.experienceTitle{
+  margin:20px
+}
 h3.experienceLocation, h3.experienceMobileLocation {
   margin: 0;
   color: #dd6b4f;
+}
+h3.experienceLocation {
+  margin: 20px;
 }
 div.experienceMobileText, div.experienceText{
   max-width: 80%;
