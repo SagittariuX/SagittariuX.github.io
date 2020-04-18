@@ -22,8 +22,6 @@ $(document).ready(function (){
     $('.experienceItemSplit').each(function(index, element){
         if (index%2){
             $(element).addClass('wow fadeInRight');
-            //make the pic go towards the middle of the screen
-            $(element).css('float', 'right'); 
         }
         else{
             $(element).addClass('wow fadeInLeft');
