@@ -21,10 +21,10 @@ $(document).ready(function (){
     });
     $('.experienceItemSplit').each(function(index, element){
         if (index%2){
-            $(element).addClass('wow fadeInLeft');
+            $(element).addClass('wow fadeInRight');
         }
         else{
-            $(element).addClass('wow fadeInRight');
+            $(element).addClass('wow fadeInLeft');
         }
     });
     $('.experienceMobileItem').each(function(index, element){
@@ -32,10 +32,10 @@ $(document).ready(function (){
             loadInExperienceMobile(json, index);
         });
         if (index%2){
-            $(element).addClass('wow fadeInLeft');
+            $(element).addClass('wow fadeInRight');
         }
         else{
-            $(element).addClass('wow fadeInRight');
+            $(element).addClass('wow fadeInLeft');
         }
     });
 
