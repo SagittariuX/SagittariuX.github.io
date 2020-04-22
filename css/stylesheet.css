@@ -105,7 +105,7 @@ h1{
 .bannerTextBox{
   position:relative;
   top:40vh;
-  left: 20vw;
+  right: 20vw;
   width:inherit;
   text-align: center;
 }
@@ -116,7 +116,7 @@ h1.bannerText{
 }
 @media only screen and (max-width: 900px){
   .bannerTextBox{
-    left:auto;
+    right:auto;
   }
 }
 
