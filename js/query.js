@@ -21,10 +21,10 @@ $(document).ready(function (){
     });
     $('.experienceItemSplit').each(function(index, element){
         if (index%2){
-            // $(element).addClass('wow fadeInRight');
+            $(element).addClass('wow fadeInRight');
         }
         else{
-            // $(element).addClass('wow fadeInLeft');
+            $(element).addClass('wow fadeInLeft');
         }
     });
     $('.experienceMobileItem').each(function(index, element){
