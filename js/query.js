@@ -1,7 +1,6 @@
 
 //getting the site ready
 $(document).ready(function (){
-    $(this).scrollTop();
     //Loads aboutme info
     $('.aboutMeText').each(function(index, element){
         $(element).load("text/intro/aboutme1.txt");
