@@ -13,6 +13,22 @@ $(document).ready(function (){
     });
 
     //loads experience info
+    //dynamically create experienceItems & experienceMobileItem
+    for(var $i = 0; i < $gExperiences; i++){
+        $('.experience').append(`
+        <div class="experienceItem">
+            <div class="experienceItemSplit">
+                <img class="experiencePicture"/>
+            </div>
+            <div class="experienceItemSplit">
+                <h3 class="experienceTitle"></h3>
+                <h3 class="experienceLocation"></h3>
+                <div class="experienceText"></div>
+            </div>
+        </div>
+        `);
+    }
+    
     //Note pictures are in reverse order
     $($('.experiencePicture').get().reverse()).each(function(index, element){
         $(element).prop('src', 'pics/experience/experience'+index+'.png');
