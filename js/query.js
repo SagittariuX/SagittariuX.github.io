@@ -7,11 +7,12 @@ $(document).ready(function (){
     });
 
     //loads experience info
-    $('.experiencePicture').each(function(index, element){
-        $(element).prop('src', 'pics/experience/placeholder'+index+'.png');
+    //Note pictures are in reverse order
+    $($('.experiencePicture').get().reverse()).each(function(index, element){
+        $(element).prop('src', 'pics/experience/experience'+index+'.png');
     });
-    $('.experienceMobilePicture').each(function(index, element){
-        $(element).prop('src', 'pics/experience/placeholder'+index+'.png');
+    $($('.experienceMobilePicture').get().reverse()).each(function(index, element){
+        $(element).prop('src', 'pics/experience/experience'+index+'.png');
     });
     $('.experienceItem').each(function(index, element){
         $.getJSON("text/experience/experience"+index+".json", function(json){
