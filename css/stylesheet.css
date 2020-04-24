@@ -181,6 +181,9 @@ h1.bannerText{
   display:block;
   float:right;
 }
+.experiencePicture, .experienceMobilePicture{
+  height: 200px;
+}
 h3.experienceTitle, h3.experienceMobileTitle {
   margin: 0 0 0 0;
   color: orange;
