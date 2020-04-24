@@ -14,7 +14,7 @@ $(document).ready(function (){
 
     //loads experience info
     //dynamically create experienceItems & experienceMobileItem
-    for(var $i = 0; i < $gExperiences; i++){
+    for(var $i = 0; $i < $gExperiences; $i++){
         $('.experience').append(`
         <div class="experienceItem">
             <div class="experienceItemSplit">
