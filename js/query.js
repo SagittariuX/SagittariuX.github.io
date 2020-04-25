@@ -27,6 +27,16 @@ $(document).ready(function (){
             </div>
         </div>
         `);
+
+        $('.experienceMobile').append(`
+        <div class="experienceMobileItem">
+            <img class="experienceMobilePicture"/>
+            <h3 class="experienceMobileTitle"></h3>
+            <h3 class="experienceMobileLocation"></h3>
+            <div class="experienceMobileText"></div>
+        </div>
+        `);
+
     }
     
     //Note pictures are in reverse order

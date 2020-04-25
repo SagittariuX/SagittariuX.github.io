@@ -183,6 +183,7 @@ h1.bannerText{
 }
 .experiencePicture, .experienceMobilePicture{
   height: 200px;
+  width: 250px;
 }
 h3.experienceTitle, h3.experienceMobileTitle {
   margin: 0 0 0 0;
