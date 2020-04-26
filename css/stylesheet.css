@@ -219,9 +219,70 @@ h3.experienceLocation, h3.experienceTitle,  div.experienceText {
 .compSciSlidesFrame{
   position: relative;
   width: 100%;
-  height: auto;
-  margin: auto;                   
+  height: 50vh;
+  margin: auto;
+  perspective: 1000px;
+  transform-style: preserve-3d;
 }
+[type=radio]{
+  display: none;
+}
+
+.compSciSlidesFrame label {
+  margin: auto;
+  width: 50%;
+  height: 100%;
+  border-radius: 4px;
+  position: absolute;
+  left: 0; right: 0;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+/* all the transitions for the slides */
+/* at starting positions pic0 is on top */
+#cspic0:checked ~ #compSciPic0, #cspic1:checked ~ #compSciPic1,
+#cspic2:checked ~ #compSciPic2, #cspic3:checked ~ #compSciPic3,
+#cspic4:checked ~ #compSciPic4 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+  transform: translate3d(0,0,0);
+}
+/* shift 1 to right */
+#cspic0:checked ~ #compSciPic1, #cspic1:checked ~ #compSciPic2,
+#cspic2:checked ~ #compSciPic3, #cspic3:checked ~ #compSciPic4,
+#cspic4:checked ~ #compSciPic0 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+  transform: translate3d(15%,0,-100px);
+}
+/* shift 2 to right */
+#cspic0:checked ~ #compSciPic2, #cspic1:checked ~ #compSciPic3,
+#cspic2:checked ~ #compSciPic4, #cspic3:checked ~ #compSciPic0,
+#cspic4:checked ~ #compSciPic1 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+  transform: translate3d(30%,0,-200px);
+}
+/* shift 2 to left */
+#cspic0:checked ~ #compSciPic3, #cspic1:checked ~ #compSciPic4,
+#cspic2:checked ~ #compSciPic0, #cspic3:checked ~ #compSciPic1,
+#cspic4:checked ~ #compSciPic2 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+  transform: translate3d(-30%,0,-200px);
+}
+/* shift 1 to left */
+#cspic0:checked ~ #compSciPic4, #cspic1:checked ~ #compSciPic0,
+#cspic2:checked ~ #compSciPic1, #cspic3:checked ~ #compSciPic2,
+#cspic4:checked ~ #compSciPic3 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+  transform: translate3d(-15%,0,-100px);
+}
+/* end of transitions*/
+
+#compSciPic0 { background: #00BCD4 }
+#compSciPic1 { background: #4CAF50 }
+#compSciPic2 { background: #CDDC39 }
+#compSciPic3 { background: #FFC107 }
+#compSciPic4 { background: #FF5722 }
+
+
 
 .compSciTextFrame{
   width:90%;
