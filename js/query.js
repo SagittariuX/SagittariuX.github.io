@@ -1,6 +1,6 @@
 //Global Variables
 var $gExperiences = 4;
-var $gCompSci = 3;
+var $gCompSci = 5;
 var $gBusiness = 3;
 
 
@@ -36,7 +36,6 @@ $(document).ready(function (){
             <div class="experienceMobileText"></div>
         </div>
         `);
-
     }
     
     //Note pictures are in reverse order
@@ -72,8 +71,14 @@ $(document).ready(function (){
     });
 
     //loads compsci info
+    for(var $i = 0; $i < $gCompSci ; $i++){
+        $('.compSciSlidesFrame').append(`
+            <input type="radio" name="compSciPics" id="pic`+$i+`">
+            <label for="pic`+$i`" id="compSciPic`+$i+`></label> 
+        `);
+    }
     $('#compSciText').load("text/compSci/aboutme1.txt");
-    $('#compSciPic').prop('src', 'pics/compSci/placeholder0.png');
+    
 
     //loads business info
     $('#businessText').load("text/business/aboutme1.txt");
