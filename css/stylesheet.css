@@ -238,7 +238,7 @@ h3.experienceLocation, h3.experienceTitle,  div.experienceText {
   cursor: pointer;
   transition: transform 0.4s ease;
 }
-/* all the transitions for the slides */
+/* all the transitions and placement for the slides */
 /* at starting positions pic0 is on top */
 #cspic0:checked ~ #compSciPic0, #cspic1:checked ~ #compSciPic1,
 #cspic2:checked ~ #compSciPic2, #cspic3:checked ~ #compSciPic3,
@@ -282,10 +282,8 @@ h3.experienceLocation, h3.experienceTitle,  div.experienceText {
 #compSciPic3 { background: #FFC107 }
 #compSciPic4 { background: #FF5722 }
 
-
-
 .compSciTextFrame{
-  width:90%;
+  width:50%;
   margin: auto;
   padding: 5vh 0vw 0vh 0vw;
 }
@@ -293,6 +291,46 @@ h3.experienceLocation, h3.experienceTitle,  div.experienceText {
 #compSciText{
   text-align: justify;
 }
+
+/* all the transitions and placement for the slides in mobile*/
+@media only screen and (max-width: 900px){
+  /* at starting positions pic0 is on top */
+  #cspic0:checked ~ #compSciPic0, #cspic1:checked ~ #compSciPic1,
+  #cspic2:checked ~ #compSciPic2, #cspic3:checked ~ #compSciPic3,
+  #cspic4:checked ~ #compSciPic4 {
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+    transform: translate3d(0,0,0);
+  }
+  /* shift 1 down */
+  #cspic0:checked ~ #compSciPic1, #cspic1:checked ~ #compSciPic2,
+  #cspic2:checked ~ #compSciPic3, #cspic3:checked ~ #compSciPic4,
+  #cspic4:checked ~ #compSciPic0 {
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+    transform: translate3d(0,15%,-100px);
+  }
+  /* shift 2 down */
+  #cspic0:checked ~ #compSciPic2, #cspic1:checked ~ #compSciPic3,
+  #cspic2:checked ~ #compSciPic4, #cspic3:checked ~ #compSciPic0,
+  #cspic4:checked ~ #compSciPic1 {
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+    transform: translate3d(0,30%,-200px);
+  }
+  /* shift 2 up */
+  #cspic0:checked ~ #compSciPic3, #cspic1:checked ~ #compSciPic4,
+  #cspic2:checked ~ #compSciPic0, #cspic3:checked ~ #compSciPic1,
+  #cspic4:checked ~ #compSciPic2 {
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+    transform: translate3d(0,-30%,-200px);
+  }
+  /* shift 1 up */
+  #cspic0:checked ~ #compSciPic4, #cspic1:checked ~ #compSciPic0,
+  #cspic2:checked ~ #compSciPic1, #cspic3:checked ~ #compSciPic2,
+  #cspic4:checked ~ #compSciPic3 {
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+    transform: translate3d(0,-15%,-100px);
+  }
+}
+
 
 /* All business related things*/
 .business {
