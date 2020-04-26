@@ -230,8 +230,8 @@ h3.experienceLocation, h3.experienceTitle,  div.experienceText {
 
 .compSciSlidesFrame label {
   margin: auto;
-  width: 90%;
-  height: 60%;
+  width: 50%;
+  height: 100%;
   border-radius: 4px;
   position: absolute;
   left: 0; right: 0;
@@ -294,6 +294,10 @@ h3.experienceLocation, h3.experienceTitle,  div.experienceText {
 
 /* all the transitions and placement for the slides in mobile*/
 @media only screen and (max-width: 900px){
+  .compSciSlidesFrame label {
+    width: 90%;
+    height: 60%;
+  }
   /* at starting positions pic0 is on top */
   #cspic0:checked ~ #compSciPic0, #cspic1:checked ~ #compSciPic1,
   #cspic2:checked ~ #compSciPic2, #cspic3:checked ~ #compSciPic3,
