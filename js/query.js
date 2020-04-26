@@ -74,7 +74,7 @@ $(document).ready(function (){
     for(var $i = 0; $i < $gCompSci ; $i++){
         $('.compSciSlidesFrame').append(`
             <input type="radio" name="compSciPics" id="pic`+$i+`">
-            <label for="pic`+$i`" id="compSciPic`+$i+`></label> 
+            <label for="pic`+$i+`" id="compSciPic`+$i+`></label> 
         `);
     }
     $('#compSciText').load("text/compSci/aboutme1.txt");
