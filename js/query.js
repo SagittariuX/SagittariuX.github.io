@@ -85,9 +85,13 @@ $(document).ready(function (){
     }
     for(var $i = 0 ; $i < $gCompSci ; $i++){//generates the visuals for buttons
         $('.compSciSlidesFrame form').append(`
-            <label for="cspic`+$i+`" id="compSciPic`+$i+`"></label> 
+            <label for="cspic`+$i+`" id="compSciPic`+$i+`">
+                <img src="pics/compSci/pic`+$i+`.png" />
+            </label> 
         `);
     }
+
+
     $('#compSciText').load("text/compSci/aboutme1.txt");
     
 

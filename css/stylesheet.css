@@ -232,11 +232,15 @@ h3.experienceLocation, h3.experienceTitle,  div.experienceText {
   margin: auto;
   width: 50%;
   height: 100%;
+  text-align: center;
   border-radius: 4px;
   position: absolute;
   left: 0; right: 0;
   cursor: pointer;
   transition: transform 0.4s ease;
+}
+.compSciSlidesFrame label img{
+  height:100%;
 }
 /* all the transitions and placement for the slides */
 /* at starting positions pic0 is on top */
