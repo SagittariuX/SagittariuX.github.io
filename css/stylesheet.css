@@ -223,15 +223,6 @@ h3.experienceLocation, h3.experienceTitle,  div.experienceText {
   margin: auto;                   
 }
 
-.compSciSlide{
-  text-align: center;
-  height: auto;
-}
-
-#compSciPic{
-  width: auto;
-  height: auto;
-}
 
 @media only screen and (max-width: 900px){
   #compSciPic {
@@ -240,28 +231,10 @@ h3.experienceLocation, h3.experienceTitle,  div.experienceText {
   }
 }
 
-#btnNext , #btnPre{
-  cursor: pointer;
-  position: absolute;
-  padding: 20px;
-  top: 40%;
-  width: auto;
-  color: black;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
 
-#btnNext{
-  right: 0%;
-  border-radius: 3px 0 0 3px;
-}
 
-#btnPre:hover, #btnNext:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
+
+
 
 .compSciTextFrame{
   width:90%;
