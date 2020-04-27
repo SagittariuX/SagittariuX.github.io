@@ -303,9 +303,11 @@ h3.experienceLocation, h3.experienceTitle,  div.experienceText {
 }
 .goldstar{
   background-image: url("../pics/misc/goldstar.png");
+  background-repeat: no-repeat;
 }
 .blackstar{
   background-image: url("../pics/misc/blackstar.png");
+  background-repeat: no-repeat;
 }
 
 #compSciText{
