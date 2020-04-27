@@ -296,18 +296,16 @@ h3.experienceLocation, h3.experienceTitle,  div.experienceText {
 #compSciRating{
   display:inline-block;
 }
-.stars{
+img .stars{
   margin: 0 10px;
   width:50px;
   height:50px;
 }
-.goldstar{
-  background-image: url("../pics/misc/goldstar.png");
-  background-repeat: no-repeat;
+img .goldstar{
+  content: url("../pics/misc/goldstar.png");
 }
-.blackstar{
-  background-image: url("../pics/misc/blackstar.png");
-  background-repeat: no-repeat;
+img .blackstar{
+  content: url("../pics/misc/blackstar.png");
 }
 
 #compSciText{
