@@ -294,7 +294,7 @@ h3.experienceLocation, h3.experienceTitle,  div.experienceText {
 }
 
 #compSciRating{
-  display:inline-block;
+  text-align: center;
 }
 img.stars{
   margin: 0 10px;
