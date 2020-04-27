@@ -90,11 +90,8 @@ $(document).ready(function (){
             </label> 
         `);
     }
-
-
-    $('#compSciText').load("text/compSci/aboutme1.txt");
+    loadInCompSciText(0);
     
-
     //loads business info
     $('#businessText').load("text/business/aboutme1.txt");
     $('#businessTextMobile').load("text/business/aboutme1.txt");
@@ -144,6 +141,12 @@ function loadInExperienceMobile(json, index){
     $('.experienceMobileLocation').eq(index).html(json.location);
     $('.experienceMobileText').eq(index).html(json.text);
     return null;
+}
+
+function loadInCompSciText(fileNum){
+    $.getJSON("text/compSci/cs"+fileNum+".json", function(json){
+        $('#compSciText').html(json.text);
+    });
 }
 
 
