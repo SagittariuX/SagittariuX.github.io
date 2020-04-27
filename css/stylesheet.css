@@ -302,10 +302,10 @@ h3.experienceLocation, h3.experienceTitle,  div.experienceText {
   height:50px;
 }
 .goldstar{
-  background-image: url("pics/misc/goldstar.png");
+  background-image: url("../pics/misc/goldstar.png");
 }
 .blackstar{
-  background-image: url("pics/misc/blackstar.png");
+  background-image: url("../pics/misc/blackstar.png");
 }
 
 #compSciText{
