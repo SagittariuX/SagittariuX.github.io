@@ -85,7 +85,7 @@ $(document).ready(function (){
     }
     for(var $i = 0 ; $i < $gCompSci ; $i++){//generates the visuals for buttons
         $('.compSciSlidesFrame form').append(`
-            <label for="cspic`+$i+`" id="compSciPic`+$i+`">
+            <label for="cspic`+$i+`" id="compSciPic`+$i+`" onclick="loadInCompSciText(`+$i+`)">
                 <img src="pics/compSci/pic`+$i+`.png" />
             </label> 
         `);
