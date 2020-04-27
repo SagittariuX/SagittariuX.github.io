@@ -3,8 +3,6 @@ var $gExperiences = 4;
 var $gCompSci = 5;
 var $gBusiness = 3;
 
-
-
 //getting the site ready
 $(document).ready(function (){
     //Loads aboutme info
