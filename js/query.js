@@ -147,12 +147,12 @@ function loadInCompSciText(fileNum){
         $('#compSciRating').empty();
         for(var $i = 0; $i < 5; $i++){
             if($i < json.stars){
-                $('$compSciRating').append(`
+                $('#compSciRating').append(`
                     <img class="stars goldstar"/>
                 `);
             }
             else{
-                $('$compSciRating').append(`
+                $('#compSciRating').append(`
                     <img class="stars blackstar"/>
                 `); 
             }
