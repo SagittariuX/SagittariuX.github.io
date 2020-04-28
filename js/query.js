@@ -143,6 +143,21 @@ function loadInExperienceMobile(json, index){
 
 function loadInCompSciText(fileNum){
     $.getJSON("text/compSci/cs"+fileNum+".json", function(json){
+        //loads in the star rating system
+        $('#compSciRating').empty();
+        for(var $i = 0; $i < 5; $i++){
+            if($i < json.stars){
+                $('$compSciRating').append(`
+                    <img class="stars goldstar"/>
+                `);
+            }
+            else{
+                $('$compSciRating').append(`
+                    <img class="stars blackstar"/>
+                `); 
+            }
+        }
+        //loads in the actual text
         $('#compSciText').html(json.text);
     });
 }
