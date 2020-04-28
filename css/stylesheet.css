@@ -31,56 +31,39 @@ ul#navbar li a:hover{
   }
 }
 
-ul#navbarMobile{
+nav#navbarMobile{
   display:none;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  position:fixed;
+  bottom:50px;
+  right:50px;
+  width:10vw;
+  height:10vw;
   overflow: hidden;
   text-align: center;
+  background-color:lightblue;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 99;
 }
 
-ul#navbarMobile li{
-  background-color: green;
+#navbarIcon0,#navbarIcon1,#navbarIcon2{
+  position: relative;
+  top:35%;
+  margin:0 auto; 
+  width:50%;
+  height:5%;
+  background-color: black;
+  transition: .4s;
 }
-
-ul#navbarMobile li:hover{
-  background-color: lightgreen;
+#navbarIcon1{
+  top:45%;
 }
-
-ul#navbarMobile li a{
-  display:block;
-  padding:20px 0;
-  color: white;
-  text-decoration: none;
-}
-
-ul#navbarMobileDropDown{
-  display:none;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;  
-  text-align: center;
-  z-index: 1;
-}
-
-ul#navbarMobileDropDown li{
-  background-color: blue;
-}
-
-ul#navbarMobileDropDown li:hover{
-  background-color: lightblue;
-}
-
-ul#navbarMobile:hover ul#navbarMobileDropDown{
-  display:block;
-  animation: slideInLeft 1s;
-  -webkit-animation: slideInLeft 1s;
+#navbarIcon2{
+  top:55%;
 }
 
 @media only screen and (max-width: 900px){
-  ul#navbarMobile{
+  nav#navbarMobile{
     display: block;
   }
 }
