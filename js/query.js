@@ -148,7 +148,7 @@ function loadInCompSciText(fileNum){
         for(var $i = 0; $i < 5; $i++){
             if($i < json.stars){
                 $('#compSciRating').append(`
-                    <img class="stars goldstar"/>
+                    <img class="stars goldstar animated heartBeat"/>
                 `);
             }
             else{
