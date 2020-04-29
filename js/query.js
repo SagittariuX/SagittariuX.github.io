@@ -110,19 +110,10 @@ $(window).on('beforeunload', function() {
     $(this).scrollTop(0);
 });
 
-var $navbarOffset = $('#navbar').offset().top; //original distance from top
-var $navbarMobileOffset = $('#navbarMobile').offset().top; //original distance from top
-$(window).on('scroll', function(){
-    if ($(window).scrollTop() > $navbarOffset){
-        $('#navbar').addClass('sticky');
-    }
-    else {
-        $('#navbar').removeClass('sticky');
-    } 
-});
-
-$("navbarMobile").click(function(){
-
+$("#navbar").hover(function(){
+    $("#navbar,#navbarIcon0, #navbarIcon1, #navbarIcon2").addClass('toggle');
+},function(){
+    $("#navbar,#navbarIcon0, #navbarIcon1, #navbarIcon2").removeClass('toggle');
 });
 
 function loadInExperience(json, index){
