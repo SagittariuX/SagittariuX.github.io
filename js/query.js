@@ -111,9 +111,9 @@ $(window).on('beforeunload', function() {
 });
 
 $("#navbar").hover(function(){
-    $("#navbar,#navbarIcon0, #navbarIcon1, #navbarIcon2").addClass('toggle');
+    $("#navbar,#navbarIcon0, #navbarIcon1, #navbarIcon2, #menuList").addClass('toggle');
 },function(){
-    $("#navbar,#navbarIcon0, #navbarIcon1, #navbarIcon2").removeClass('toggle');
+    $("#navbar,#navbarIcon0, #navbarIcon1, #navbarIcon2, #menuList").removeClass('toggle');
 });
 
 function loadInExperience(json, index){
