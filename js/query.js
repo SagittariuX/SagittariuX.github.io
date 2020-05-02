@@ -91,10 +91,7 @@ $(document).ready(function (){
     loadInCompSciText(0);
     
     //loads business info
-    $('#businessText').load("text/business/aboutme1.txt");
-    $('#businessTextMobile').load("text/business/aboutme1.txt");
-    $('#businessPic').prop('src', 'pics/business/placeholder0.png');
-    $('#businessPicMobile').prop('src', 'pics/business/placeholder0.png');
+    
 
     //Loads education info
     $('#educationText').load("text/education/aboutme1.txt");

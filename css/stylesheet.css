@@ -366,22 +366,9 @@ img.blackstar{
 }
 .businessSectional{
   flex: 1;
-  width: 50%;
+  border:solid;
   padding: 0% 10% 0% 10%;
   text-align: center;
-}
-.businessSectionalMobile{
-  max-width: 100%;
-  padding: 0% 10% 0% 10%;
-  text-align: center;
-}
-
-#businessPic, #businessPicMobile{
-  max-width: 100%;
-  height: auto;
-}
-#businessText, #businessTextMobile{
-  text-align: justify;
 }
 
 #dotsRow{
@@ -404,12 +391,7 @@ img.blackstar{
 }
 
 @media only screen and (max-width: 900px){
-  .business{
-    display:none;
-  }
-  .businessMobile{
-    display: block;
-  }
+  
 }
 
 /* All education related things*/
