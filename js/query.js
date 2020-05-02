@@ -158,5 +158,15 @@ function loadInCompSciText(fileNum){
         $('#compSciText').html(json.text);
     });
 }
+var $gFlipcardSide = 0;
+var $gFlipcardContent = 0;
+function flipMe(){
+    // if($gFlipcardSide == 0){
+    //     $(".flip")
+    // }else{
+
+    // }
+    $('.flipcard').toggleClass('flipping');
+}
 
 
