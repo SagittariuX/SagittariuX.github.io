@@ -157,20 +157,37 @@ function loadInCompSciText(fileNum){
         //loads in the actual text
         $('#compSciText').html(json.text);
     });
+    return null;
 }
 
 var $gFlipcardSide = 0;//keeps track of which side is currently face up
-function flipMe(){
-    var $target;
+function flipMe(num){
+    if($('.dots').eq(num).hasClass('toggle')){
+        return null;
+    }
+
+    var $imgTarget;
+    var $textTarget;
     if($gFlipcardSide == 0){
         $gFlipcardSide = 1;
-        $target = $('#imgFlipSide1 img');
+        $imgTarget = $('#imgFlipSide1 img');
+        $textTarget = $('#textFlipSide1');
     }else{
         $gFlipcardSide = 0;
-        $target = $('#imgFlipSide0 img');
+        $imgTarget = $('#imgFlipSide0 img');
+        $textTarget = $('#textFlipSide0');
     }
-    $target.prop('src', 'pics/business/placeholder1.png')
+    $('.dots').each(function(index, element){
+        if(num == index){
+            $(element).addClass('toggle');
+        }
+        else{
+            $(element).removeClass('toggle');
+        }
+    });
+    $imgTarget.prop('src', 'pics/business/placeholder1.png')
     $('.flipcard').toggleClass('flipping');
+    return null;
 }
 
 

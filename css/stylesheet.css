@@ -372,23 +372,26 @@ img.blackstar{
   position: absolute;
   margin:auto 0;
   height:100%;width:80%;
-  background-color: #00BCD4;
   box-shadow: 0 0 15px rgba(0,0,0,.5);
 
   transition:transform 2s;
   transform-style: preserve-3d;
 }
-#imgFlipSide0, #imgFlipSide1{
+#imgFlipSide0, #imgFlipSide1, #textFlipSide0, #textFlipSide1{
   position: absolute;
   height: 100%; width:100%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   background-color: green;
 }
-#imgFlipSide1{
+#imgFlipSide1, #textFlipSide1{
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
   background-color: red;
+}
+#textFlipSide0 div,#textFlipSide1 div{
+  padding:10%;
+  
 }
 #imgFlipSide0 img, #imgFlipSide1 img{
   height:100%; width:100%;
@@ -408,7 +411,7 @@ img.blackstar{
 .dots{
   cursor: pointer;
   height: 30px; width: 10px;
-  margin: 50px 0;
+  margin: 33% 0;
   transition: background-color 0.5s;
   background-color: gray;
 }
@@ -424,6 +427,7 @@ img.blackstar{
   }
   .businessSectional{
     display: block;
+    height:30vh;
     width: 80%;
     margin: 0 auto;
     padding:0;
