@@ -158,13 +158,18 @@ function loadInCompSciText(fileNum){
         $('#compSciText').html(json.text);
     });
 }
+
 var $gFlipcardSide = 0;//keeps track of which side is currently face up
 function flipMe(){
+    var $target;
     if($gFlipcardSide == 0){
         $gFlipcardSide = 1;
+        $target = $('#imgFlipSide1 img');
     }else{
         $gFlipcardSide = 0;
+        $target = $('#imgFlipSide0 img');
     }
+    $target.prop('src', 'pics/business/placeholder1.png')
     $('.flipcard').toggleClass('flipping');
 }
 
