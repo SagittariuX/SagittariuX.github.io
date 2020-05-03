@@ -379,23 +379,25 @@ img.blackstar{
   transition:transform 2s;
   transform-style: preserve-3d;
 }
-.flipSide0, .flipSide1{
+#imgFlipSide0, #imgFlipSide1{
   position: absolute;
   height: 100%; width:100%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   background-color: green;
 }
-.backside{
+#imgFlipSide1{
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
   background-color: red;
+}
+#imgFlipSide0 img, #imgFlipSide1 img{
+  height:100%; width:100%;
 }
 .flipping{
   transform:rotateY(180deg);
   -webkit-transform: rotateY(180deg);
 }
-
 
 #dotsRow{
   display:block;

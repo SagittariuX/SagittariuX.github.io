@@ -91,7 +91,7 @@ $(document).ready(function (){
     loadInCompSciText(0);
     
     //loads business info
-    
+    $("#imgFlipSide0 img").prop('src', 'pics/business/placeholder0.png');
 
     //Loads education info
     $('#educationText').load("text/education/aboutme1.txt");
@@ -158,14 +158,13 @@ function loadInCompSciText(fileNum){
         $('#compSciText').html(json.text);
     });
 }
-var $gFlipcardSide = 0;
-var $gFlipcardContent = 0;
+var $gFlipcardSide = 0;//keeps track of which side is currently face up
 function flipMe(){
-    // if($gFlipcardSide == 0){
-    //     $(".flip")
-    // }else{
-
-    // }
+    if($gFlipcardSide == 0){
+        $gFlipcardSide = 1;
+    }else{
+        $gFlipcardSide = 0;
+    }
     $('.flipcard').toggleClass('flipping');
 }
 
