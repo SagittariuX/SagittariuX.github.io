@@ -493,6 +493,20 @@ footer{
 footer h1, footer h3{
   color: white;
 }
+div#contactOptions{
+  display: flex;
+  width: 100%;
+}
+div.cOption{
+  border:solid;
+  flex:1;
+  margin: 20px;
+}
+
+div.cOption img{
+  width: 15vw;
+  margin: auto;
+}
 
 
 
