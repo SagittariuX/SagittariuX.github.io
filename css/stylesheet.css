@@ -2,9 +2,8 @@
 html, body{
   margin: 0;
   padding: 0;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: 'Oxygen', Arial, sans-serif;
 }
-
 ul#navbar{
   list-style-type: none;
   padding: 0;
@@ -485,6 +484,14 @@ img.blackstar{
   .educationMobile{
     display: block;
   }
+}
+
+footer{
+  background-color: rgb(255, 192, 75);
+  text-align: center;
+}
+footer h1, footer h3{
+  color: white;
 }
 
 
