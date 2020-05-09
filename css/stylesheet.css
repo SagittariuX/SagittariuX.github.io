@@ -28,7 +28,6 @@ div#menuList a:hover{
   background-color: orangered;
 }
 
-
 nav#navbar{
   display:block;
   position:fixed;
@@ -36,6 +35,10 @@ nav#navbar{
   right:50px;
   width:10vw;
   height:10vw;
+  max-width: 100px;
+  max-height: 100px;
+  min-width:50px;
+  min-height:50px;
   overflow: hidden;
   text-align: center;
   background-color:rgb(253, 201, 104);
@@ -53,7 +56,7 @@ nav#navbar.toggle{
   background-color: white;
   border:solid;
   border-color:rgb(253, 201, 104);
-  border-radius:10%;
+  border-radius:0;
 }
 
 #navbarIcon0,#navbarIcon1,#navbarIcon2{
