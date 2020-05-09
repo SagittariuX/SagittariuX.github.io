@@ -521,6 +521,25 @@ div.cOption img{
   margin: auto;
 }
 
+@media only screen and (max-width: 900px){
+  div#contactOptions{
+    display:block;
+    max-width:100%;
+  }
+  div.cOption{
+    flex:none;
+    margin: 20px 20px 0px 20px;
+  }
+  div.cOption a{
+    display:inline-block;
+  }
+  div.cOption img{
+    min-width: 80px;
+    min-height:80px;
+    float:left;
+  }
+}
+
 
 
 
