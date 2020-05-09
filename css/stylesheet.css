@@ -492,6 +492,7 @@ footer{
 }
 footer h1, footer h3, footer h4{
   color: white;
+  word-wrap: break-word;
 }
 div#contactOptions{
   display: flex;
@@ -502,6 +503,7 @@ div.cOption{
   flex:1;
   margin: 20px;
   padding: 20px;
+  
 }
 div.cOption a{
   display:block;
