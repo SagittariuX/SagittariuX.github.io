@@ -522,6 +522,9 @@ div.cOption img{
 }
 
 @media only screen and (max-width: 900px){
+  footer h1, footer h3{
+    margin: 10px;
+  }
   div#contactOptions{
     display:block;
     max-width:100%;
@@ -531,12 +534,15 @@ div.cOption img{
     margin: 20px 20px 0px 20px;
   }
   div.cOption a{
-    display:inline-block;
+    display:flex;
   }
   div.cOption img{
     min-width: 80px;
     min-height:80px;
     float:left;
+  }
+  div.cOption h4{
+    padding: 0 10px;
   }
 }
 
