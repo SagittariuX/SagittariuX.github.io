@@ -7,6 +7,7 @@
     <meta name="keywords" content="Aaron, An, Aaron An, Business, Computer Science, Job"/>
     <meta http-equiv="author" content="Aaron An" />
     <meta http-equiv="pragma" content="no-cache" /> 
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet'>
     <link href="css/stylesheet.css" type="text/css" rel="stylesheet"/>
     <link href="css/animate.css" rel="stylesheet">
   </head>
@@ -68,23 +69,34 @@
 
   <!--- Quick overview over business interests etc-->
   <h1 class="wow fadeInUp" id = "goToBusiness">Business</h1>
-  <div class="business">
-    <div class="businessSectional wow fadeInUp" id="businessText"></div>
-    <div class="businessSectional wow fadeInUp">
-      <img id="businessPic"/>
+  <div class="business wow fadeInUp">
+    <div class="businessSectional">
+      <div class="flipcard">
+        <div id="imgFlipSide0">
+          <img/>
+        </div>
+        <div id="imgFlipSide1">
+          <img/>
+        </div>
+      </div>
     </div>
-  </div>
-  <!-- In mobile view show picture with text underneath -->
-  <div class="businessMobile">
-    <div class="businessSectionalMobile wow fadeInUp">
-      <img id="businessPicMobile"/>
-    </div>
-    <div class="businessSectionalMobile wow fadeInUp" id="businessTextMobile"></div>
-  </div>
     <div id="dotsRow">
-    <span class="dots active" onclick="businessSlideShow(0)"></span>
-    <span class="dots" onclick="businessSlideShow(1)"></span>
+      <div class="dots toggle" onclick="flipMe(0)"></div>
+      <div class="dots" onclick="flipMe(1)"></div>
+      <div class="dots" onclick="flipMe(2)"></div>
+    </div>
+    <div class="businessSectional">
+      <div class="flipcard">
+        <div id="textFlipSide0">
+          <div>Oops</div>
+        </div>
+        <div id="textFlipSide1">
+          <div>Double Oops</div>
+        </div>
+      </div>
+    </div>
   </div>
+  
 
   <!---simple education overview-->
   <h1 class="wow fadeInUp" id = "goToEducation">Education</h1>
@@ -101,13 +113,33 @@
     </div>
     <div class="educationSectionalMobile wow fadeInUp" id="educationTextMobile"></div>
   </div>
-  </body>
-  <footer>
-      <div class="contactInfo">
-          <p>Phone: 1-248-358-456</p>
-          <p>Email: <a href="mailto:aaronan1996@gmail.com">aaronan1996@gmail.com</a></p>
-        </div>
+  <footer class="wow fadeInUp">
+    <h1>Thanks For Touring My Web!</h1>
+    <h3>I am currently looking for work opportunities, 
+      if my skill have peaked your interest. Please contact me.</h3>
+    <div id="contactOptions">
+      <div class="cOption">
+        <a href="mailto:aaronan1996@gmail.com">
+          <img src="pics/misc/email.png">
+          <h4>The best way to reach me is by email at aaronan1996@gmail.com</h4>
+        </a>
+      </div>
+      <div class="cOption">
+        <a href="tel:248-635-8456">
+          <img src="pics/misc/phone.png">
+          <h4>Or you could call me directly at 248-635-8456, if I don't pick up please leave a message at the tone</h4>
+        </a>
+      </div>
+      <div class="cOption">
+        <a href="#"> 
+          <img src="pics/misc/resume.png">
+          <h4>If you are still curious or need additional information please checkout my LinkedIn</h4>
+        </a>
+      </div>
+    </div>
+
   </footer>
+  </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/parallax.js-1.5.0/parallax.js"></script>
   <script src="js/wow.min.js"></script>

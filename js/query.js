@@ -91,10 +91,7 @@ $(document).ready(function (){
     loadInCompSciText(0);
     
     //loads business info
-    $('#businessText').load("text/business/aboutme1.txt");
-    $('#businessTextMobile').load("text/business/aboutme1.txt");
-    $('#businessPic').prop('src', 'pics/business/placeholder0.png');
-    $('#businessPicMobile').prop('src', 'pics/business/placeholder0.png');
+    $("#imgFlipSide0 img").prop('src', 'pics/business/placeholder0.png');
 
     //Loads education info
     $('#educationText').load("text/education/aboutme1.txt");
@@ -149,6 +146,37 @@ function loadInCompSciText(fileNum){
         //loads in the actual text
         $('#compSciText').html(json.text);
     });
+    return null;
+}
+
+var $gFlipcardSide = 0;//keeps track of which side is currently face up
+function flipMe(num){
+    if($('.dots').eq(num).hasClass('toggle')){
+        return null;
+    }
+
+    var $imgTarget;
+    var $textTarget;
+    if($gFlipcardSide == 0){
+        $gFlipcardSide = 1;
+        $imgTarget = $('#imgFlipSide1 img');
+        $textTarget = $('#textFlipSide1');
+    }else{
+        $gFlipcardSide = 0;
+        $imgTarget = $('#imgFlipSide0 img');
+        $textTarget = $('#textFlipSide0');
+    }
+    $('.dots').each(function(index, element){
+        if(num == index){
+            $(element).addClass('toggle');
+        }
+        else{
+            $(element).removeClass('toggle');
+        }
+    });
+    $imgTarget.prop('src', 'pics/business/placeholder1.png')
+    $('.flipcard').toggleClass('flipping');
+    return null;
 }
 
 

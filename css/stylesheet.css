@@ -2,10 +2,40 @@
 html, body{
   margin: 0;
   padding: 0;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: 'Oxygen', Arial, sans-serif;
 }
+<<<<<<< HEAD
 
 div#menuList{
+=======
+ul#navbar{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: orange;
+  text-align: center;
+}
+ul#navbar li{
+  display:inline-block;
+  padding: 20px;
+}
+ul#navbar li a{
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+}
+ul#navbar li a:hover{
+  background-color: orangered;
+}
+@media only screen and (max-width: 900px){
+  ul#navbar{
+    display: none;
+  }
+}
+
+ul#navbarMobile{
+>>>>>>> a07d22efb4d583cfe86837c9709eeb1bb865af2a
   display:none;
   padding: 0;
   margin: 0;
@@ -347,55 +377,93 @@ img.blackstar{
   display: flex;
   width: 100%;
 }
-.businessMobile{
-  display: none;
-  width: 100%;
-}
 .businessSectional{
+  position:relative;
   flex: 1;
-  width: 50%;
-  padding: 0% 10% 0% 10%;
-  text-align: center;
-}
-.businessSectionalMobile{
-  max-width: 100%;
-  padding: 0% 10% 0% 10%;
+  height:50vh;
+  padding: 0% 5% 0% 5%;
   text-align: center;
 }
 
-#businessPic, #businessPicMobile{
-  max-width: 100%;
-  height: auto;
+.flipcard{
+  position: absolute;
+  margin:auto 0;
+  height:100%;width:80%;
+  box-shadow: 0 0 15px rgba(0,0,0,.5);
+
+  transition:transform 2s;
+  transform-style: preserve-3d;
 }
-#businessText, #businessTextMobile{
-  text-align: justify;
+#imgFlipSide0, #imgFlipSide1, #textFlipSide0, #textFlipSide1{
+  position: absolute;
+  height: 100%; width:100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background-color: green;
+}
+#imgFlipSide1, #textFlipSide1{
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  background-color: red;
+}
+#textFlipSide0 div,#textFlipSide1 div{
+  padding:10%;
+  
+}
+#imgFlipSide0 img, #imgFlipSide1 img{
+  height:100%; width:100%;
+}
+.flipping{
+  transform:rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
 }
 
 #dotsRow{
-  width: 100%; 
+  display:block;
+  flex:0;
+  margin:auto 0;
+  height:inherit; 
   text-align: center;
-  margin-top: 20px;
 }
 .dots{
   cursor: pointer;
-  display: inline-block;
-  height: 15px; width: 15px;
-  border-radius: 50%;
-  margin: 0px 3px;
+  height: 30px; width: 10px;
+  margin: 33% 0;
   transition: background-color 0.5s;
   background-color: gray;
 }
 
-.dots:hover, .active{
+.dots:hover, .dots.toggle{
   background-color: black;
 }
 
 @media only screen and (max-width: 900px){
   .business{
-    display:none;
+    display:block;
+    text-align: center;
   }
-  .businessMobile{
+  .businessSectional{
     display: block;
+    height:30vh;
+    width: 80%;
+    margin: 0 auto;
+    padding:0;
+    text-align: center;
+  }
+  .flipcard{
+    margin: 0 auto;
+    width:100%;
+  }
+  #dotsRow{
+    display:inline-block;
+    height:auto; max-width: 100%;
+    margin: 20px 0;
+  }
+  .dots{
+    display:block;
+    float:left;
+    height:10px; width:30px;
+    margin: 0 20px;
   }
 }
 
@@ -433,6 +501,66 @@ img.blackstar{
   }
   .educationMobile{
     display: block;
+  }
+}
+
+footer{
+  background-color: rgb(255, 192, 75);
+  text-align: center;
+}
+footer h1, footer h3, footer h4{
+  color: white;
+  word-wrap: break-word;
+}
+div#contactOptions{
+  display: flex;
+  width: 100%;
+}
+div.cOption{
+  border:solid;
+  flex:1;
+  margin: 20px;
+  padding: 20px;
+  perspective: 1000px;
+}
+div.cOption a{
+  display:block;
+  text-decoration: none;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+div.cOption a:hover {
+  transform: translateZ(100px) ;
+}
+
+div.cOption img{
+  height: 10vw;
+  margin: auto;
+}
+
+@media only screen and (max-width: 900px){
+  footer h1, footer h3{
+    margin: 10px;
+  }
+  div#contactOptions{
+    display:block;
+    max-width:100%;
+  }
+  div.cOption{
+    flex:none;
+    margin: 20px 20px 0px 20px;
+  }
+  div.cOption a{
+    display:flex;
+  }
+  div.cOption img{
+    min-width: 80px;
+    min-height:80px;
+    float:left;
+  }
+  div.cOption h4{
+    padding: 0 10px;
   }
 }
 
