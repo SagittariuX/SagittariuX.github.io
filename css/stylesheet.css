@@ -4,38 +4,8 @@ html, body{
   padding: 0;
   font-family: 'Oxygen', Arial, sans-serif;
 }
-<<<<<<< HEAD
 
 div#menuList{
-=======
-ul#navbar{
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  background-color: orange;
-  text-align: center;
-}
-ul#navbar li{
-  display:inline-block;
-  padding: 20px;
-}
-ul#navbar li a{
-  padding: 20px;
-  color: white;
-  text-decoration: none;
-}
-ul#navbar li a:hover{
-  background-color: orangered;
-}
-@media only screen and (max-width: 900px){
-  ul#navbar{
-    display: none;
-  }
-}
-
-ul#navbarMobile{
->>>>>>> a07d22efb4d583cfe86837c9709eeb1bb865af2a
   display:none;
   padding: 0;
   margin: 0;
@@ -53,6 +23,7 @@ div#menuList a{
   color: white;
   background-color: orange;
   text-decoration: none;
+  font-size: larger;
 }
 div#menuList a:hover{
   background-color: orangered;
@@ -72,15 +43,14 @@ nav#navbar{
   overflow: hidden;
   text-align: center;
   background-color:rgb(253, 201, 104);
-  border-radius: 50%;
   cursor: pointer;
   z-index: 99;
-  transition: .5s;
+  transition: .3s;
 }
 
 nav#navbar.toggle{
   height:30vh;
-  width:20vw;
+  width:auto;
   max-width: unset;
   max-height: unset;
   background-color: white;
@@ -96,7 +66,7 @@ nav#navbar.toggle{
   width:50%;
   height:5%;
   background-color: black;
-  transition: .2s;
+  transition: 0s;
 }
 #navbarIcon1{
   top:45%;
@@ -135,12 +105,6 @@ h1.bannerText{
   .bannerTextBox{
     right:auto;
   }
-}
-
-
-.contactInfo{
-  width: 100%;
-  display: flex; 
 }
 
 .aboutMe {
