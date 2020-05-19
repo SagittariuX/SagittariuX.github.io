@@ -437,8 +437,11 @@ img.blackstar{
 div#interests{
   display:none;
 }
-div#inspirations{
-  
+div#inspirationsArt{
+  display:none;
+}
+div#inspirationMusic{
+  display:none;
 }
 /* contact info */
 footer{
