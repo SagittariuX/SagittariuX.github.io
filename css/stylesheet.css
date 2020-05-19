@@ -434,8 +434,12 @@ img.blackstar{
 }
 
 /* interests & inspirations */
-
-
+div#interests{
+  display:none;
+}
+div#inspirations{
+  
+}
 /* contact info */
 footer{
   background-color: rgb(255, 192, 75);
