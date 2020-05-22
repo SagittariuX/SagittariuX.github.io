@@ -107,9 +107,9 @@ $(document).ready(function (){
 
 // Makes sure to rewind viewing history to top so animations could playout
 // Only chrome needs to have this explicit command
-$(window).on('beforeunload', function() {
-    $(this).scrollTop(0);
-});
+// $(window).on('beforeunload', function() {
+//     $(this).scrollTop(0);
+// });  <--- Add this in later
 
 $("#navbar").hover(function(){
     $("#navbar,#navbarIcon0, #navbarIcon1, #navbarIcon2, #menuList").addClass('toggle');
@@ -183,4 +183,16 @@ function flipMe(num){
     return null;
 }
 
+function spotifyTrack(focus){
+    var $focus = $('.spotifyTrack').get(0);
+    transform3dTarget($focus, 0, 0, 100);
+    rotate3dTarget($focus, 0 , 1, 0, 60);
+}
+
+function transform3dTarget(target, x, y, z){
+    target.style.transform = `translate3d(${x}px, ${y}px, ${z}px)`;
+}
+function rotate3dTarget(target, x, y, z, angle){
+    target.style.transform = `rotate3d(${x},${y},${z},${angle}deg)`;
+}
 
