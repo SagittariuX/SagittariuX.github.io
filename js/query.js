@@ -2,10 +2,14 @@
 var $gExperiences = 5;
 var $gCompSci = 5;
 var $gBusiness = 3;
-
+var $gSpotifyResponse ;
 //getting the site ready
 $(document).ready(function (){
+    //Starts up the Spotify access process
+    //getSpotifyAccess(); <== add this in later
     //Loads aboutme info
+   
+
     $('.aboutMeText').each(function(index, element){
         $(element).load("text/intro/aboutme1.txt");
     });

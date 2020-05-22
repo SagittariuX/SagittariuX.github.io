@@ -440,9 +440,30 @@ div#interests{
 div#inspirationsArt{
   display:none;
 }
-div#inspirationMusic{
-  display:none;
+/* Spotify Music */
+div#inspirationsMusic{
+  max-width:100%;
+  height: 80vh;
+  background-color: rgb(73, 233, 73);
+  padding: 20px;
 }
+div#spotifyPlaylist{
+  max-width: 100%;
+  height:auto;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+div.spotifyTrack{
+  margin:auto;
+  width: 40vh;
+  height: 40vh;
+  background-color: white;
+  box-shadow: rgba(0,0,0,.20);
+  transition: .5s ease;
+}
+
+
+
 /* contact info */
 footer{
   background-color: rgb(255, 192, 75);
