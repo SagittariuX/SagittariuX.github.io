@@ -204,6 +204,7 @@ function formatLeftTracks(focus, offset){
     formatLeftTracks(focus-1, offset-10);
     return;
 }
+//formats all the tracks right of main track
 function formatRightTracks(focus, offset){
     if($('.spotifyTrack').get(focus)){
         var $focus = $('.spotifyTrack').get(focus) ;
@@ -214,12 +215,10 @@ function formatRightTracks(focus, offset){
     formatRightTracks(focus+1, offset+10);
     return;
 }
-
-// function myFunc(focus){
-//     var $focus = $('.spotifyTrack').get(focus) ;
-//     transform3dTarget($focus, 300, 0 , -100, 0 , 1, 0, -60);
-//     return;
-// }
+var $gSpotifyTracks = [];
+function changeAudio (){
+    $('')
+}
 function transform3dTarget(target, moveX, moveY, moveZ, rotateX, rotateY, rotateZ, angle){
     target.style.transform = `translate3d(${moveX}vw, ${moveY}px, ${moveZ}px)
                               rotate3d(${rotateX},${rotateY},${rotateZ},${angle}deg)`;

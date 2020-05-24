@@ -57,6 +57,7 @@ function getSpotifyPlaylist(token){
 //              -> preview_url
 //              -> album -> images -> *take first element -> url
 //              -> artists (could be multiple) -> name
+//              -> external_urls -> spotify
 
 //generates the clickable tracks
 function generateTracks(items){
@@ -65,6 +66,13 @@ function generateTracks(items){
             $('#spotifyPlaylist').append(`
                 <img class='spotifyTrack' src="${item.track.album.images[0].url}"/>
             `);
+            $gSpotifyTracks.push(
+                new SpotifyTrack(item.track.name, 
+                                 item.track.album.images[0].url,
+                                 item.track.previewUrl,
+                                 item.track.external_urls.spotify,
+                                 item.track.artists)
+            );
         }
         return;
     });
@@ -73,4 +81,14 @@ function generateTracks(items){
     formatTracks(0);
     console.log('Tracks formatted');
     return;
+}
+
+class SpotifyTrack{
+    constructor(songName, picUrl, previewUrl, spotifyUrl, artists){
+        this.songName = songName;
+        this.picUrl = picUrl;
+        this.previewUrl = previewUrl;
+        this.spotifyUrl = spotifyUrl;
+        this.artists = artists;
+    }
 }
