@@ -216,7 +216,7 @@ function formatRightTracks(focus, offset){
     return;
 }
 var $gSpotifyTracks = [];
-function changeAudio (){
+function changeAudio (focus){
     $('')
 }
 function transform3dTarget(target, moveX, moveY, moveZ, rotateX, rotateY, rotateZ, angle){

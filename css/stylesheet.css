@@ -465,9 +465,8 @@ div#spotifyPlaylist img{
   transition: transform .5s ease;
   box-shadow: 0 0 1px 5px rgba(0,0,0,.20);
 }
-div#inspirationsMusic audio{
-  display:block;
-  margin: 10px auto;
+audio#spotifyPlayer{
+  display:none;
 }
 @media only screen and (max-width: 900px){
   div#spotifyPlaylist{
