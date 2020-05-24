@@ -192,8 +192,8 @@ function addingClickHandlerToTracks(){
 function formatTracks(focus){
     var $focus = $('.spotifyTrack').get(focus);
     transform3dTarget($focus, 0, 0, 0, 0 , 0, 0, 0);
-    formatLeftTracks(focus-1, -300);
-    formatRightTracks(focus+1, 300);
+    formatLeftTracks(focus-1, -30);
+    formatRightTracks(focus+1, 30);
     return;
 }
 //formats all the tracks left of main track
@@ -201,7 +201,7 @@ function formatLeftTracks(focus, offset){
     if(focus < 0) return;
     var $focus = $('.spotifyTrack').get(focus);
     transform3dTarget($focus, offset, 0, -200, 0 , 1, 0, 60);
-    formatLeftTracks(focus-1, offset-100);
+    formatLeftTracks(focus-1, offset-10);
     return;
 }
 function formatRightTracks(focus, offset){
@@ -211,7 +211,7 @@ function formatRightTracks(focus, offset){
         return;
     }
     transform3dTarget($focus, offset, 0, -200, 0 , 1, 0, -60);
-    formatRightTracks(focus+1, offset+100);
+    formatRightTracks(focus+1, offset+10);
     return;
 }
 
@@ -221,7 +221,7 @@ function formatRightTracks(focus, offset){
 //     return;
 // }
 function transform3dTarget(target, moveX, moveY, moveZ, rotateX, rotateY, rotateZ, angle){
-    target.style.transform = `translate3d(${moveX}px, ${moveY}px, ${moveZ}px)
+    target.style.transform = `translate3d(${moveX}vw, ${moveY}px, ${moveZ}px)
                               rotate3d(${rotateX},${rotateY},${rotateZ},${angle}deg)`;
 }
 

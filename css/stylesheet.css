@@ -456,7 +456,6 @@ div#spotifyPlaylist{
   perspective: 1000px;
   transform-style: preserve-3d;
 }
-
 div#spotifyPlaylist img{  
   margin:auto;
   position: absolute;
@@ -470,8 +469,11 @@ div#inspirationsMusic audio{
   display:block;
   margin: 10px auto;
 }
-
-
+@media only screen and (max-width: 900px){
+  div#spotifyPlaylist{
+    height: 30vh;
+  }
+}
 /* contact info */
 footer{
   background-color: rgb(255, 192, 75);
