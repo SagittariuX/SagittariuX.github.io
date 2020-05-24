@@ -6,7 +6,7 @@ var $gSpotifyResponse ;
 //getting the site ready
 $(document).ready(function (){
     //Starts up the Spotify access process
-    //getSpotifyAccess(); <== add this in later
+    getSpotifyAccess(); 
     //Loads aboutme info
    
 
@@ -96,12 +96,8 @@ $(document).ready(function (){
     
     //loads business info
     $("#imgFlipSide0 img").prop('src', 'pics/business/placeholder0.png');
+    
 
-    //Loads education info
-    $('#educationText').load("text/education/aboutme1.txt");
-    $('#educationTextMobile').load("text/education/aboutme1.txt");
-    $('#educationPic').prop('src', 'pics/education/placeholder0.png');
-    $('#educationPicMobile').prop('src', 'pics/education/placeholder0.png');
     new WOW().init();
 });
 
@@ -183,16 +179,39 @@ function flipMe(num){
     return null;
 }
 
-function spotifyTrack(focus){
-    var $focus = $('.spotifyTrack').get(0);
-    transform3dTarget($focus, 0, 0, 100);
-    rotate3dTarget($focus, 0 , 1, 0, 60);
+function formatTracks(focus){
+    var $focus = $('.spotifyTrack').get(focus);
+    transform3dTarget($focus, 0, 0, 0, 0 , 0, 0, 0);
+    formatLeftTracks(focus-1, -300);
+    formatRightTracks(focus+1, 300);
+    return;
+}
+//formats all the tracks left of main track
+function formatLeftTracks(focus, offset){
+    if(focus < 0) return;
+    var $focus = $('.spotifyTrack').get(focus);
+    transform3dTarget($focus, offset, 0, -200, 0 , 1, 0, 60);
+    formatLeftTracks(focus-1, offset-100);
+    return;
+}
+function formatRightTracks(focus, offset){
+    if($('.spotifyTrack').get(focus)){
+        var $focus = $('.spotifyTrack').get(focus) ;
+    }else{
+        return;
+    }
+    transform3dTarget($focus, offset, 0, -200, 0 , 1, 0, -60);
+    formatRightTracks(focus+1, offset+100);
+    return;
 }
 
-function transform3dTarget(target, x, y, z){
-    target.style.transform = `translate3d(${x}px, ${y}px, ${z}px)`;
-}
-function rotate3dTarget(target, x, y, z, angle){
-    target.style.transform = `rotate3d(${x},${y},${z},${angle}deg)`;
+// function myFunc(focus){
+//     var $focus = $('.spotifyTrack').get(focus) ;
+//     transform3dTarget($focus, 300, 0 , -100, 0 , 1, 0, -60);
+//     return;
+// }
+function transform3dTarget(target, moveX, moveY, moveZ, rotateX, rotateY, rotateZ, angle){
+    target.style.transform = `translate3d(${moveX}px, ${moveY}px, ${moveZ}px)
+                              rotate3d(${rotateX},${rotateY},${rotateZ},${angle}deg)`;
 }
 

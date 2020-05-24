@@ -39,7 +39,7 @@ function getSpotifyPlaylist(token){
             'Authorization': 'Bearer '+token
         },
         success: function(data){
-            getTracksInfo(data.items);
+            generateTracks(data.items);
             return;
         },
         error: function(xhr, status, error){
@@ -53,10 +53,23 @@ function getSpotifyPlaylist(token){
 // Tracks returned from Spotify is not cleanly just tracks
 // To get to tracks go in one more level from items
 
-function getTracksInfo(tracks){
-    tracks.forEach((item, index) => {
-        
+//item -> track -> name
+//              -> preview_url
+//              -> album -> images -> *take first element -> url
+//              -> artists (could be multiple) -> name
+
+//generates the clickable tracks 
+function generateTracks(items){
+    items.forEach( (item,index) => {
+        if(item.track.preview_url){
+            $('#spotifyPlaylist').append(`
+                <img class='spotifyTrack' onclick="formatTracks(${index})" src="${item.track.album.images[0].url}"/>
+            `);
+        }
+        return;
     });
     console.log('Tracks info compiled')
+    formatTracks(0);
+    console.log('Tracks formatted');
     return;
 }
