@@ -58,17 +58,18 @@ function getSpotifyPlaylist(token){
 //              -> album -> images -> *take first element -> url
 //              -> artists (could be multiple) -> name
 
-//generates the clickable tracks 
+//generates the clickable tracks
 function generateTracks(items){
     items.forEach( (item,index) => {
         if(item.track.preview_url){
             $('#spotifyPlaylist').append(`
-                <img class='spotifyTrack' onclick="formatTracks(${index})" src="${item.track.album.images[0].url}"/>
+                <img class='spotifyTrack' src="${item.track.album.images[0].url}"/>
             `);
         }
         return;
     });
     console.log('Tracks info compiled')
+    addingClickHandlerToTracks();
     formatTracks(0);
     console.log('Tracks formatted');
     return;

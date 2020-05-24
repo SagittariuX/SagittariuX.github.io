@@ -179,6 +179,16 @@ function flipMe(num){
     return null;
 }
 
+
+function addingClickHandlerToTracks(){
+    $('.spotifyTrack').each((index, element) => {
+        $(element).click(() =>{
+            formatTracks(index);
+        } )
+    });
+    return;
+}
+
 function formatTracks(focus){
     var $focus = $('.spotifyTrack').get(focus);
     transform3dTarget($focus, 0, 0, 0, 0 , 0, 0, 0);
