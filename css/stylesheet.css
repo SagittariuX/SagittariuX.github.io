@@ -446,7 +446,8 @@ div#inspirationsArt{
 div#inspirationsMusic{
   max-width:100%;
   height: auto;
-  background-color: #1DB954;
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(48,246,81,1) 46%, rgba(255,255,255,1) 100%);
   padding: 20px;
   font-family: 'Righteous', Arial, sans-serif;
 }
@@ -476,10 +477,11 @@ div#songInfo{
 }
 div#songInfo a{
   margin: 10px;
+  color: black;
   text-decoration: none;
 }
 div#songInfo a:hover{
-  color: white;
+  color: red;
 }
 
 @media only screen and (max-width: 900px){
@@ -489,11 +491,12 @@ div#songInfo a:hover{
 }
 /* contact info */
 footer{
-  background-color: rgb(255, 192, 75);
+  background: rgb(252,200,75);
+  background: linear-gradient(0deg, rgba(252,200,75,1) 0%, rgba(252,200,75,1) 50%, rgba(255,255,255,1) 100%);
   text-align: center;
 }
 footer h1, footer h3, footer h4{
-  color: white;
+  color: black;
   word-wrap: break-word;
 }
 div#contactOptions{
