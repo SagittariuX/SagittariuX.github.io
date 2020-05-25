@@ -183,17 +183,21 @@ function flipMe(num){
 function addingClickHandlerToTracks(){
     $('.spotifyTrack').each((index, element) => {
         $(element).click(() =>{
-            formatTracks(index);
+            formatTracks(index, 'click');
         } )
     });
     return;
 }
 
-function formatTracks(focus){
+function formatTracks(focus, handlerSource = null){
     var $focus = $('.spotifyTrack').get(focus);
+    var $player = $('audio#spotifyPlayer')[0];
     transform3dTarget($focus, 0, 0, 0, 0 , 0, 0, 0);
     formatLeftTracks(focus-1, -30);
     formatRightTracks(focus+1, 30);
+
+    changeAudio(focus, $player, handlerSource);
+
     return;
 }
 //formats all the tracks left of main track
@@ -215,9 +219,19 @@ function formatRightTracks(focus, offset){
     formatRightTracks(focus+1, offset+10);
     return;
 }
-var $gSpotifyTracks = [];
-function changeAudio (focus){
-    $('')
+//changes audio src also pauses/plays audio
+function changeAudio (focus, player, handlerSource = null){
+    if(player.src !== $gSpotifyTracks[focus].previewUrl){
+        player.src = $gSpotifyTracks[focus].previewUrl;
+        player.load();
+    }else{//same song pause it
+        player.paused? player.play(): player.pause();
+        return;
+    }
+    if(handlerSource){//only play the song if user explicitly clicks
+        player.play();
+    }
+    return;
 }
 function transform3dTarget(target, moveX, moveY, moveZ, rotateX, rotateY, rotateZ, angle){
     target.style.transform = `translate3d(${moveX}vw, ${moveY}px, ${moveZ}px)
