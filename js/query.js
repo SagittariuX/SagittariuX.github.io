@@ -186,6 +186,7 @@ function formatTracks(focus, handlerSource = null){
     formatLeftTracks(focus-1, -30);
     formatRightTracks(focus+1, 30);
 
+    $player.volume = 0.5;
     changeAudio(focus, $player, handlerSource);
     changeSongInfo(focus);
     return;
