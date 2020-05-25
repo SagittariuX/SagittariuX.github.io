@@ -446,9 +446,11 @@ div#inspirationsArt{
 div#inspirationsMusic{
   max-width:100%;
   height: auto;
-  background-color: rgb(73, 233, 73);
+  background-color: #1DB954;
   padding: 20px;
+  font-family: 'Righteous', Arial, sans-serif;
 }
+
 div#spotifyPlaylist{
   position: relative;
   max-width: 100%;
@@ -464,6 +466,20 @@ div#spotifyPlaylist img{
   cursor: pointer;
   transition: transform .5s ease;
   box-shadow: 0 0 1px 5px rgba(0,0,0,.20);
+}
+
+div#songInfo{
+  display: block;
+  width:auto;
+  margin: 0 auto;
+  text-align: center;
+}
+div#songInfo a{
+  margin: 10px;
+  text-decoration: none;
+}
+div#songInfo a:hover{
+  color: white;
 }
 
 @media only screen and (max-width: 900px){

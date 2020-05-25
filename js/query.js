@@ -179,16 +179,6 @@ function flipMe(num){
     return null;
 }
 
-
-function addingClickHandlerToTracks(){
-    $('.spotifyTrack').each((index, element) => {
-        $(element).click(() =>{
-            formatTracks(index, 'click');
-        } )
-    });
-    return;
-}
-
 function formatTracks(focus, handlerSource = null){
     var $focus = $('.spotifyTrack').get(focus);
     var $player = $('audio#spotifyPlayer')[0];
@@ -197,7 +187,7 @@ function formatTracks(focus, handlerSource = null){
     formatRightTracks(focus+1, 30);
 
     changeAudio(focus, $player, handlerSource);
-
+    changeSongInfo(focus);
     return;
 }
 //formats all the tracks left of main track
@@ -233,6 +223,32 @@ function changeAudio (focus, player, handlerSource = null){
     }
     return;
 }
+function changeSongInfo(focus){
+    var $name = $('h2#trackName');  
+    var $artists = $('h3#trackArtists');
+    $name.empty(); $artists.empty();
+
+    $name.append(`
+        <a href='${$gSpotifyTracks[focus].spotifyUrl}' target='_blank'>
+            ${$gSpotifyTracks[focus].songName}
+        </a>
+    `);
+
+    var $artistsString = '';
+    $gSpotifyTracks[focus].artists.forEach( (artist) => {
+        $artistsString += `
+            <a href='${artist.external_urls.spotify}' target='_blank'>
+                ${artist.name}
+            </a>
+        `;
+    });
+    $artists.append($artistsString);
+
+    return;
+}
+
+
+
 function transform3dTarget(target, moveX, moveY, moveZ, rotateX, rotateY, rotateZ, angle){
     target.style.transform = `translate3d(${moveX}vw, ${moveY}px, ${moveZ}px)
                               rotate3d(${rotateX},${rotateY},${rotateZ},${angle}deg)`;

@@ -84,6 +84,15 @@ function generateTracks(items){
     return;
 }
 
+function addingClickHandlerToTracks(){
+    $('.spotifyTrack').each((index, element) => {
+        $(element).click(() =>{
+            formatTracks(index, 'click');
+        } )
+    });
+    return;
+}
+
 class SpotifyTrack{
     constructor(songName, picUrl, previewUrl, spotifyUrl, artists){
         this.songName = songName;
