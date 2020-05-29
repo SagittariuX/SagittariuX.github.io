@@ -24,7 +24,7 @@ $(document).ready(function (){
             </div>
             <div class="experienceItemSplit">
                 <h3 class="experienceTitle"></h3>
-                <h3 class="experienceLocation"></h3>
+                <h3 class="experiencePosition"></h3>
                 <div class="experienceText"></div>
             </div>
         </div>
@@ -34,7 +34,7 @@ $(document).ready(function (){
         <div class="experienceMobileItem">
             <img class="experienceMobilePicture"/>
             <h3 class="experienceMobileTitle"></h3>
-            <h3 class="experienceMobileLocation"></h3>
+            <h3 class="experienceMobilePosition"></h3>
             <div class="experienceMobileText"></div>
         </div>
         `);
@@ -115,14 +115,14 @@ $("#navbar").hover(function(){
 
 function loadInExperience(json, index){
     $('.experienceTitle').eq(index).html(json.title);
-    $('.experienceLocation').eq(index).html(json.location);
+    $('.experiencePosition').eq(index).html(json.position);
     $('.experienceText').eq(index).html(json.text);
     return null;
 }
 
 function loadInExperienceMobile(json, index){
     $('.experienceMobileTitle').eq(index).html(json.title);
-    $('.experienceMobileLocation').eq(index).html(json.location);
+    $('.experienceMobilePosition').eq(index).html(json.position);
     $('.experienceMobileText').eq(index).html(json.text);
     return null;
 }

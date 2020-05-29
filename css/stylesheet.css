@@ -89,7 +89,6 @@ h1{
   color: orange;
 }
 #banner{
-  width: inherit;
   height: 100vh;
 }
 .bannerTextBox{
@@ -165,16 +164,14 @@ h1.bannerText{
   display:block;
   float:right;
 }
-.experiencePicture, .experienceMobilePicture{
-  height: 200px;
-  width: 200px;
-  
+.experiencePicture{
+  width: 20vw;
 }
 h3.experienceTitle, h3.experienceMobileTitle {
   margin: 0 0 0 0;
   color: orange;
 }
-h3.experienceLocation, h3.experienceMobileLocation {
+h3.experiencePosition, h3.experienceMobilePosition {
   margin: 0 0 0 0;
   color: #dd6b4f;
 }
@@ -194,6 +191,9 @@ h3.experienceLocation, h3.experienceTitle,  div.experienceText {
 
   .experienceMobile { 
     display:block;
+  }
+  .experienceMobilePicture {
+    width: 50vw;
   }
 }
 
