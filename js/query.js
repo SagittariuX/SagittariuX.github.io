@@ -114,16 +114,18 @@ $("#navbar").hover(function(){
 });
 
 function loadInExperience(json, index){
-    $('.experienceTitle').eq(index).html(json.title);
-    $('.experiencePosition').eq(index).html(json.position);
-    $('.experienceText').eq(index).html(json.text);
+    var $pos = -1*index-1;
+    $('.experienceTitle').eq($pos).html(json.title);
+    $('.experiencePosition').eq($pos).html(json.position);
+    $('.experienceText').eq($pos).html(json.text);
     return null;
 }
 
 function loadInExperienceMobile(json, index){
-    $('.experienceMobileTitle').eq(index).html(json.title);
-    $('.experienceMobilePosition').eq(index).html(json.position);
-    $('.experienceMobileText').eq(index).html(json.text);
+    var $pos = -1*index-1;
+    $('.experienceMobileTitle').eq($pos).html(json.title);
+    $('.experienceMobilePosition').eq($pos).html(json.position);
+    $('.experienceMobileText').eq($pos).html(json.text);
     return null;
 }
 
