@@ -47,7 +47,7 @@ $(document).ready(function (){
     $($('.experienceMobilePicture').get().reverse()).each(function(index, element){
         $(element).prop('src', 'pics/experience/experience'+index+'.png');
     });
-    $('.experienceItem').each(function(index, element){
+    $($('.experienceItem').get().reverse()).each(function(index, element){
         $.getJSON("text/experience/experience"+index+".json", function(json){
             loadInExperience(json, index);
         });
