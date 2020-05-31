@@ -175,14 +175,18 @@ h3.experiencePosition, h3.experienceMobilePosition {
   margin: 0 0 0 0;
   color: #dd6b4f;
 }
-div.experienceMobileText{
-  max-width: 80%;
-  margin: 20px auto;
-  text-align: justify;
-}
 h3.experiencePosition, h3.experienceTitle,  div.experienceText {
   margin: 0 0 0 20px;
 }
+div.experienceText{
+  width:60%;
+  text-align: justify;
+}
+div.experienceMobileText{
+  max-width: 80%;
+  margin: 20px auto;
+}
+
 
 @media only screen and (max-width: 900px){
   .experience{
