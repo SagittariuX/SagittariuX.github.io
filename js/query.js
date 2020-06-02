@@ -1,8 +1,6 @@
 //Global Variables
 var $gExperiences = 5;
 var $gCompSci = 5;
-var $gBusiness = 3;
-var $gSpotifyResponse ;
 //getting the site ready
 $(document).ready(function (){
     //Starts up the Spotify access process
@@ -93,16 +91,11 @@ $(document).ready(function (){
         `);
     }
     loadInCompSciText(0);
-    
-    //loads business info
-    $("#imgFlipSide0 img").prop('src', 'pics/business/placeholder0.png');
-    
 
     new WOW().init();
 });
 
 // Makes sure to rewind viewing history to top so animations could playout
-// Only chrome needs to have this explicit command
 // $(window).on('beforeunload', function() {
 //     $(this).scrollTop(0);
 // });  <--- Add this in later
@@ -148,36 +141,6 @@ function loadInCompSciText(fileNum){
         //loads in the actual text
         $('#compSciText').html(json.text);
     });
-    return null;
-}
-
-var $gFlipcardSide = 0;//keeps track of which side is currently face up
-function flipMe(num){
-    if($('.dots').eq(num).hasClass('toggle')){
-        return null;
-    }
-
-    var $imgTarget;
-    var $textTarget;
-    if($gFlipcardSide == 0){
-        $gFlipcardSide = 1;
-        $imgTarget = $('#imgFlipSide1 img');
-        $textTarget = $('#textFlipSide1');
-    }else{
-        $gFlipcardSide = 0;
-        $imgTarget = $('#imgFlipSide0 img');
-        $textTarget = $('#textFlipSide0');
-    }
-    $('.dots').each(function(index, element){
-        if(num == index){
-            $(element).addClass('toggle');
-        }
-        else{
-            $(element).removeClass('toggle');
-        }
-    });
-    $imgTarget.prop('src', 'pics/business/placeholder1.png')
-    $('.flipcard').toggleClass('flipping');
     return null;
 }
 
@@ -249,8 +212,6 @@ function changeSongInfo(focus){
 
     return;
 }
-
-
 
 function transform3dTarget(target, moveX, moveY, moveZ, rotateX, rotateY, rotateZ, angle){
     target.style.transform = `translate3d(${moveX}vw, ${moveY}px, ${moveZ}px)
