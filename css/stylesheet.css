@@ -287,7 +287,11 @@ div.experienceMobileText{
 }
 img.stars{
   width:5vw;
+  max-width: 100px;
+  min-width: 50px;
   height:5vw;
+  max-height: 100px;
+  min-height: 50px;
 }
 img.goldstar{
   content: url("../pics/misc/goldstar.png");
@@ -354,6 +358,7 @@ div#inspirationsArt{
 /* Spotify Music */
 div#inspirationsMusic{
   max-width:100%;
+  overflow: hidden;
   height: auto;
   background: rgb(255,255,255);
   background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(48,246,81,1) 46%, rgba(255,255,255,1) 100%);
@@ -400,8 +405,8 @@ div#songInfo a:hover{
 }
 /* contact info */
 footer{
-  background: rgb(252,200,75);
-  background: linear-gradient(0deg, rgba(252,200,75,1) 0%, rgba(252,200,75,1) 50%, rgba(255,255,255,1) 100%);
+  background: rgb(145, 145, 145);
+  overflow: hidden;
   text-align: center;
 }
 footer h1, footer h3, footer h4{
