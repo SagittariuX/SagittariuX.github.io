@@ -144,13 +144,10 @@ function loadInCompSciText(fileNum){
     return null;
 }
 var $gFocusTrack;
-var $gJustSwiped = false;
+var $gSwipeTimeout = 0;
 function formatTracks(focus, handlerSource = null){
     
-    if($gJustSwiped) {
-        $gJustSwiped = false;
-        return;
-    }; //prevent ghostclicks
+    if(Date.now() < $gSwipeTimeout) return; //prevent ghostclicks
 
 
     if(focus > -1 && focus < $('.spotifyTrack').length){//make sure nothing is out of index

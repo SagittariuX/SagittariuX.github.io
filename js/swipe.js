@@ -8,11 +8,11 @@ var playlistHandler = new Hammer($('#spotifyPlaylist')[0]);
 
 playlistHandler.on('swipeleft', function(event){
     formatTracks($gFocusTrack+1, event.type);
-    $gJustSwiped = true;
+    $gSwipeTimeout = Date.now() + 100;
     console.log(event.type);
 });
 playlistHandler.on('swiperight', function(event){
     formatTracks($gFocusTrack-1, event.type);
-    $gJustSwiped = true;
+    $gSwipeTimeout = Date.now() + 100;
     console.log(event.type);
 });

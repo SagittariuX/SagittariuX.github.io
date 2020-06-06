@@ -38,6 +38,7 @@ function getSpotifyPlaylist(token){
             'Content-type':'application/x-www-form-urlencoded',
             'Authorization': 'Bearer '+token
         },
+        data: 'limit=10',
         success: function(data){
             generateTracks(data.items);
             return;
