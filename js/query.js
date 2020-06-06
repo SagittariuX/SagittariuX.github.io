@@ -143,8 +143,22 @@ function loadInCompSciText(fileNum){
     });
     return null;
 }
-
+var $gFocusTrack;
+var $gJustSwiped = false;
 function formatTracks(focus, handlerSource = null){
+    
+    if($gJustSwiped) {
+        $gJustSwiped = false;
+        return;
+    }; //prevent ghostclicks
+
+
+    if(focus > -1 && focus < $('.spotifyTrack').length){//make sure nothing is out of index
+        $gFocusTrack = focus;
+    }else{
+        return;
+    }
+
     var $focus = $('.spotifyTrack').get(focus);
     var $player = $('audio#spotifyPlayer')[0];
     transform3dTarget($focus, 0, 0, 0, 0 , 0, 0, 0);
@@ -184,7 +198,7 @@ function changeAudio (focus, player, handlerSource = null){
         player.paused? player.play(): player.pause();
         return;
     }
-    if(handlerSource){//only play the song if user explicitly clicks
+    if(handlerSource){//only play the song if user explicitly commands
         player.play();
     }
     return;

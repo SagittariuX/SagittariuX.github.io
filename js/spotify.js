@@ -65,7 +65,7 @@ function generateTracks(items){
     items.forEach( (item,index) => {
         if(item.track.preview_url){
             $('#spotifyPlaylist').append(`
-                <img class='spotifyTrack' src="${item.track.album.images[0].url}"/>
+                <img class='spotifyTrack' draggable="false" src="${item.track.album.images[0].url}"/>
             `);
             $gSpotifyTracks.push(
                 new SpotifyTrack(item.track.name, 

@@ -350,9 +350,11 @@ img.blackstar{
 
 /* artstation gallery */
 div#inspirationsArt{
+  display:none;
   max-width: 100%;
 }
 div#artGallery{
+  background: gray;
   width: 80%;
   height: 300px;
   text-align: center;
