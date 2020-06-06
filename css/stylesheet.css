@@ -348,12 +348,15 @@ img.blackstar{
 }
 
 
-/* interests & inspirations */
-div#interests{
-  display:none;
-}
+/* artstation gallery */
 div#inspirationsArt{
-  display:none;
+  max-width: 100%;
+}
+div#artGallery{
+  width: 80%;
+  height: 300px;
+  text-align: center;
+  font-size: large;
 }
 /* Spotify Music */
 div#inspirationsMusic{
