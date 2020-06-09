@@ -288,10 +288,10 @@ div.experienceMobileText{
 img.stars{
   width:5vw;
   max-width: 100px;
-  min-width: 50px;
+  min-width: 20px;
   height:5vw;
   max-height: 100px;
-  min-height: 50px;
+  min-height: 20px;
 }
 img.goldstar{
   content: url("../pics/misc/goldstar.png");
@@ -356,7 +356,6 @@ div#inspirationsArt{
 div#artContainer{
   position:relative;
   max-width: 100%;
-  
   overflow: hidden;
   padding-top: 56.25%;
   background: gray;
