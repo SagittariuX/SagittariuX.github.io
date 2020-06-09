@@ -1,13 +1,14 @@
 //Global Variables
 var $gExperiences = 5;
 var $gCompSci = 5;
+var $gAllArtInfo = [];
+var $gFocusTrack;
+var $gSwipeTimeout = 0;
 //getting the site ready
 $(document).ready(function (){
     //Starts up the Spotify access process
     getSpotifyAccess(); 
     //Loads aboutme info
-   
-
     $('.aboutMeText').each(function(index, element){
         $(element).load("text/intro/aboutme1.txt");
     });
@@ -143,8 +144,8 @@ function loadInCompSciText(fileNum){
     });
     return null;
 }
-var $gFocusTrack;
-var $gSwipeTimeout = 0;
+
+// Things to do with spotify
 function formatTracks(focus, handlerSource = null){
     
     if(Date.now() < $gSwipeTimeout) return; //prevent ghostclicks
@@ -228,4 +229,22 @@ function transform3dTarget(target, moveX, moveY, moveZ, rotateX, rotateY, rotate
     target.style.transform = `translate3d(${moveX}vw, ${moveY}px, ${moveZ}px)
                               rotate3d(${rotateX},${rotateY},${rotateZ},${angle}deg)`;
 }
+//Things to do with spotify ends
 
+//Things to do with artstation
+
+
+
+function loadMainArt(option){
+    var canvas = $('img#mainArt')[0];
+    canvas.prop('src', $gAllArtInfo[option].pic_url)
+    return;
+}
+class ArtInfo{
+    constructor(pic_url, text, dir_url){
+        this.pic_url = pic_url;
+        this.text = text;
+        this.dir_url = dir_url;
+    }
+}
+//Things to do with artstation ends
