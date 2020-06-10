@@ -1,8 +1,8 @@
-var galleryHandler = new Hammer($('#artGallery')[0]);
+// var galleryHandler = new Hammer($('#artGallery')[0]);
 
-galleryHandler.on('swipeleft swiperight', function(event){
-    console.log(event.type);
-});
+// galleryHandler.on('swipeleft swiperight', function(event){
+//     console.log(event.type);
+// });
 
 var playlistHandler = new Hammer($('#spotifyPlaylist')[0]);
 playlistHandler.on('swipeleft swiperight', function(event){
