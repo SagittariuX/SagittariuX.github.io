@@ -262,9 +262,9 @@ function loadInArtOptions(){
     var options = $('div#artOptions')[0];
     $.each($gAllArtInfo, function(index, art){
         offset = index*width;
-        options.append(`
+        $(options).append(`
             <img style="left:${offset}%; width:${width}%" src="${art.pic_url}">
-        `)    
+        `);
     });
 }
 
