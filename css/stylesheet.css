@@ -395,7 +395,6 @@ div#artOptions img{
   position: absolute;
   top: 0; bottom: 0;
   left: 0;
-  width: 16.66% ;
   height: 100%;
   opacity: .5;
   transition: .5s;

@@ -93,6 +93,23 @@ $(document).ready(function (){
     }
     loadInCompSciText(0);
 
+    //loads art Info
+    $.getJSON('text/artstation/artstation.json', function(json){
+        $.each(json.items, function(index, item){ //gather everything into a list
+            $gAllArtInfo.push(
+                new ArtInfo(
+                    item.pic_url,
+                    item.text,
+                    item.dir_url
+                )
+            );
+        });
+        console.log('art loaded')
+        return;
+    })
+    loadMainArt(0);
+    loadInArtOptions();
+
     new WOW().init();
 });
 
@@ -232,14 +249,25 @@ function transform3dTarget(target, moveX, moveY, moveZ, rotateX, rotateY, rotate
 //Things to do with spotify ends
 
 //Things to do with artstation
-
-
-
 function loadMainArt(option){
+
     var canvas = $('img#mainArt')[0];
     canvas.prop('src', $gAllArtInfo[option].pic_url)
     return;
 }
+
+function loadInArtOptions(){
+    var width = 100/($gAllArtInfo.length) ;
+    var offset = 0;
+    var options = $('div#artOptions')[0];
+    $.each($gAllArtInfo, function(index, art){
+        offset = index*width;
+        options.append(`
+            <img style="left:${offset}%; width:${width}%" src="${art.pic_url}">
+        `)    
+    });
+}
+
 class ArtInfo{
     constructor(pic_url, text, dir_url){
         this.pic_url = pic_url;
