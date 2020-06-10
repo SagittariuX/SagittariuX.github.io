@@ -252,7 +252,7 @@ function transform3dTarget(target, moveX, moveY, moveZ, rotateX, rotateY, rotate
 function loadMainArt(option){
 
     var canvas = $('img#mainArt')[0];
-    canvas.prop('src', $gAllArtInfo[option].pic_url);
+    $(canvas).prop('src', $gAllArtInfo[option].pic_url);
     return;
 }
 
