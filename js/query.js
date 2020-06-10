@@ -104,11 +104,11 @@ $(document).ready(function (){
                 )
             );
         });
-        console.log('art loaded')
+        console.log('art loaded');
+        loadMainArt(0);
+        loadInArtOptions();
         return;
     })
-    loadMainArt(0);
-    loadInArtOptions();
 
     new WOW().init();
 });
