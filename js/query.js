@@ -270,7 +270,7 @@ function loadInArtOptions(){
     $.each($gAllArtInfo, function(index, art){
         offset = index*width;
         $(options).append(`
-            <img style="left:${offset}%; width:${width}%" src="${art.pic_url} onclick="loadMainArt(${index})">
+            <img style="left:${offset}%; width:${width}%" src="${art.pic_url}" onclick="loadMainArt(${index})">
         `);
     });
 }
