@@ -105,8 +105,8 @@ $(document).ready(function (){
             );
         });
         console.log('art loaded');
-        loadMainArt(0);
         loadInArtOptions();
+        loadMainArt(0);
         return;
     })
 
@@ -250,9 +250,16 @@ function transform3dTarget(target, moveX, moveY, moveZ, rotateX, rotateY, rotate
 
 //Things to do with artstation
 function loadMainArt(option){
-
     var canvas = $('img#mainArt')[0];
+    var textBox = $('div#artText span')[0];
     $(canvas).prop('src', $gAllArtInfo[option].pic_url);
+    $(textBox).empty();
+    $(textBox).html($gAllArtInfo[option].text);
+    $('div#artOptions img').each(function(index, element){
+        $(element).removeClass('toggle');
+        if (index == option) $(element).addClass('toggle');
+        return;
+    });
     return;
 }
 
@@ -263,10 +270,11 @@ function loadInArtOptions(){
     $.each($gAllArtInfo, function(index, art){
         offset = index*width;
         $(options).append(`
-            <img style="left:${offset}%; width:${width}%" src="${art.pic_url}">
+            <img style="left:${offset}%; width:${width}%" src="${art.pic_url} onclick="loadMainArt(${index})">
         `);
     });
 }
+
 
 class ArtInfo{
     constructor(pic_url, text, dir_url){
