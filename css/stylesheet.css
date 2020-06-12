@@ -349,6 +349,15 @@ img.blackstar{
 
 
 /* artstation gallery */
+div#galleryBack{
+  padding: 5% 0;
+  max-width: 100%;
+  background: rgb(26, 26, 26);
+}
+div#galleryBack h2{
+  color: white;
+  text-align: center;
+}
 div#inspirationsArt{
   width: 80%;
   max-width: 1300px;
@@ -359,7 +368,6 @@ div#artContainer{
   max-width: 100%;
   overflow: hidden;
   padding-top: 56.25%;
-  background: gray;
 }
 img#mainArt{
   position: absolute;
@@ -368,10 +376,14 @@ img#mainArt{
   margin: 0 auto;
   width: auto;
   height: 100%;
+  overflow: hidden;
 }
 div#artText{
-  position: relative;
-  background : red;
+  position: absolute;
+  background : rgb(26, 26, 26);
+  top: 0;
+  left: 0;right: 0;
+  opacity: .7;
   max-width: 100%;
   padding-top: 5%;
   text-align: center;
@@ -380,13 +392,14 @@ div#artText{
 div#artText span{
   position: absolute;
   margin: auto;
+  color: white;
+  padding-top: 10px;
   top: 0; bottom: 0;
   left: 0; right: 0;
 }
 div#artOptions{
   position:relative;
   overflow: hidden;
-  background: gray;
   max-width: 100%;
   padding-top: 10%;
 
