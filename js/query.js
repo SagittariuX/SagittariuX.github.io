@@ -252,7 +252,9 @@ function transform3dTarget(target, moveX, moveY, moveZ, rotateX, rotateY, rotate
 function loadMainArt(option){
     var canvas = $('img#mainArt')[0];
     var textBox = $('div#artText span')[0];
+    var artLink = $('a#artLink')[0];
     $(canvas).prop('src', $gAllArtInfo[option].pic_url);
+    $(artLink).prop('href', $gAllArtInfo[option].dir_url)
     $(textBox).empty();
     $(textBox).html($gAllArtInfo[option].text);
     $('div#artOptions img').each(function(index, element){

@@ -82,7 +82,6 @@ nav#navbar.toggle{
 }
 
 h1{
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: 100;
   padding:5vh 0 5vh 0;
   text-align: center;
@@ -353,6 +352,7 @@ div#galleryBack{
   padding: 5% 0;
   max-width: 100%;
   background: rgb(26, 26, 26);
+  box-shadow: 0 -5px 10px rgba(0,0,0,.60),0 5px 10px rgba(0,0,0,.60);
 }
 div#galleryBack h2{
   color: white;
@@ -387,7 +387,7 @@ div#artText{
   max-width: 100%;
   padding-top: 5%;
   text-align: center;
-  font-size: large;
+  
 }
 div#artText span{
   position: absolute;
@@ -396,6 +396,7 @@ div#artText span{
   padding-top: 10px;
   top: 0; bottom: 0;
   left: 0; right: 0;
+  font-size: 1.5vw;
 }
 div#artOptions{
   position:relative;
@@ -421,6 +422,7 @@ div#inspirationsMusic{
   max-width:100%;
   overflow: hidden;
   height: auto;
+  margin-top: 5%;
   background: rgb(255,255,255);
   background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(48,246,81,1) 46%, rgba(255,255,255,1) 100%);
   padding: 20px;
