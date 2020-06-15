@@ -2,13 +2,18 @@
     "items": [
         {
             "pic_url": "https://cdna.artstation.com/p/assets/images/images/012/929/874/large/wl-op-3s.jpg?1537238794",
-            "text": "something",
+            "text": "Love the stylized art, almost like a water painting",
             "dir_url": "https://www.artstation.com/artwork/gZBvx"
         },
         {
             "pic_url": "https://cdnb.artstation.com/p/assets/images/images/000/451/751/large/khyzyl-saleem-panterafinallow.jpg?1443927051",
-            "text": "something",
+            "text": "Are you sure this is not a photo?",
             "dir_url": "https://www.artstation.com/artwork/48Zn4"
+        },
+        {
+            "pic_url": "https://cdnb.artstation.com/p/assets/images/images/012/936/301/large/inhyuk-lee-spider-geddon-4-6.jpg?1537272994",
+            "text": "Big Spiderman fan here, love this collage of Spidey",
+            "dir_url": "https://www.artstation.com/artwork/8QLyO"
         }
     ]
 
