@@ -249,12 +249,17 @@ function transform3dTarget(target, moveX, moveY, moveZ, rotateX, rotateY, rotate
 //Things to do with spotify ends
 
 //Things to do with artstation
+//loads in art for the canvas(both desktop and mobile)
+//only call this for desktop changes
 function loadMainArt(option){
     var canvas = $('img#mainArt')[0];
-    var textBox = $('div#artText span')[0];
+    var canvasMobile = $('img#mainArtMobile')[0];
     var artLink = $('a#artLink')[0];
+    var textBox = $('div#artText span')[0];
     $(canvas).prop('src', $gAllArtInfo[option].pic_url);
-    $(artLink).prop('href', $gAllArtInfo[option].dir_url)
+    $(canvasMobile).prop('src', $gAllArtInfo[option].pic_url);
+    $(artLink).prop('href', $gAllArtInfo[option].dir_url);
+    $(artLinkMobile).prop('href', $gAllArtInfo[option].dir_url);
     $(textBox).empty();
     $(textBox).html($gAllArtInfo[option].text);
     $('div#artOptions img').each(function(index, element){
@@ -277,6 +282,9 @@ function loadInArtOptions(){
     });
 }
 
+function openArtUrl(){
+    
+}
 
 class ArtInfo{
     constructor(pic_url, text, dir_url){

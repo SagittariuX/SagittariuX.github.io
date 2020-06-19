@@ -344,7 +344,6 @@ img.blackstar{
   }
 }
 
-
 /* artstation gallery */
 div#galleryBack{
   padding: 5% 0;
@@ -356,18 +355,21 @@ div#galleryBack h2{
   color: white;
   text-align: center;
 }
-div#inspirationsArt{
+div#inspirationsArt, div#inspirationsArtMobile{
   width: 80%;
   max-width: 1300px;
   margin: 0 auto;
 }
-div#artContainer{
+div#inspirationsArtMobile{
+  display: none;
+}
+div#artContainer, div#artContainerMobile{
   position:relative;
   max-width: 100%;
   overflow: hidden;
   padding-top: 56.25%;
 }
-img#mainArt{
+img#mainArt, img#mainArtMobile{
   position: absolute;
   top: 0; bottom: 0;
   left: 0; right: 0;
@@ -414,6 +416,16 @@ div#artOptions img{
 }
 div#artOptions img:hover, div#artOptions img.toggle{
   opacity: 1;
+}
+
+@media only screen and (max-width: 900px){
+  div#inspirationsArt{
+    display: none;
+  }
+  div#inspirationsArtMobile{
+    display: block;
+  }
+  
 }
 /* Spotify Music */
 div#inspirationsMusic{
