@@ -107,7 +107,8 @@ $(document).ready(function (){
         console.log('art loaded');
         loadInArtOptions();
         loadMainArt($gAllArtInfo[0].pic_url, $gAllArtInfo[0].text, $gAllArtInfo[0].dir_url);
-        addingClickHanderToArt();
+        addingClickHanderToMainArt();
+        addingClickHanderToArtOptions();
         return;
     })
 
@@ -288,6 +289,13 @@ function addingClickHanderToArtOptions(){
         });
         return;
     });
+    return;
+}
+function addingClickHanderToMainArt(){
+    var canvas = $('img#mainArt')[0];
+    canvas.click(function(){
+        window.open($(this).data('dirurl'));
+    })
     return;
 }
 
