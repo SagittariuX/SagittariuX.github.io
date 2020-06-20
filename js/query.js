@@ -106,7 +106,8 @@ $(document).ready(function (){
         });
         console.log('art loaded');
         loadInArtOptions();
-        loadMainArt(0);
+        loadMainArt($gAllArtInfo[0]);
+        addingClickHanderToArt();
         return;
     })
 
@@ -249,17 +250,16 @@ function transform3dTarget(target, moveX, moveY, moveZ, rotateX, rotateY, rotate
 //Things to do with spotify ends
 
 //Things to do with artstation
-function loadMainArt(option){
+function loadMainArt(data){
     var canvas = $('img#mainArt')[0];
     var textBox = $('div#artText span')[0];
     var artLink = $('a#artLink')[0];
-    $(canvas).prop('src', $gAllArtInfo[option].pic_url);
-    $(artLink).prop('href', $gAllArtInfo[option].dir_url)
+    $(canvas).prop('src', data.pic_url);
+    $(artLink).prop('href', data.dir_url)
     $(textBox).empty();
-    $(textBox).html($gAllArtInfo[option].text);
+    $(textBox).html(data.text);
     $('div#artOptions img').each(function(index, element){
         $(element).removeClass('toggle');
-        if (index == option) $(element).addClass('toggle');
         return;
     });
     return;
@@ -272,11 +272,24 @@ function loadInArtOptions(){
     $.each($gAllArtInfo, function(index, art){
         offset = index*width;
         $(options).append(`
-            <img style="left:${offset}%; width:${width}%" src="${art.pic_url}" onclick="loadMainArt(${index})">
+            <img style="left:${offset}%; width:${width}%" 
+                 src="${art.pic_url}"
+                 data-artdata="${art}">
         `);
     });
 }
 
+function addingClickHanderToArt(){
+    $('div#artOptions img').click(()=>{
+        loadMainArt($(this).data('artdata'));
+        addToggle($(this));
+    })
+    $('img#mainArt')[0].click(()=>{
+        window.open($(this).attr('src'));
+        console.log('mainart click');
+    });
+    return;
+}
 
 class ArtInfo{
     constructor(pic_url, text, dir_url){
@@ -286,3 +299,8 @@ class ArtInfo{
     }
 }
 //Things to do with artstation ends
+
+function addToggle(element){
+    $(element).addClass('toggle');
+    return;
+}
