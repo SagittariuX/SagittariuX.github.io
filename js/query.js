@@ -106,7 +106,7 @@ $(document).ready(function (){
         });
         console.log('art loaded');
         loadInArtOptions();
-        loadMainArt($gAllArtInfo[0]);
+        loadMainArt($gAllArtInfo[0].pic_url, $gAllArtInfo[0].text, $gAllArtInfo[0].dir_url);
         addingClickHanderToArt();
         return;
     })
@@ -254,6 +254,7 @@ function loadMainArt(pic_url, text, dir_url){
     var canvas = $('img#mainArt')[0];
     var textBox = $('div#artText span')[0];
     $(canvas).prop('src', pic_url);
+    $(canvas).data("dirurl", dir_url);
     $(textBox).empty();
     $(textBox).html(text);
     $('div#artOptions img').each(function(index, element){
@@ -272,7 +273,7 @@ function loadInArtOptions(){
         $(options).append(`
             <img style="left:${offset}%; width:${width}%" 
                  src="${art.pic_url}"
-                 data-arturl="${art.pic_url}"
+                 data-picurl="${art.pic_url}"
                  data-text="${art.text}"
                  data-dirurl="${art.dir_url}">
         `);
@@ -282,7 +283,7 @@ function loadInArtOptions(){
 function addingClickHanderToArtOptions(){
     $('div#artOptions img').each(function (index, element){
         $(element).click(function(){
-            loadMainArt($(this).data('arturl'),$(this).data('text'), $(this).data('dirurl'));
+            loadMainArt($(this).data('picurl'),$(this).data('text'), $(this).data('dirurl'));
             addToggle($(this));
         });
         return;
