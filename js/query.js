@@ -280,11 +280,13 @@ function loadInArtOptions(){
 }
 
 function addingClickHanderToArt(){
-    $('div#artOptions img').click(()=>{
-        console.log($(this).data('artdata'));
-        loadMainArt($(this).data('artdata'));
-        addToggle($(this));
-    })
+    $('div#artOptions img').each((index, element) => {
+        $(element).click(()=>{
+            console.log($(this).data('artdata'));
+            loadMainArt($(this).data('artdata'));
+            addToggle($(this));
+        });
+    });
     $('img#mainArt')[0].click(()=>{
         window.open($(this).attr('src'));
         console.log('mainart click');
