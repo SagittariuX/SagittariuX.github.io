@@ -254,7 +254,6 @@ function loadMainArt(pic_url, text, dir_url){
     var canvas = $('img#mainArt')[0];
     var textBox = $('div#artText span')[0];
     $(canvas).prop('src', pic_url);
-    $(artLink).prop('href', dir_url)
     $(textBox).empty();
     $(textBox).html(text);
     $('div#artOptions img').each(function(index, element){
