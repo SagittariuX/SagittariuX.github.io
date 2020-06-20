@@ -251,25 +251,11 @@ function transform3dTarget(target, moveX, moveY, moveZ, rotateX, rotateY, rotate
 //Things to do with spotify ends
 
 //Things to do with artstation
-<<<<<<< HEAD
-//loads in art for the canvas(both desktop and mobile)
-//only call this for desktop changes
-function loadMainArt(option){
-    var canvas = $('img#mainArt')[0];
-    var canvasMobile = $('img#mainArtMobile')[0];
-    var artLink = $('a#artLink')[0];
-    var textBox = $('div#artText span')[0];
-    $(canvas).prop('src', $gAllArtInfo[option].pic_url);
-    $(canvasMobile).prop('src', $gAllArtInfo[option].pic_url);
-    $(artLink).prop('href', $gAllArtInfo[option].dir_url);
-    $(artLinkMobile).prop('href', $gAllArtInfo[option].dir_url);
-=======
 function loadMainArt(pic_url, text, dir_url){
     var canvas = $('img#mainArt')[0];
     var textBox = $('div#artText span')[0];
     $(canvas).prop('src', pic_url);
     $(canvas).data("dirurl", dir_url);
->>>>>>> 2134b292344743fb19d0e1b48902783fd7b5f486
     $(textBox).empty();
     $(textBox).html(text);
     $('div#artOptions img').each(function(index, element){
@@ -295,10 +281,6 @@ function loadInArtOptions(){
     });
 }
 
-<<<<<<< HEAD
-function openArtUrl(){
-    
-=======
 function addingClickHanderToArtOptions(){
     $('div#artOptions img').each(function (index, element){
         $(element).click(function(){
@@ -315,7 +297,6 @@ function addingClickHanderToMainArt(){
         window.open($(this).data('dirurl'));
     })
     return;
->>>>>>> 2134b292344743fb19d0e1b48902783fd7b5f486
 }
 
 class ArtInfo{
