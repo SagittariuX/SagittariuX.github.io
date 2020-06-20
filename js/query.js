@@ -250,14 +250,13 @@ function transform3dTarget(target, moveX, moveY, moveZ, rotateX, rotateY, rotate
 //Things to do with spotify ends
 
 //Things to do with artstation
-function loadMainArt(data){
+function loadMainArt(pic_url, text, dir_url){
     var canvas = $('img#mainArt')[0];
     var textBox = $('div#artText span')[0];
-    var artLink = $('a#artLink')[0];
-    $(canvas).prop('src', data.pic_url);
-    $(artLink).prop('href', data.dir_url)
+    $(canvas).prop('src', pic_url);
+    $(artLink).prop('href', dir_url)
     $(textBox).empty();
-    $(textBox).html(data.text);
+    $(textBox).html(text);
     $('div#artOptions img').each(function(index, element){
         $(element).removeClass('toggle');
         return;
@@ -274,23 +273,19 @@ function loadInArtOptions(){
         $(options).append(`
             <img style="left:${offset}%; width:${width}%" 
                  src="${art.pic_url}"
-                 data-artdata="${art.pic_url}">
+                 data-arturl="${art.pic_url}"
+                 data-text="${art.text}"
+                 data-dirurl="${art.dir_url}">
         `);
     });
 }
 
-function addingClickHanderToArt(){
+function addingClickHanderToArtOptions(){
     $('div#artOptions img').each(function (index, element){
         $(element).click(function(){
-            console.log($(this));
-            loadMainArt($(this).data('artdata'));
+            loadMainArt($(this).data('arturl'),$(this).data('text'), $(this).data('dirurl'));
             addToggle($(this));
         });
-        return;
-    });
-    $('img#mainArt')[0].click(function(){
-        window.open($(this).attr('src'));
-        console.log('mainart click');
         return;
     });
     return;
