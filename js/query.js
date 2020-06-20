@@ -274,7 +274,9 @@ function loadInArtOptions(){
         $(options).append(`
             <img style="left:${offset}%; width:${width}%" 
                  src="${art.pic_url}"
-                 data-artdata="${art.toJson()}">
+                 data-artdata="{"pic_url": ${art.pic_url},
+                                "text": ${art.text},
+                                "dir_url": ${art.dir_url}}">
         `);
     });
 }
@@ -286,10 +288,12 @@ function addingClickHanderToArt(){
             loadMainArt($(this).data('artdata'));
             addToggle($(this));
         });
+        return;
     });
     $('img#mainArt')[0].click(function(){
         window.open($(this).attr('src'));
         console.log('mainart click');
+        return;
     });
     return;
 }
@@ -300,19 +304,10 @@ class ArtInfo{
         this.text = text;
         this.dir_url = dir_url;
     }
-
-    toJson(){
-        return `{
-            "pic_url": ${this.pic_url},
-            "text": ${this.text},
-            "dir_url": ${this.dir_url}
-        }`;
-    }
 }
 //Things to do with artstation ends
 
 function addToggle(element){
-    console.log('adding toggle');
     $(element).addClass('toggle');
     return;
 }
