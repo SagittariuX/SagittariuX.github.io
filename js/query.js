@@ -293,7 +293,7 @@ function addingClickHanderToArtOptions(){
 }
 function addingClickHanderToMainArt(){
     var canvas = $('img#mainArt')[0];
-    canvas.click(function(){
+    $(canvas).click(function(){
         window.open($(this).data('dirurl'));
     })
     return;
