@@ -106,7 +106,9 @@ $(document).ready(function (){
         });
         console.log('art loaded');
         loadInArtOptions();
-        loadMainArt(0);
+        loadMainArt($gAllArtInfo[0].pic_url, $gAllArtInfo[0].text, $gAllArtInfo[0].dir_url);
+        addingClickHanderToMainArt();
+        addingClickHanderToArtOptions();
         return;
     })
 
@@ -249,6 +251,7 @@ function transform3dTarget(target, moveX, moveY, moveZ, rotateX, rotateY, rotate
 //Things to do with spotify ends
 
 //Things to do with artstation
+<<<<<<< HEAD
 //loads in art for the canvas(both desktop and mobile)
 //only call this for desktop changes
 function loadMainArt(option){
@@ -260,11 +263,17 @@ function loadMainArt(option){
     $(canvasMobile).prop('src', $gAllArtInfo[option].pic_url);
     $(artLink).prop('href', $gAllArtInfo[option].dir_url);
     $(artLinkMobile).prop('href', $gAllArtInfo[option].dir_url);
+=======
+function loadMainArt(pic_url, text, dir_url){
+    var canvas = $('img#mainArt')[0];
+    var textBox = $('div#artText span')[0];
+    $(canvas).prop('src', pic_url);
+    $(canvas).data("dirurl", dir_url);
+>>>>>>> 2134b292344743fb19d0e1b48902783fd7b5f486
     $(textBox).empty();
-    $(textBox).html($gAllArtInfo[option].text);
+    $(textBox).html(text);
     $('div#artOptions img').each(function(index, element){
         $(element).removeClass('toggle');
-        if (index == option) $(element).addClass('toggle');
         return;
     });
     return;
@@ -277,13 +286,36 @@ function loadInArtOptions(){
     $.each($gAllArtInfo, function(index, art){
         offset = index*width;
         $(options).append(`
-            <img style="left:${offset}%; width:${width}%" src="${art.pic_url}" onclick="loadMainArt(${index})">
+            <img style="left:${offset}%; width:${width}%" 
+                 src="${art.pic_url}"
+                 data-picurl="${art.pic_url}"
+                 data-text="${art.text}"
+                 data-dirurl="${art.dir_url}">
         `);
     });
 }
 
+<<<<<<< HEAD
 function openArtUrl(){
     
+=======
+function addingClickHanderToArtOptions(){
+    $('div#artOptions img').each(function (index, element){
+        $(element).click(function(){
+            loadMainArt($(this).data('picurl'),$(this).data('text'), $(this).data('dirurl'));
+            addToggle($(this));
+        });
+        return;
+    });
+    return;
+}
+function addingClickHanderToMainArt(){
+    var canvas = $('img#mainArt')[0];
+    $(canvas).click(function(){
+        window.open($(this).data('dirurl'));
+    })
+    return;
+>>>>>>> 2134b292344743fb19d0e1b48902783fd7b5f486
 }
 
 class ArtInfo{
@@ -294,3 +326,8 @@ class ArtInfo{
     }
 }
 //Things to do with artstation ends
+
+function addToggle(element){
+    $(element).addClass('toggle');
+    return;
+}
