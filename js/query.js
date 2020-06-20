@@ -304,6 +304,7 @@ class ArtInfo{
 //Things to do with artstation ends
 
 function addToggle(element){
+    console.log('adding toggle');
     $(element).addClass('toggle');
     return;
 }
