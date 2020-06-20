@@ -284,11 +284,11 @@ function addingClickHanderToArt(){
         $(element).click(()=>{
             // console.log($(this));
             // loadMainArt($(this).data('artdata'));
-            addToggle($(this));
+            addToggle($(this.element));
         });
     });
     $('img#mainArt')[0].click(()=>{
-        window.open($(this).attr('src'));
+        window.open($(this.element).attr('src'));
         console.log('mainart click');
     });
     return;
