@@ -282,8 +282,8 @@ function loadInArtOptions(){
 function addingClickHanderToArt(){
     $('div#artOptions img').each((index, element) => {
         $(element).click(()=>{
-            console.log($(this));
-            loadMainArt($(this).data('artdata'));
+            // console.log($(this));
+            // loadMainArt($(this).data('artdata'));
             addToggle($(this));
         });
     });
