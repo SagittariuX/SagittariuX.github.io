@@ -280,15 +280,15 @@ function loadInArtOptions(){
 }
 
 function addingClickHanderToArt(){
-    $('div#artOptions img').each((index, element) => {
-        $(element).click(()=>{
-            // console.log($(this));
-            // loadMainArt($(this).data('artdata'));
-            addToggle($(this.element));
+    $('div#artOptions img').each(function (index, element){
+        $(element).click(function(){
+            console.log($(this));
+            loadMainArt($(this).data('artdata'));
+            addToggle($(this));
         });
     });
-    $('img#mainArt')[0].click(()=>{
-        window.open($(this.element).attr('src'));
+    $('img#mainArt')[0].click(function(){
+        window.open($(this).attr('src'));
         console.log('mainart click');
     });
     return;
