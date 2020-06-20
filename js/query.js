@@ -274,7 +274,7 @@ function loadInArtOptions(){
         $(options).append(`
             <img style="left:${offset}%; width:${width}%" 
                  src="${art.pic_url}"
-                 data-artdata="${art}">
+                 data-artdata="${art.toJson()}">
         `);
     });
 }
@@ -299,6 +299,14 @@ class ArtInfo{
         this.pic_url = pic_url;
         this.text = text;
         this.dir_url = dir_url;
+    }
+
+    toJson(){
+        return `{
+            "pic_url": ${this.pic_url},
+            "text": ${this.text},
+            "dir_url": ${this.dir_url}
+        }`;
     }
 }
 //Things to do with artstation ends
