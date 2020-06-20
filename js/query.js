@@ -274,9 +274,7 @@ function loadInArtOptions(){
         $(options).append(`
             <img style="left:${offset}%; width:${width}%" 
                  src="${art.pic_url}"
-                 data-artdata="{"pic_url": ${art.pic_url},
-                                "text": ${art.text},
-                                "dir_url": ${art.dir_url}}">
+                 data-artdata="${art.pic_url}">
         `);
     });
 }
