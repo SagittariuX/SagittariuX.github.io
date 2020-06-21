@@ -293,9 +293,10 @@ function addingClickHanderToArtOptions(){
 }
 function addingClickHanderToMainArt(){
     var canvas = $('img#mainArt')[0];
+    var canvasMobile = $('img#mainArtMobile')[0];
     $(canvas).click(function(){
         window.open($(this).data('dirurl'));
-    })
+    });
     return;
 }
 
