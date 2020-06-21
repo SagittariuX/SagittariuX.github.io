@@ -107,11 +107,11 @@ $(document).ready(function (){
         console.log('art loaded');
         loadInArtOptions();
         loadMainArt($gAllArtInfo[0].pic_url, $gAllArtInfo[0].text, $gAllArtInfo[0].dir_url);
-        addingClickHanderToMainArt();
-        addingClickHanderToArtOptions();
+        addingClickHandlerToMainArt();
+        addingClickHandlerToArtOptions();
         return;
     })
-
+    addingClickHandlerToMainArtMobile();
     new WOW().init();
 });
 
@@ -166,10 +166,7 @@ function loadInCompSciText(fileNum){
 
 // Things to do with spotify
 function formatTracks(focus, handlerSource = null){
-    
     if(Date.now() < $gSwipeTimeout) return; //prevent ghostclicks
-
-
     if(focus > -1 && focus < $('.spotifyTrack').length){//make sure nothing is out of index
         $gFocusTrack = focus;
     }else{
@@ -247,6 +244,18 @@ function changeSongInfo(focus){
 function transform3dTarget(target, moveX, moveY, moveZ, rotateX, rotateY, rotateZ, angle){
     target.style.transform = `translate3d(${moveX}vw, ${moveY}px, ${moveZ}px)
                               rotate3d(${rotateX},${rotateY},${rotateZ},${angle}deg)`;
+    target.style.MozTransform = `translate3d(${moveX}vw, ${moveY}px, ${moveZ}px)
+                                 rotate3d(${rotateX},${rotateY},${rotateZ},${angle}deg)`;
+    target.style.webkitTransform = `translate3d(${moveX}vw, ${moveY}px, ${moveZ}px)
+                                 rotate3d(${rotateX},${rotateY},${rotateZ},${angle}deg)`;
+}
+
+function transform2dTarget(target, moveX, moveY, rotateAngle){
+    target.style.transform = `translate(${moveX}, ${moveY})
+                              rotate(${rotateAngle})`;
+    target.style.MozTransform = `translate(${moveX}, ${moveY})
+                                 rotate(${rotateAngle})`;
+                              
 }
 //Things to do with spotify ends
 
@@ -281,7 +290,11 @@ function loadInArtOptions(){
     });
 }
 
-function addingClickHanderToArtOptions(){
+function moveMainArtMobile(){
+    return;
+}
+
+function addingClickHandlerToArtOptions(){
     $('div#artOptions img').each(function (index, element){
         $(element).click(function(){
             loadMainArt($(this).data('picurl'),$(this).data('text'), $(this).data('dirurl'));
@@ -291,11 +304,21 @@ function addingClickHanderToArtOptions(){
     });
     return;
 }
-function addingClickHanderToMainArt(){
+function addingClickHandlerToMainArt(){
     var canvas = $('img#mainArt')[0];
-    var canvasMobile = $('img#mainArtMobile')[0];
     $(canvas).click(function(){
         window.open($(this).data('dirurl'));
+    });
+    return;
+}
+function addingClickHandlerToMainArtMobile(){
+    $('img.mainArtMobile').each(function(index, element){
+        $(element).off('click');
+        $(element).on('click', function(){
+            if(Date.now() < $gSwipeTimeout) return;//prevents ghostclicks
+            window.open($(this).data('dirurl'));
+        })
+        return;
     });
     return;
 }

@@ -208,7 +208,9 @@ div.experienceMobileText{
   height: 50vh;
   margin: auto;
   perspective: 1000px;
+  -moz-perspective: 1000px;
   transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
 }
 [type=radio]{
   display: none;
@@ -236,6 +238,7 @@ div.experienceMobileText{
 #cspic4:checked ~ #compSciPic4 {
   box-shadow: 0 0 20px 0 rgba(0,0,0,.5);
   transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
 }
 /* shift 1 to right */
 #cspic0:checked ~ #compSciPic1, #cspic1:checked ~ #compSciPic2,
@@ -243,6 +246,7 @@ div.experienceMobileText{
 #cspic4:checked ~ #compSciPic0 {
   box-shadow: 4px 0 10px 0 rgba(0,0,0,.37);
   transform: translate3d(15%,0,-100px);
+  -moz-transform: translate3d(15%,0,-100px);
 }
 /* shift 2 to right */
 #cspic0:checked ~ #compSciPic2, #cspic1:checked ~ #compSciPic3,
@@ -250,6 +254,7 @@ div.experienceMobileText{
 #cspic4:checked ~ #compSciPic1 {
   box-shadow: 4px 0 7px 0 rgba(0,0,0,.27);
   transform: translate3d(30%,0,-200px);
+  -moz-transform: translate3d(30%,0,-200px);
 }
 /* shift 2 to left */
 #cspic0:checked ~ #compSciPic3, #cspic1:checked ~ #compSciPic4,
@@ -257,6 +262,7 @@ div.experienceMobileText{
 #cspic4:checked ~ #compSciPic2 {
   box-shadow: -4px 0 7px 0 rgba(0,0,0,.27);
   transform: translate3d(-30%,0,-200px);
+  -moz-transform: translate3d(-30%,0,-200px);
 }
 /* shift 1 to left */
 #cspic0:checked ~ #compSciPic4, #cspic1:checked ~ #compSciPic0,
@@ -264,6 +270,7 @@ div.experienceMobileText{
 #cspic4:checked ~ #compSciPic3 {
   box-shadow: -4px 0 10px 0 rgba(0,0,0,.37);
   transform: translate3d(-15%,0,-100px);
+  -moz-transform: translate3d(-15%,0,-100px);
 }
 /* end of transitions*/
 
@@ -313,6 +320,7 @@ img.blackstar{
   #cspic4:checked ~ #compSciPic4 {
     box-shadow: 0 4px 10px 0 rgba(0,0,0,.37),0 -4px 10px 0 rgba(0,0,0,.37);
     transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
   }
   /* shift 1 down */
   #cspic0:checked ~ #compSciPic1, #cspic1:checked ~ #compSciPic2,
@@ -320,6 +328,7 @@ img.blackstar{
   #cspic4:checked ~ #compSciPic0 {
     box-shadow: 0 5px 5px 0 rgba(0,0,0,.20);
     transform: translate3d(0,15%,-100px);
+    -moz-transform: translate3d(0,15%,-100px);
   }
   /* shift 2 down */
   #cspic0:checked ~ #compSciPic2, #cspic1:checked ~ #compSciPic3,
@@ -327,6 +336,7 @@ img.blackstar{
   #cspic4:checked ~ #compSciPic1 {
     box-shadow: 0 3px 4px 0 rgba(0,0,0,.17);
     transform: translate3d(0,30%,-200px);
+    -moz-transform: translate3d(0,30%,-200px);
   }
   /* shift 2 up */
   #cspic0:checked ~ #compSciPic3, #cspic1:checked ~ #compSciPic4,
@@ -334,6 +344,7 @@ img.blackstar{
   #cspic4:checked ~ #compSciPic2 {
     box-shadow: 0 -3px 4px 0 rgba(0,0,0,.17);
     transform: translate3d(0,-30%,-200px);
+    -moz-transform: translate3d(0,-30%,-200px);
   }
   /* shift 1 up */
   #cspic0:checked ~ #compSciPic4, #cspic1:checked ~ #compSciPic0,
@@ -341,6 +352,7 @@ img.blackstar{
   #cspic4:checked ~ #compSciPic3 {
     box-shadow: 0 -5px 5px 0 rgba(0,0,0,.20);
     transform: translate3d(0,-15%,-100px);
+    -moz-transform: translate3d(0,-15%,-100px);
   }
 }
 
@@ -380,7 +392,7 @@ img#mainArt, img.mainArtMobile{
   cursor: pointer;
 }
 img.mainArtMobile{
-  transition: transform;
+  transition: transform .5s ease;
 }
 div#artText{
   position: absolute;
@@ -458,6 +470,7 @@ div#spotifyPlaylist img{
   cursor: pointer;
   transition: transform .5s ease;
   box-shadow: 0 0 10px 4px rgba(0,0,0,.5);
+  pointer-events: all;
 }
 
 div#songInfo{
