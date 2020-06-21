@@ -20,8 +20,8 @@ galleryHandler.on('swipeleft swiperight', function(event){
             artnum = 5;
         }
     }
-    appendMainArtMobile(artnum);
-
+    appendMainArtMobile(artnum,'https://www.google.com', artnum ,'https://cdnb.artstation.com/p/assets/images/images/000/451/751/large/khyzyl-saleem-panterafinallow.jpg?1443927051');
+    addingClickHandlerToMainArtMobile();
     var direction = (event.type === 'swipeleft')? '-100%' : '100%';
     transform2dTarget(target, direction, '0', '0');
     

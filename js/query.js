@@ -294,14 +294,14 @@ function loadInArtOptions(){
     });
 }
 
-function appendMainArtMobile(artnum){
+function appendMainArtMobile(artnum, dirurl, text, src){
     $('div#artContainerMobile').append(`
         <img class="mainArtMobile"
              draggable="false"
              data-artnum="${artnum}"
-             data-dirurl="https://www.google.com"
-             data-text="manual text"
-             src="https://cdnb.artstation.com/p/assets/images/images/000/451/751/large/khyzyl-saleem-panterafinallow.jpg?1443927051"
+             data-dirurl="${dirurl}"
+             data-text="${text}"
+             src="${src}"
         >
     `);
     
