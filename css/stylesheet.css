@@ -394,6 +394,9 @@ img#mainArt, img.mainArtMobile{
 img.mainArtMobile{
   transition: transform .5s ease;
 }
+.topimage{
+  z-index: 99;
+}
 div#artText{
   position: absolute;
   background : rgb(26, 26, 26);

@@ -1,12 +1,33 @@
+
 var galleryHandler = new Hammer($('div#artContainerMobile')[0]);
 galleryHandler.on('swipeleft swiperight', function(event){
+    if(Date.now() < $gSwipeTimeout) return;
+    if($('img.mainArtMobile').length > 1){
+        $('img.mainArtMobile').first().remove();
+    }
+    var target = $('img.mainArtMobile').first();
+    target.addClass('topimage');
     
-    $gSwipeTimeout = Date.now() + 100;
+    var artnum = target.data('artnum');
+    if(event.type === 'swipeleft'){
+        artnum++;
+        if(artnum > 5){//carousel around to beginning
+            artnum = 0;
+        }
+    } else if(event.type === 'swiperight'){
+        artnum--;
+        if(artnum < 0){//carousel around to ending
+            artnum = 5;
+        }
+    }
+    appendMainArtMobile(artnum);
+
+    var direction = (event.type === 'swipeleft')? '-100%' : '100%';
+    transform2dTarget(target, direction, '0', '0');
+    
+    $gSwipeTimeout = Date.now() + 500;
     console.log('artGalleryMobile: '+event.type);
 })
-// galleryHandler.on('swipeleft swiperight', function(event){
-//     console.log(event.type);
-// });
 
 var playlistHandler = new Hammer($('#spotifyPlaylist')[0]);
 playlistHandler.on('swipeleft swiperight', function(event){

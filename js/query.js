@@ -241,6 +241,7 @@ function changeSongInfo(focus){
     return;
 }
 
+//target here is a DOM element
 function transform3dTarget(target, moveX, moveY, moveZ, rotateX, rotateY, rotateZ, angle){
     target.style.transform = `translate3d(${moveX}vw, ${moveY}px, ${moveZ}px)
                               rotate3d(${rotateX},${rotateY},${rotateZ},${angle}deg)`;
@@ -248,14 +249,17 @@ function transform3dTarget(target, moveX, moveY, moveZ, rotateX, rotateY, rotate
                                  rotate3d(${rotateX},${rotateY},${rotateZ},${angle}deg)`;
     target.style.webkitTransform = `translate3d(${moveX}vw, ${moveY}px, ${moveZ}px)
                                  rotate3d(${rotateX},${rotateY},${rotateZ},${angle}deg)`;
+    return;
 }
 
+//target here is a jquery element 
 function transform2dTarget(target, moveX, moveY, rotateAngle){
-    target.style.transform = `translate(${moveX}, ${moveY})
-                              rotate(${rotateAngle})`;
-    target.style.MozTransform = `translate(${moveX}, ${moveY})
-                                 rotate(${rotateAngle})`;
-                              
+    var transformations = `translate(${moveX}, ${moveY}) rotate(${rotateAngle})`;
+    target.css('transform', transformations);
+    target.css('-moz-transform', transformations);
+    target.css('-webkit-transform', transformations);
+    
+    return;
 }
 //Things to do with spotify ends
 
@@ -290,7 +294,17 @@ function loadInArtOptions(){
     });
 }
 
-function moveMainArtMobile(){
+function appendMainArtMobile(artnum){
+    $('div#artContainerMobile').append(`
+        <img class="mainArtMobile"
+             draggable="false"
+             data-artnum="${artnum}"
+             data-dirurl="https://www.google.com"
+             data-text="manual text"
+             src="https://cdnb.artstation.com/p/assets/images/images/000/451/751/large/khyzyl-saleem-panterafinallow.jpg?1443927051"
+        >
+    `);
+    
     return;
 }
 
