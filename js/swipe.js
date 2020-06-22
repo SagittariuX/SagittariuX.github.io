@@ -10,7 +10,7 @@ galleryHandler.on('swipeleft swiperight', function(event){
     var artnum = target.data('artnum');
     if(event.type === 'swipeleft'){
         artnum++;
-        if(artnum > 5){//carousel around to beginning
+        if(artnum > $gAllArtInfo.length){//carousel around to beginning
             artnum = 0;
         }
     } else if(event.type === 'swiperight'){
@@ -21,7 +21,7 @@ galleryHandler.on('swipeleft swiperight', function(event){
     }
     //make the element that appears below the target
     loadMainArtMobile(artnum);
-    //two elements at this point
+    
     addingClickHandlerToMainArtMobile();
     var directionX = (event.type === 'swipeleft')? '-100%' : '100%';
     transform2dTarget(target, directionX, '0', '0');

@@ -288,9 +288,10 @@ function loadInArtOptions(){
     var options = $('div#artOptions')[0];
     $.each($gAllArtInfo, function(index, art){
         offset = index*width;
+        var toggle = (index == 0)? 'toggle': '';
         $(options).append(`
             <img style="left:${offset}%; width:${width}%" 
-                 class="${(index == 0)? 'toggle': ''}"
+                 class="${toggle}"
                  src="${art.pic_url}"
                  data-picurl="${art.pic_url}"
                  data-text="${art.text}"
