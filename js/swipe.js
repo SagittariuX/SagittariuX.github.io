@@ -10,13 +10,13 @@ galleryHandler.on('swipeleft swiperight', function(event){
     var artnum = target.data('artnum');
     if(event.type === 'swipeleft'){
         artnum++;
-        if(artnum > $gAllArtInfo.length){//carousel around to beginning
+        if(artnum > $gAllArtInfo.length-1){//carousel around to beginning
             artnum = 0;
         }
     } else if(event.type === 'swiperight'){
         artnum--;
         if(artnum < 0){//carousel around to ending
-            artnum = 5;
+            artnum = $gAllArtInfo.length-1;
         }
     }
     //make the element that appears below the target
