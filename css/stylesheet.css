@@ -373,6 +373,9 @@ div#inspirationsArt, div#inspirationsArtMobile{
   margin: 0 auto;
 }
 div#inspirationsArtMobile{
+  width: 100%;
+}
+div#inspirationsArtMobile{
   display: none;
 }
 div#artContainer, div#artContainerMobile{
@@ -402,11 +405,10 @@ div#artText{
   background : rgb(26, 26, 26);
   top: 0;
   left: 0;right: 0;
-  opacity: .7;
+  opacity: .8;
   max-width: 100%;
   padding-top: 5%;
   text-align: center;
-  
 }
 div#artText span{
   position: absolute;
@@ -416,6 +418,16 @@ div#artText span{
   top: 0; bottom: 0;
   left: 0; right: 0;
   font-size: 1.5vw;
+}
+div#artTextMobile{
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+div#artTextMobile span{
+  padding: 10px 0;
+  font-size: 1.5em ;
+  color: white;
 }
 div#artOptions{
   position:relative;

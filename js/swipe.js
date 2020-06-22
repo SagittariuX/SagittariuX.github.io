@@ -1,13 +1,12 @@
 
 var galleryHandler = new Hammer($('div#artContainerMobile')[0]);
 galleryHandler.on('swipeleft swiperight', function(event){
-    if(Date.now() < $gSwipeTimeout) return;
+    if(Date.now() < $gSwipeTimeout) return;//prevents ghost clicks
     if($('img.mainArtMobile').length > 1){
         $('img.mainArtMobile').first().remove();
     }
-    var target = $('img.mainArtMobile').first();
+    var target = $('img.mainArtMobile').first();//The element thats being manipulated
     target.addClass('topimage');
-    
     var artnum = target.data('artnum');
     if(event.type === 'swipeleft'){
         artnum++;
@@ -20,11 +19,17 @@ galleryHandler.on('swipeleft swiperight', function(event){
             artnum = 5;
         }
     }
-    appendMainArtMobile(artnum,'https://www.google.com', artnum ,'https://cdnb.artstation.com/p/assets/images/images/000/451/751/large/khyzyl-saleem-panterafinallow.jpg?1443927051');
+    //make the element that appears below the target
+    loadMainArtMobile(artnum);
+    //two elements at this point
     addingClickHandlerToMainArtMobile();
-    var direction = (event.type === 'swipeleft')? '-100%' : '100%';
-    transform2dTarget(target, direction, '0', '0');
-    
+    var directionX = (event.type === 'swipeleft')? '-100%' : '100%';
+    transform2dTarget(target, directionX, '0', '0');
+
+    //change the flavour text
+    target = $('img.mainArtMobile').last();//the current element in display
+    $('div#artTextMobile span').html(target.data('text'));
+
     $gSwipeTimeout = Date.now() + 500;
     console.log('artGalleryMobile: '+event.type);
 })

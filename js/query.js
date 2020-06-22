@@ -105,10 +105,14 @@ $(document).ready(function (){
             );
         });
         console.log('art loaded');
+        //all the desktop display art
         loadInArtOptions();
         loadMainArt($gAllArtInfo[0].pic_url, $gAllArtInfo[0].text, $gAllArtInfo[0].dir_url);
         addingClickHandlerToMainArt();
         addingClickHandlerToArtOptions();
+
+        //all the mobile display art
+        loadMainArtMobile()
         return;
     })
     addingClickHandlerToMainArtMobile();
@@ -286,6 +290,7 @@ function loadInArtOptions(){
         offset = index*width;
         $(options).append(`
             <img style="left:${offset}%; width:${width}%" 
+                 class=${(index == 0)? 'toggle': ''}
                  src="${art.pic_url}"
                  data-picurl="${art.pic_url}"
                  data-text="${art.text}"
@@ -294,7 +299,16 @@ function loadInArtOptions(){
     });
 }
 
-function appendMainArtMobile(artnum, dirurl, text, src){
+function loadMainArtMobile(artnum = 0){
+    appendMainArtMobile($gAllArtInfo[artnum].pic_url, $gAllArtInfo[artnum].text, $gAllArtInfo[artnum].dir_url, artnum);
+    //change the flavour text
+    var target = $('img.mainArtMobile').last();//the current element in display
+    $('div#artTextMobile span').html(target.data('text'));
+
+    return;
+}
+
+function appendMainArtMobile(src,text,dirurl,artnum){
     $('div#artContainerMobile').append(`
         <img class="mainArtMobile"
              draggable="false"
