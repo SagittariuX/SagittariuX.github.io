@@ -21,14 +21,12 @@ galleryHandler.on('swipeleft swiperight', function(event){
     }
     //make the element that appears below the target
     loadMainArtMobile(artnum);
-    
     addingClickHandlerToMainArtMobile();
     var directionX = (event.type === 'swipeleft')? '-100%' : '100%';
     transform2dTarget(target, directionX, '0', '0');
 
-    //change the flavour text
-    target = $('img.mainArtMobile').last();//the current element in display
-    $('div#artTextMobile span').html(target.data('text'));
+    //makes sure that desktop also keeps track of which picture is on
+    $('div#artOptions img').eq(artnum).click();
 
     $gSwipeTimeout = Date.now() + 500;
     console.log('artGalleryMobile: '+event.type);

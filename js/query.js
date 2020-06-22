@@ -308,6 +308,15 @@ function loadMainArtMobile(artnum = 0){
     return;
 }
 
+function alterMainArtMobile(src,text,dirurl,artnum){
+    var target = $('img.mainArtMobile').last();
+    target.prop('src', src);
+    target.data('text', text);
+    target.data('dirurl', dirurl);
+    target.data('artnum', artnum);
+    return;
+}
+
 function appendMainArtMobile(src,text,dirurl,artnum){
     $('div#artContainerMobile').append(`
         <img class="mainArtMobile"
@@ -318,7 +327,6 @@ function appendMainArtMobile(src,text,dirurl,artnum){
              src="${src}"
         >
     `);
-    
     return;
 }
 
@@ -327,6 +335,7 @@ function addingClickHandlerToArtOptions(){
         $(element).click(function(){
             loadMainArt($(this).data('picurl'),$(this).data('text'), $(this).data('dirurl'));
             addToggle($(this));
+            alterMainArtMobile($(this).data('picurl'),$(this).data('text'), $(this).data('dirurl'),index);
         });
         return;
     });
