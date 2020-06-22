@@ -291,7 +291,6 @@ function loadInArtOptions(){
         offset = index*width;
         $(options).append(`
             <img style="left:${offset}%; width:${width}%" 
-                 class="${toggle}"
                  src="${art.pic_url}"
                  data-picurl="${art.pic_url}"
                  data-text="${art.text}"
