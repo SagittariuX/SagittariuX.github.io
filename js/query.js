@@ -108,6 +108,7 @@ $(document).ready(function (){
         //all the desktop display art
         loadInArtOptions();
         loadMainArt($gAllArtInfo[0].pic_url, $gAllArtInfo[0].text, $gAllArtInfo[0].dir_url);
+        $('div#artOptions img').first().addClass('toggle');//manually adding the toggle sigh
         addingClickHandlerToMainArt();
         addingClickHandlerToArtOptions();
 
@@ -288,7 +289,6 @@ function loadInArtOptions(){
     var options = $('div#artOptions')[0];
     $.each($gAllArtInfo, function(index, art){
         offset = index*width;
-        var toggle = (index == 0)? 'toggle': '';
         $(options).append(`
             <img style="left:${offset}%; width:${width}%" 
                  class="${toggle}"
