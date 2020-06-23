@@ -507,6 +507,7 @@ div#songInfo a:hover{
 @media only screen and (max-width: 900px){
   div#spotifyPlaylist{
     height: 30vh;
+    max-width: 100%;
   }
 }
 /* contact info */
