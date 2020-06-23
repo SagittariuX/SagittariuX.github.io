@@ -472,7 +472,8 @@ div#inspirationsMusic{
 
 div#spotifyPlaylist{
   position: relative;
-  max-width: 100%;
+  max-width: 40%;
+  margin: auto;
   height: 50vh;
   perspective: 1000px;
   transform-style: preserve-3d;
