@@ -199,155 +199,52 @@ div.experienceMobileText{
 }
 
 /* All compsci related things*/
-.compSci {
-  width: 100%;
-}
-.compSciSlidesFrame{
-  position: relative;
-  width: 100%;
+div.compSci {
+  position:relative;
+  max-width: 100%;
   height: 50vh;
-  margin: auto;
-  perspective: 1000px;
-  -moz-perspective: 1000px;
-  transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
+  border: solid;
 }
-[type=radio]{
-  display: none;
-}
-
-.compSciSlidesFrame label {
+div.compSciCard{
+  display: flex;
+  position:absolute;
   margin: auto;
-  width: 50%;
-  height: 100%;
+  top: 0;bottom: 0;
+  left: 0;right: 0;
+  border-radius: 25px ;
+  max-height: 100%;
+  max-width: 70%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0,0,0,.60);
+}
+div.csCardInterior{
+  flex: 1;
   text-align: center;
-  border-radius: 4px;
-  position: absolute;
-  left: 0; right: 0;
-  cursor: pointer;
-  transition: transform 0.4s ease;
+  padding: 25px 0px;
+  border: solid;
 }
-.compSciSlidesFrame label img{
-  height:100%;
-  max-width:100%;
+div.csCardInterior img{
+  max-width: 50%;
+  border: solid;
+  margin: auto 0 ;
+  top: 0; bottom: 0;
 }
-/* all the transitions and placement for the slides */
-/* at starting positions pic0 is on top */
-#cspic0:checked ~ #compSciPic0, #cspic1:checked ~ #compSciPic1,
-#cspic2:checked ~ #compSciPic2, #cspic3:checked ~ #compSciPic3,
-#cspic4:checked ~ #compSciPic4 {
-  box-shadow: 0 0 20px 0 rgba(0,0,0,.5);
-  transform: translate3d(0,0,0);
-  -moz-transform: translate3d(0,0,0);
-}
-/* shift 1 to right */
-#cspic0:checked ~ #compSciPic1, #cspic1:checked ~ #compSciPic2,
-#cspic2:checked ~ #compSciPic3, #cspic3:checked ~ #compSciPic4,
-#cspic4:checked ~ #compSciPic0 {
-  box-shadow: 4px 0 10px 0 rgba(0,0,0,.37);
-  transform: translate3d(15%,0,-100px);
-  -moz-transform: translate3d(15%,0,-100px);
-}
-/* shift 2 to right */
-#cspic0:checked ~ #compSciPic2, #cspic1:checked ~ #compSciPic3,
-#cspic2:checked ~ #compSciPic4, #cspic3:checked ~ #compSciPic0,
-#cspic4:checked ~ #compSciPic1 {
-  box-shadow: 4px 0 7px 0 rgba(0,0,0,.27);
-  transform: translate3d(30%,0,-200px);
-  -moz-transform: translate3d(30%,0,-200px);
-}
-/* shift 2 to left */
-#cspic0:checked ~ #compSciPic3, #cspic1:checked ~ #compSciPic4,
-#cspic2:checked ~ #compSciPic0, #cspic3:checked ~ #compSciPic1,
-#cspic4:checked ~ #compSciPic2 {
-  box-shadow: -4px 0 7px 0 rgba(0,0,0,.27);
-  transform: translate3d(-30%,0,-200px);
-  -moz-transform: translate3d(-30%,0,-200px);
-}
-/* shift 1 to left */
-#cspic0:checked ~ #compSciPic4, #cspic1:checked ~ #compSciPic0,
-#cspic2:checked ~ #compSciPic1, #cspic3:checked ~ #compSciPic2,
-#cspic4:checked ~ #compSciPic3 {
-  box-shadow: -4px 0 10px 0 rgba(0,0,0,.37);
-  transform: translate3d(-15%,0,-100px);
-  -moz-transform: translate3d(-15%,0,-100px);
-}
-/* end of transitions*/
 
-#compSciPic0 { background: #00BCD4 }
-#compSciPic1 { background: #4CAF50 }
-#compSciPic2 { background: #CDDC39 }
-#compSciPic3 { background: #FFC107 }
-#compSciPic4 { background: #FF5722 }
-
-.compSciTextFrame{
-  width:50%;
+div#compSciRating{
   margin: auto;
-  padding: 5vh 0vw 0vh 0vw;
-}
-
-#compSciRating{
-  text-align: center;
+  height: 5%;
+  max-height: 10%;
+  border: solid;
 }
 img.stars{
-  width:5vw;
-  max-width: 70px;
-  min-width: 20px;
-  height:5vw;
-  max-height: 70px;
-  min-height: 20px;
+  height: 100%;
 }
 
-
-#compSciText{
-  text-align: justify;
-}
-
-/* all the transitions and placement for the slides in mobile*/
 @media only screen and (max-width: 900px){
-  .compSciSlidesFrame label {
-    width: 90%;
-    height: 80%;
-  }
-  /* at starting positions pic0 is on top */
-  #cspic0:checked ~ #compSciPic0, #cspic1:checked ~ #compSciPic1,
-  #cspic2:checked ~ #compSciPic2, #cspic3:checked ~ #compSciPic3,
-  #cspic4:checked ~ #compSciPic4 {
-    box-shadow: 0 4px 10px 0 rgba(0,0,0,.37),0 -4px 10px 0 rgba(0,0,0,.37);
-    transform: translate3d(0,0,0);
-    -moz-transform: translate3d(0,0,0);
-  }
-  /* shift 1 down */
-  #cspic0:checked ~ #compSciPic1, #cspic1:checked ~ #compSciPic2,
-  #cspic2:checked ~ #compSciPic3, #cspic3:checked ~ #compSciPic4,
-  #cspic4:checked ~ #compSciPic0 {
-    box-shadow: 0 5px 5px 0 rgba(0,0,0,.20);
-    transform: translate3d(0,15%,-100px);
-    -moz-transform: translate3d(0,15%,-100px);
-  }
-  /* shift 2 down */
-  #cspic0:checked ~ #compSciPic2, #cspic1:checked ~ #compSciPic3,
-  #cspic2:checked ~ #compSciPic4, #cspic3:checked ~ #compSciPic0,
-  #cspic4:checked ~ #compSciPic1 {
-    box-shadow: 0 3px 4px 0 rgba(0,0,0,.17);
-    transform: translate3d(0,30%,-200px);
-    -moz-transform: translate3d(0,30%,-200px);
-  }
-  /* shift 2 up */
-  #cspic0:checked ~ #compSciPic3, #cspic1:checked ~ #compSciPic4,
-  #cspic2:checked ~ #compSciPic0, #cspic3:checked ~ #compSciPic1,
-  #cspic4:checked ~ #compSciPic2 {
-    box-shadow: 0 -3px 4px 0 rgba(0,0,0,.17);
-    transform: translate3d(0,-30%,-200px);
-    -moz-transform: translate3d(0,-30%,-200px);
-  }
-  /* shift 1 up */
-  #cspic0:checked ~ #compSciPic4, #cspic1:checked ~ #compSciPic0,
-  #cspic2:checked ~ #compSciPic1, #cspic3:checked ~ #compSciPic2,
-  #cspic4:checked ~ #compSciPic3 {
-    box-shadow: 0 -5px 5px 0 rgba(0,0,0,.20);
-    transform: translate3d(0,-15%,-100px);
-    -moz-transform: translate3d(0,-15%,-100px);
+  div.compSciCard{
+    flex-direction: column;
   }
 }
 
@@ -571,7 +468,11 @@ div#credits{
   }
 }
 
-
+.coolBlue { background: #00BCD4 }
+.coolGreen { background: #4CAF50 }
+.coolYellow { background: #CDDC39 }
+.coolOrange { background: #FFC107 }
+.coolRed { background: #FF5722 }
 
 
 

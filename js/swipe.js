@@ -1,4 +1,5 @@
 
+//swipe handler for art gallery(mobile)
 var galleryHandler = new Hammer($('div#artContainerMobile')[0]);
 galleryHandler.on('swipeleft swiperight', function(event){
     if(Date.now() < $gSwipeTimeout) return;//prevents ghost clicks
@@ -32,6 +33,7 @@ galleryHandler.on('swipeleft swiperight', function(event){
     console.log('artGalleryMobile: '+event.type);
 })
 
+//swipe hander for music player
 var playlistHandler = new Hammer($('#spotifyPlaylist')[0]);
 playlistHandler.on('swipeleft swiperight', function(event){
     (event.type === 'swipeleft') ? formatTracks($gFocusTrack+1, event.type) : formatTracks($gFocusTrack-1, event.type);    
