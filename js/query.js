@@ -1,6 +1,6 @@
 //Global Variables
 var $gExperiences = 5;
-var $gCompSci = 5;
+var $gCompSciInfo = [];
 var $gAllArtInfo = [];
 var $gFocusTrack;
 var $gSwipeTimeout = 0;
@@ -72,25 +72,26 @@ $(document).ready(function (){
     });
 
     //loads compsci info
-    for(var $i = 0; $i < $gCompSci ; $i++){//generates radio buttons
-        if($i == 0){
-            $('.compSciSlidesFrame form').append(`
-                <input type="radio" name="compSciPics" id="cspic`+$i+`" checked>
-            `);
-        }
-        else{
-            $('.compSciSlidesFrame form').append(`
-                <input type="radio" name="compSciPics" id="cspic`+$i+`">
-            `);
-        }
-    }
-    for(var $i = 0 ; $i < $gCompSci ; $i++){//generates the visuals for buttons
-        $('.compSciSlidesFrame form').append(`
-            <label for="cspic`+$i+`" id="compSciPic`+$i+`" onclick="loadInCompSciText(`+$i+`)">
-                <img src="pics/compSci/pic`+$i+`.png" />
-            </label> 
-        `);
-    }
+    $.getJSON('text/compSci/cs.json', function(json){
+        $.each(json.items, function(index, item){
+            $gAllArtInfo.push(
+                new CompSciInfo(
+                    item.pic_url,
+                    item.stars,
+                    item.text
+                )
+            );
+        });
+        console.log('compsci loaded');
+        loadInCompSciCard();
+        return;
+    });
+
+
+
+    
+    
+    
     loadInCompSciText(0);
 
     //loads art Info
@@ -148,8 +149,22 @@ function loadInExperienceMobile(json, index){
 }
 
 //Things to do with CompSci
-function loadInCompSciInfo(){
-
+function loadInCompSciCard(leftRight = null){
+    $('div#compSci').append(`
+        <div class="compSciCard coolBlue">
+            <div class="csCardInterior">
+                <img src="pics/compSci/pic0.png" draggable="false">
+            </div>
+            <div class="csCardInterior">
+                <div class="compSciRating">
+                    <img class="stars" src="pics/misc/goldstar.png" draggable="false">
+                </div>
+                <div class="compSciText"> 
+                </div>
+            </div>
+        </div>
+    `);
+    return;
 }
 
 function loadInCompSciText(fileNum){
@@ -259,26 +274,7 @@ function changeSongInfo(focus){
     return;
 }
 
-//target here is a DOM element
-function transform3dTarget(target, moveX, moveY, moveZ, rotateX, rotateY, rotateZ, angle){
-    target.style.transform = `translate3d(${moveX}vw, ${moveY}px, ${moveZ}px)
-                              rotate3d(${rotateX},${rotateY},${rotateZ},${angle}deg)`;
-    target.style.MozTransform = `translate3d(${moveX}vw, ${moveY}px, ${moveZ}px)
-                                 rotate3d(${rotateX},${rotateY},${rotateZ},${angle}deg)`;
-    target.style.webkitTransform = `translate3d(${moveX}vw, ${moveY}px, ${moveZ}px)
-                                 rotate3d(${rotateX},${rotateY},${rotateZ},${angle}deg)`;
-    return;
-}
 
-//target here is a jquery element 
-function transform2dTarget(target, moveX, moveY, rotateAngle){
-    var transformations = `translate(${moveX}, ${moveY}) rotate(${rotateAngle})`;
-    target.css('transform', transformations);
-    target.css('-moz-transform', transformations);
-    target.css('-webkit-transform', transformations);
-    
-    return;
-}
 //Things to do with spotify ends
 
 //Things to do with artstation
@@ -381,6 +377,27 @@ class ArtInfo{
     }
 }
 //Things to do with artstation ends
+
+//target here is a DOM element
+function transform3dTarget(target, moveX, moveY, moveZ, rotateX, rotateY, rotateZ, angle){
+    target.style.transform = `translate3d(${moveX}vw, ${moveY}px, ${moveZ}px)
+                              rotate3d(${rotateX},${rotateY},${rotateZ},${angle}deg)`;
+    target.style.MozTransform = `translate3d(${moveX}vw, ${moveY}px, ${moveZ}px)
+                                 rotate3d(${rotateX},${rotateY},${rotateZ},${angle}deg)`;
+    target.style.webkitTransform = `translate3d(${moveX}vw, ${moveY}px, ${moveZ}px)
+                                 rotate3d(${rotateX},${rotateY},${rotateZ},${angle}deg)`;
+    return;
+}
+
+//target here is a jquery element 
+function transform2dTarget(target, moveX, moveY, rotateAngle){
+    var transformations = `translate(${moveX}, ${moveY}) rotate(${rotateAngle})`;
+    target.css('transform', transformations);
+    target.css('-moz-transform', transformations);
+    target.css('-webkit-transform', transformations);
+    
+    return;
+}
 
 function addToggle(element){
     $(element).addClass('toggle');
