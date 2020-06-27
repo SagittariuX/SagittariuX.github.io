@@ -1,0 +1,29 @@
+{
+    "items":[
+        {
+            "pic_url": "pics/compSci/pic0.png",
+            "stars": 3,
+            "text" : "text 0"
+        },
+        {
+            "pic_url": "pics/compSci/pic1.png",
+            "stars": 3,
+            "text" : "text 1"
+        },
+        {
+            "pic_url": "pics/compSci/pic2.png",
+            "stars": 3,
+            "text" : "text 2"
+        },
+        {
+            "pic_url": "pics/compSci/pic3.png",
+            "stars": 3,
+            "text" : "text 3"
+        },
+        {
+            "pic_url": "pics/compSci/pic4.png",
+            "stars": 3,
+            "text" : "text 4"
+        }
+    ]
+}

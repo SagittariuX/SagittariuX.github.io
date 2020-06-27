@@ -237,12 +237,12 @@ div.compSciText{
 
 div.compSciRating{
   margin: auto;
-  height: 5%;
+  height: auto;
   max-height: 10%;
   border: solid;
 }
 img.stars{
-  width: 30% !important;
+  width: 7% !important;
   max-width: 40px !important;
   min-width: 20px !important;
 }

@@ -147,6 +147,11 @@ function loadInExperienceMobile(json, index){
     return null;
 }
 
+//Things to do with CompSci
+function loadInCompSciInfo(){
+
+}
+
 function loadInCompSciText(fileNum){
     $.getJSON("text/compSci/cs"+fileNum+".json", function(json){
         //loads in the star rating system
@@ -167,6 +172,14 @@ function loadInCompSciText(fileNum){
         $('#compSciText').html(json.text);
     });
     return null;
+}
+
+class CompSciInfo{
+    constructor(pic_url, stars, text){
+        this.pic_url = pic_url;
+        this.stars = stars;
+        this.text = text;
+    }
 }
 
 // Things to do with spotify
