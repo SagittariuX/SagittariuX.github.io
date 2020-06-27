@@ -202,17 +202,15 @@ div.experienceMobileText{
 div.compSci {
   position:relative;
   max-width: 100%;
-  height: 50vh;
+  height: auto;
   border: solid;
 }
 div.compSciCard{
   display: flex;
-  position:absolute;
   margin: auto;
   top: 0;bottom: 0;
   left: 0;right: 0;
   border-radius: 25px ;
-  max-height: 100%;
   max-width: 70%;
   justify-content: center;
   align-items: center;
@@ -225,26 +223,33 @@ div.csCardInterior{
   padding: 25px 0px;
   border: solid;
 }
-div.csCardInterior img{
+div.csCardInterior > img{
   max-width: 50%;
   border: solid;
   margin: auto 0 ;
   top: 0; bottom: 0;
 }
 
-div#compSciRating{
+div.compSciText{
+  border: solid;
+  font-size: large;
+}
+
+div.compSciRating{
   margin: auto;
   height: 5%;
   max-height: 10%;
   border: solid;
 }
 img.stars{
-  height: 100%;
+  width: 30% !important;
+  max-width: 40px !important;
+  min-width: 20px !important;
 }
 
 @media only screen and (max-width: 900px){
   div.compSciCard{
-    flex-direction: column;
+    display: block;
   }
 }
 
