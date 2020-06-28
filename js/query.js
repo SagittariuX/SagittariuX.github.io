@@ -74,7 +74,7 @@ $(document).ready(function (){
     //loads compsci info
     $.getJSON('text/compSci/cs.json', function(json){
         $.each(json.items, function(index, item){
-            $gAllArtInfo.push(
+            $gCompSciInfo.push(
                 new CompSciInfo(
                     item.pic_url,
                     item.stars,
@@ -86,13 +86,6 @@ $(document).ready(function (){
         loadInCompSciCard();
         return;
     });
-
-
-
-    
-    
-    
-    loadInCompSciText(0);
 
     //loads art Info
     $.getJSON('text/artstation/artstation.json', function(json){
@@ -149,45 +142,43 @@ function loadInExperienceMobile(json, index){
 }
 
 //Things to do with CompSci
-function loadInCompSciCard(leftRight = null){
-    $('div#compSci').append(`
-        <div class="compSciCard coolBlue">
-            <div class="csCardInterior">
-                <img src="pics/compSci/pic0.png" draggable="false">
-            </div>
-            <div class="csCardInterior">
-                <div class="compSciRating">
-                    <img class="stars" src="pics/misc/goldstar.png" draggable="false">
-                </div>
-                <div class="compSciText"> 
-                </div>
-            </div>
-        </div>
-    `);
-    return;
-}
-
-function loadInCompSciText(fileNum){
-    $.getJSON("text/compSci/cs"+fileNum+".json", function(json){
-        //loads in the star rating system
-        $('#compSciRating').empty();
-        for(var $i = 0; $i < 5; $i++){
-            if($i < json.stars){
-                $('#compSciRating').append(`
-                    <img class="stars animated heartBeat" src="../pics/misc/goldstar.png"/>
-                `);
-            }
-            else{
-                $('#compSciRating').append(`
-                    <img class="stars" src="../pics/misc/blackstar.png"/>
-                `); 
-            }
-        }
-        //loads in the actual text
-        $('#compSciText').html(json.text);
+function loadInCompSciCard(){
+    var colors = ['coolYellow', 'coolGreen', 'coolOrange', 'coolBlue', 'coolRed'];
+    $.each($gCompSciInfo, function(index, Info){
+        $('div#compSci').append(`<div class="compSciCard ${colors[index]}"></div>`);
+        loadInCompSciCardInterior(index);
     });
     return null;
 }
+
+function loadInCompSciCardInterior(fileNum){
+    var target = $('div#compSci').last();
+    target.append(`
+        <div class="csCardInterior">
+            <img src="${$gCompSciInfo[fileNum].pic_url}" draggable="false">
+        </div>
+    `);//append the image half
+    var stars = returnCompSciStars($gCompSciInfo[fileNum].stars)
+    target.append(`
+        <div class="csCardInterior">
+            <div class="compSciRating">
+                ${stars}
+            </div>
+            <div class="compSciText">${$gCompSciInfo[fileNum].text}</div>
+        </div>
+    `);
+    return null;
+}
+function returnCompSciStars(stars){
+    var string = '';
+    for(var i = 0; i < 5; i++){
+        string+=(i<stars) ?
+         '<img class="stars" src="pics/misc/goldstar.png" draggable="false">':
+         '<img class="stars" src="pics/misc/blackstar.png" draggable="false">';
+    }
+    return string; 
+}
+
 
 class CompSciInfo{
     constructor(pic_url, stars, text){
