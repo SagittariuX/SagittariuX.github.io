@@ -152,7 +152,7 @@ function loadInCompSciCard(){
 }
 
 function loadInCompSciCardInterior(fileNum){
-    var target = $('div#compSci').last();
+    var target = $('div.compSciCard').last();
     target.append(`
         <div class="csCardInterior">
             <img src="${$gCompSciInfo[fileNum].pic_url}" draggable="false">
