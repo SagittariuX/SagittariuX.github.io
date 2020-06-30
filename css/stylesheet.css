@@ -202,16 +202,18 @@ div.experienceMobileText{
 div#compSci {
   position:relative;
   max-width: 100%;
-  height: auto;
+  height: 50vh;
   border: solid;
 }
 div.compSciCard{
   display: flex;
-  margin: 10% auto;
+  position: absolute;
+  margin:auto;
   top: 0;bottom: 0;
   left: 0;right: 0;
   border-radius: 25px ;
   max-width: 70%;
+  max-height: 70%;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -229,7 +231,12 @@ div.csCardInterior > img{
   margin: auto 0 ;
   top: 0; bottom: 0;
 }
-
+div.csCardInterior.right{
+  display: none;
+}
+div.compSciCard:hover div.csCardInterior.right{
+  display: unset;
+}
 div.compSciText{
   border: solid;
   font-size: large;
