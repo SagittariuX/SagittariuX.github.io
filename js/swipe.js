@@ -1,4 +1,12 @@
 
+//swipe handler for CompSci
+var compSciHandler = new Hammer($('div#compSci')[0]);
+compSciHandler.on('swipeleft swiperight', function(event){
+    console.log('compSci: '+event.type);
+    return ;
+});
+
+
 //swipe handler for art gallery(mobile)
 var galleryHandler = new Hammer($('div#artContainerMobile')[0]);
 galleryHandler.on('swipeleft swiperight', function(event){
