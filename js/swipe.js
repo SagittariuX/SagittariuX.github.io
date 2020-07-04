@@ -48,3 +48,46 @@ playlistHandler.on('swipeleft swiperight', function(event){
     $gSwipeTimeout = Date.now() + 100;
     console.log('spotifyPlaylist: '+event.type);
 });
+
+
+//functions for directional hover
+function calcDistance(x1,y1,x2,y2){
+    var diffX = x1 - x2;
+    var diffY = y1 - y2;
+    return (diffX * diffX) + (diffY * diffY);
+}
+
+function nearestEdge(x,y,w,h){
+    var topEdge = calcDistance(x,y,w/2,0);
+    var botEdge = calcDistance(x,y,w/2,h);
+    var leftEdge = calcDistance(x,y,0,h/2);
+    var rightEdge = calcDistance(x,y,w,h/2);
+
+    var min = Math.min(topEdge,botEdge,leftEdge,rightEdge);
+    switch(min){
+        case topEdge:
+            return 'top';
+        case botEdge:
+            return 'bot';
+        case leftEdge:
+            return 'left';
+        case rightEdge:
+            return 'right';
+    }
+}
+
+$('div.compSciBlock').mouseenter(function(event){
+    var offset = $(this).offset();
+    var x = event.pageX - offset.left;
+    var y = event.pageY - offset.top;
+    var width = $(this).width();
+    var height = $(this).height();
+    var edge = nearestEdge(x,y,width,height);
+    
+    console.log('nearestEdge:'+edge)
+
+    return;
+});
+
+
+
