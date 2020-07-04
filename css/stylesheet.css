@@ -225,8 +225,19 @@ div.csoverlay{
   height: 100%;
   background-color: rgba(0,0,0,.7);
   z-index: 10;
+  overflow: hidden;
+  color: white;
+  font-size: large;
+}
+div.overlayText{
+  margin: 10% 5% 0 5%;
 }
 
+@media only screen and (max-width:1100px){
+  div.csoverlay{
+    font-size: small;
+  }
+}
 div.compSciRating{
   margin: auto;
   height: auto;
@@ -240,7 +251,7 @@ img.stars{
 }
 
 @media only screen and (max-width: 900px){
-  div#compSciIcons, div#compSciTextArea{
+  div#compSci{
     display: none;
   }
 }
