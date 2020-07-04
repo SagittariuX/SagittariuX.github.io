@@ -84,7 +84,19 @@ $('div.compSciBlock').mouseenter(function(event){
     var height = $(this).height();
     var edge = nearestEdge(x,y,width,height);
     
-    console.log('nearestEdge:'+edge)
+    console.log('nearestEdge Enter:'+edge)
+
+    return;
+});
+$('div.compSciBlock').mouseleave(function(event){
+    var offset = $(this).offset();
+    var x = event.pageX - offset.left;
+    var y = event.pageY - offset.top;
+    var width = $(this).width();
+    var height = $(this).height();
+    var edge = nearestEdge(x,y,width,height);
+    
+    console.log('nearestEdge Exit:'+edge)
 
     return;
 });
