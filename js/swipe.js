@@ -83,8 +83,53 @@ $('div.compSciBlock').mouseenter(function(event){
     var width = $(this).width();
     var height = $(this).height();
     var edge = nearestEdge(x,y,width,height);
-    
-    console.log('nearestEdge Enter:'+edge)
+    var overlay = $(this).find('div.csoverlay');
+    switch(edge){
+        case 'top':
+            overlay.css({'left':'0%', 'top': '-100%'});
+            overlay.animate({
+                left: '0%',
+                top: "0%"
+            },{
+                queue: false,
+                duration: 200
+            });
+            //transform2dTarget(overlay, '0%', '100%', '0');
+            break;
+        case 'bot':
+            overlay.css({'left':'0%' , 'top': '100%'});
+            overlay.animate({
+                left: '0%',
+                top: "0%"
+            },{
+                queue: false,
+                duration: 200
+            });
+            //transform2dTarget(overlay, '0%', '-100%', '0');
+            break;
+        case 'left':
+            overlay.css({'left':'-100%' , 'top': '0%'});
+            overlay.animate({
+                left: '0%',
+                top: "0%"
+            },{
+                queue: false,
+                duration: 200
+            });
+           // transform2dTarget(overlay, '100%', '0%', '0');
+            break;
+        case 'right':
+            overlay.css({'left':'100%' , 'top': '0%'});
+            overlay.animate({
+                left: '0%',
+                top: "0%"
+            },{
+                queue: false,
+                duration: 200
+            });
+           // transform2dTarget(overlay, '-100%', '0%', '0');
+            break;
+    }
 
     return;
 });
@@ -95,8 +140,50 @@ $('div.compSciBlock').mouseleave(function(event){
     var width = $(this).width();
     var height = $(this).height();
     var edge = nearestEdge(x,y,width,height);
-    
-    console.log('nearestEdge Exit:'+edge)
+    var overlay = $(this).find('div.csoverlay');
+    switch(edge){
+       
+        case 'top':
+            overlay.animate({
+                left: '0%',
+                top: "-100%"
+            },{
+                queue: false,
+                duration: 200
+            });
+            //transform2dTarget(overlay, '0%', '-100%', '0');
+            break;
+        case 'bot':
+            overlay.animate({
+                left: '0%',
+                top: "100%"
+            },{
+                queue: false,
+                duration: 200
+            });
+           // transform2dTarget(overlay, '0%', '100%', '0');
+            break;
+        case 'left':
+            overlay.animate({
+                left: '-100%',
+                top: "0%"
+            },{
+                queue: false,
+                duration: 200
+            });
+           // transform2dTarget(overlay, '-100%', '0%', '0');
+            break;
+        case 'right':
+            overlay.animate({
+                left: '100%',
+                top: "0%"
+            },{
+                queue: false,
+                duration: 200
+            });
+           // transform2dTarget(overlay, '100%', '0%', '0');
+            break;
+    }
 
     return;
 });
