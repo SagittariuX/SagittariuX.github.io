@@ -209,6 +209,7 @@ div.compSciBlock {
   display: inline-block;
   position: relative;
   width: 30%;
+  max-width: 400px;
   border:solid;
   overflow: hidden;
 }
@@ -224,59 +225,6 @@ div.csoverlay{
   height: 100%;
   background-color: rgba(0,0,0,.7);
   z-index: 10;
-}
-
-
-div#compSciIcons{
-  display: flex;
-  max-width: 100%;
-  justify-content: space-evenly;
-}
-div#compSciIcons > img{
-  width: 20%;
-  max-width: 300px;
-  border: solid;
-}
-div#compSciTextArea{
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-  overflow: hidden;
-  border: red;
-}
-div.compSciText{
-  width: 20%;
-  padding: 1%;
-  max-width: 300px;
-}
-
-div.compSciCard{
-  display: flex;
-  position: absolute;
-  border-radius: 25px ;
-  max-height: 100%;
-  width: auto;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  box-shadow: 0 0 30px rgba(0,0,0,.60);
-  left: 50%;
-  transform: translate(-50%,0);
-}
-div.csCardInterior{
-  flex: 1;
-  text-align: center;
-  padding: 0px;
-  border: solid;
-}
-div.csCardInterior > img{
-  height : 100%;
-}
-div.csCardInterior.right{
-  display: none;
-}
-div.compSciCard:hover div.csCardInterior.right{
-  display: unset;
 }
 
 div.compSciRating{
