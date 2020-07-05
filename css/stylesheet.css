@@ -189,7 +189,6 @@ div.experienceMobileText{
   .experience{
     display:none;
   }
-
   .experienceMobile { 
     display:block;
   }
@@ -229,7 +228,7 @@ div.csoverlay{
   color: white;
   font-size: large;
 }
-div.overlayText{
+div.csoverlayText{
   margin: 10% 5% 0 5%;
 }
 
@@ -388,7 +387,6 @@ div#spotifyPlaylist img{
   box-shadow: 0 0 10px 4px rgba(0,0,0,.5);
   pointer-events: all;
 }
-
 div#songInfo{
   display: block;
   width:auto;

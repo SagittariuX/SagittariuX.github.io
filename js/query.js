@@ -83,7 +83,7 @@ $(document).ready(function (){
             );
         });
         console.log('compsci loaded');
-        loadInCompSciCard();
+        loadInCSOverlay();
         return;
     });
 
@@ -142,6 +142,21 @@ function loadInExperienceMobile(json, index){
 }
 
 //Things to do with CompSci
+function loadInCSOverlay(){
+    var target = $('div#compSci').last();
+    $.each($gCompSciInfo, function(index, info){
+        target.append(`
+            <div class="compSciBlock">
+                <img src="${info.pic_url}">
+                <div class="csoverlay">
+                    <div class="csoverlayText">${info.text}</div>
+                </div>   
+            </div>    
+        `)
+    });
+    return;
+}
+
 function loadInCompSciCard(){
     var colors = ['coolYellow', 'coolGreen', 'coolOrange', 'coolBlue', 'coolRed'];
     $.each($gCompSciInfo, function(index, Info){
@@ -261,11 +276,8 @@ function changeSongInfo(focus){
         `;
     });
     $artists.append($artistsString);
-
     return;
 }
-
-
 //Things to do with spotify ends
 
 //Things to do with artstation
