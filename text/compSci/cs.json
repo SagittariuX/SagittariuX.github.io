@@ -24,6 +24,11 @@
             "pic_url": "pics/compSci/pic4.png",
             "stars": 3,
             "text" : "text 4"
+        },
+        {
+            "pic_url": "pics/compSci/pic5.png",
+            "stars": 2,
+            "text": "text 5"
         }
     ]
 }
