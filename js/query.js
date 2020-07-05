@@ -155,8 +155,8 @@ function loadInCSOverlay(){
             </div>    
         `);
         lastDiv = $('div.compSciBlock').last();
-        lastDiv.mouseenter(csOverlayMouseEnter(event));
-        lastDiv.mouseleave(csOverlayMouseLeave(event));
+        lastDiv.mouseenter(csOverlayMouseEnter(event, lastDiv));
+        lastDiv.mouseleave(csOverlayMouseLeave(event, lastDiv));
     });
     return;
 }
