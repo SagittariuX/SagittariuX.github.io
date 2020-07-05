@@ -86,6 +86,8 @@ $(document).ready(function (){
         loadInCSOverlay();
         return;
     });
+    $('div.compSciBlock').mouseenter(csOverlayMouseEnter(event));
+    $('div.compSciBlock').mouseleave(csOverlayMouseLeave(event));
 
     //loads art Info
     $.getJSON('text/artstation/artstation.json', function(json){
