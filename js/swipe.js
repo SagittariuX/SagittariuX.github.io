@@ -76,7 +76,8 @@ function nearestEdge(x,y,w,h){
     }
 }
 
-$('div.compSciBlock').mouseenter(function(event){
+$('div.compSciBlock').mouseenter(
+function csOverlayMouseEnter(event){
     var offset = $(this).offset();
     var x = event.pageX - offset.left;
     var y = event.pageY - offset.top;
@@ -133,7 +134,8 @@ $('div.compSciBlock').mouseenter(function(event){
 
     return;
 });
-$('div.compSciBlock').mouseleave(function(event){
+
+function csOverlayMouseLeave(event){
     var offset = $(this).offset();
     var x = event.pageX - offset.left;
     var y = event.pageY - offset.top;

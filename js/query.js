@@ -84,6 +84,8 @@ $(document).ready(function (){
         });
         console.log('compsci loaded');
         loadInCSOverlay();
+        $('div.compSciBlock').mouseenter(csOverlayMouseEnter(event));
+        $('div.compSciBlock').mouseleave(csOverlayMouseLeave(event));
         return;
     });
 
