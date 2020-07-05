@@ -84,8 +84,6 @@ $(document).ready(function (){
         });
         console.log('compsci loaded');
         loadInCSOverlay();
-        $('div.compSciBlock').mouseenter(csOverlayMouseEnter(event));
-        $('div.compSciBlock').mouseleave(csOverlayMouseLeave(event));
         return;
     });
 
@@ -146,6 +144,7 @@ function loadInExperienceMobile(json, index){
 //Things to do with CompSci
 function loadInCSOverlay(){
     var target = $('div#compSci').last();
+    var lastDiv;
     $.each($gCompSciInfo, function(index, info){
         target.append(`
             <div class="compSciBlock">
@@ -154,7 +153,10 @@ function loadInCSOverlay(){
                     <div class="csoverlayText">${info.text}</div>
                 </div>   
             </div>    
-        `)
+        `);
+        lastDiv = $('div.compSciBlock').last();
+        lastDiv.mouseenter(csOverlayMouseEnter(event));
+        lastDiv.mouseleave(csOverlayMouseLeave(event));
     });
     return;
 }
