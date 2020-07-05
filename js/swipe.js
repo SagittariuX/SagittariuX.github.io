@@ -77,14 +77,14 @@ function nearestEdge(x,y,w,h){
 }
 
 
-function csOverlayMouseEnter(event, element){
-    var offset = element.offset();
+$('div.compSciBlock').mouseenter(function(event){
+    var offset = $(this).offset();
     var x = event.pageX - offset.left;
     var y = event.pageY - offset.top;
-    var width = element.width();
-    var height = element.height();
+    var width = $(this).width();
+    var height = $(this).height();
     var edge = nearestEdge(x,y,width,height);
-    var overlay = element.find('div.csoverlay');
+    var overlay = $(this).find('div.csoverlay');
     switch(edge){
         case 'top':
             overlay.css({'left':'0%', 'top': '-100%'});
@@ -133,16 +133,16 @@ function csOverlayMouseEnter(event, element){
     }
 
     return;
-};
+});
 
-function csOverlayMouseLeave(event, element){
-    var offset = element.offset();
+$('div.compSciBlock').mouseleave(function (event){
+    var offset = $(this).offset();
     var x = event.pageX - offset.left;
     var y = event.pageY - offset.top;
-    var width = element.width();
-    var height = element.height();
+    var width = $(this).width();
+    var height = $(this).height();
     var edge = nearestEdge(x,y,width,height);
-    var overlay = element.find('div.csoverlay');
+    var overlay = $(this).find('div.csoverlay');
     switch(edge){
        
         case 'top':
@@ -188,7 +188,7 @@ function csOverlayMouseLeave(event, element){
     }
 
     return;
-};
+});
 
 
 

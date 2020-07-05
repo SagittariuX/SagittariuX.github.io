@@ -83,11 +83,9 @@ $(document).ready(function (){
             );
         });
         console.log('compsci loaded');
-        loadInCSOverlay();
+        loadInCSOverlayText();
         return;
     });
-    $('div.compSciBlock').mouseenter(csOverlayMouseEnter(event));
-    $('div.compSciBlock').mouseleave(csOverlayMouseLeave(event));
 
     //loads art Info
     $.getJSON('text/artstation/artstation.json', function(json){
@@ -144,21 +142,9 @@ function loadInExperienceMobile(json, index){
 }
 
 //Things to do with CompSci
-function loadInCSOverlay(){
-    var target = $('div#compSci').last();
-    var lastDiv;
-    $.each($gCompSciInfo, function(index, info){
-        target.append(`
-            <div class="compSciBlock">
-                <img src="${info.pic_url}">
-                <div class="csoverlay">
-                    <div class="csoverlayText">${info.text}</div>
-                </div>   
-            </div>    
-        `);
-        lastDiv = $('div.compSciBlock').last();
-        lastDiv.mouseenter(csOverlayMouseEnter(event, lastDiv));
-        lastDiv.mouseleave(csOverlayMouseLeave(event, lastDiv));
+function loadInCSOverlayText(){
+    $('div.csoverlayText').each(function(index){
+        $(this).html($gCompSciInfo[index].text)
     });
     return;
 }
