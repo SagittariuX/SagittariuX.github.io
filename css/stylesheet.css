@@ -410,68 +410,60 @@ div#songInfo a:hover{
 }
 /* contact info */
 footer{
-  background: rgb(145, 145, 145);
+  background: rgb(165, 61, 0);
   overflow: hidden;
   text-align: center;
 }
 footer h1, footer h3, footer h4{
-  color: black;
+  color: white;
   word-wrap: break-word;
 }
 div#contactOptions{
-  display: flex;
   width: 100%;
+}
+div#contactOptions a{
+  display:inline-block;
+  max-height: 10%;
+  text-decoration: none;
+  color: black;
 }
 div.cOption{
-  flex:1;
+  display: flex;
+  width: auto;
+  height: auto;
   margin: 20px;
-  padding: 20px;
-  perspective: 1000px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: rgb(167, 92, 49);
+  align-items: center;
 }
-div.cOption a{
-  display:block;
-  text-decoration: none;
-  transition: transform 0.6s ease;
-  transform-style: preserve-3d;
+div.cOption:hover{
+  box-shadow: 0px 0px 10px rgba(0,0,0,.60);
 }
-
-div.cOption a:hover {
-  transform: translateZ(100px) ;
-}
-
-div.cOption img{
-  height: 10vw;
-  margin: auto;
-}
-
-div#credits{
-  width: 100%;
-  height:10vh; 
+div.cOption > img{
+  margin-right: 10px;
+  height: 50px;
+  width: auto;
 }
 
 @media only screen and (max-width: 900px){
   footer h1, footer h3{
     margin: 10px;
   }
-  div#contactOptions{
-    display:block;
-    max-width:100%;
+  div.cOption {
+    margin: 10px 10px;
+    border-radius: 50%;
+    padding: 20px;
   }
-  div.cOption{
-    flex:none;
-    margin: 20px 20px 0px 20px;
+  div.cOption > img{
+    margin-right: unset;
   }
-  div.cOption a{
-    display:flex;
+  div.cOption > span{
+    display: none;
   }
-  div.cOption img{
-    min-width: 80px;
-    min-height:80px;
-    float:left;
-  }
-  div.cOption h4{
-    padding: 0 10px;
-  }
+  
+
+  
 }
 
 .coolBlue { background: #00BCD4 }
