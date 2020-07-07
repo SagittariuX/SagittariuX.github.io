@@ -462,15 +462,13 @@ div.cOption > img{
     display: none;
   }
   
-
-  
 }
 
-.coolBlue { background: #00BCD4 }
-.coolGreen { background: #4CAF50 }
-.coolYellow { background: #CDDC39 }
-.coolOrange { background: #FFC107 }
-.coolRed { background: #FF5722 }
+.coolBlue { background: #00BCD4 !important}
+.coolGreen { background: #4CAF50 !important}
+.coolYellow { background: #CDDC39 !important}
+.coolOrange { background: #FFC107 !important}
+.coolRed { background: #FF5722 !important}
 
 
 
