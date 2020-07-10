@@ -10,10 +10,10 @@ nav{
   display: block;
   width: 100%;
   max-width: 1000px;
-  background-color: orange;
-  height: 7vh;
-  z-index: 100;
+  height: auto;
+  z-index: 99;
   transition: 1s;
+  text-align: center;
 }
 .stickToTop{
   position: sticky;
@@ -21,7 +21,28 @@ nav{
   top:0;
 }
 .hideNav{
-  top:-7%;
+  top:-50px;
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+  border: solid;
+  border-top: none;
+  border-color: white orange orange orange ;
+  list-style: none;
+  box-shadow: 0px -10px 5px 3px rgba(255, 166, 0, 0.596);
+}
+nav ul li{
+  display: inline-block;
+}
+nav ul li a{
+  display: block;
+  color: orange;
+  padding: 10px 20px;
+  text-decoration: none;
 }
 
 h1{
@@ -32,6 +53,7 @@ h1{
 }
 #banner{
   height: 100vh;
+  
 }
 .bannerTextBox{
   position:relative;
