@@ -153,7 +153,6 @@ $('div.compSciBlock').mouseleave(function (event){
                 queue: false,
                 duration: 200
             });
-            //transform2dTarget(overlay, '0%', '-100%', '0');
             break;
         case 'bot':
             overlay.animate({
@@ -163,7 +162,6 @@ $('div.compSciBlock').mouseleave(function (event){
                 queue: false,
                 duration: 200
             });
-           // transform2dTarget(overlay, '0%', '100%', '0');
             break;
         case 'left':
             overlay.animate({
@@ -173,7 +171,6 @@ $('div.compSciBlock').mouseleave(function (event){
                 queue: false,
                 duration: 200
             });
-           // transform2dTarget(overlay, '-100%', '0%', '0');
             break;
         case 'right':
             overlay.animate({
@@ -183,7 +180,6 @@ $('div.compSciBlock').mouseleave(function (event){
                 queue: false,
                 duration: 200
             });
-           // transform2dTarget(overlay, '100%', '0%', '0');
             break;
     }
 

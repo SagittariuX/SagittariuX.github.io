@@ -1,4 +1,6 @@
 //Global Variables
+var $gNavOffset = $('nav').offset();
+var $gLastScroll = 0;
 var $gExperiences = 5;
 var $gCompSciInfo = [];
 var $gAllArtInfo = [];
@@ -118,6 +120,37 @@ $(document).ready(function (){
 // $(window).on('beforeunload', function() {
 //     $(this).scrollTop(0);
 // });  <--- Add this in later
+
+$(window).on('scroll', function(){
+    var scrollDir = ($(window).scrollTop() > $gLastScroll) ? 'down' : 'up';
+    $gLastScroll = $(window).scrollTop();
+    
+    stickyNav();
+    hideNav(scrollDir);
+    
+
+    return; 
+});
+
+function stickyNav(){
+    if($(window).scrollTop() > $gNavOffset.top){
+        $('nav').addClass('stickToTop');
+    }else{
+        $('nav').removeClass('stickToTop');
+    }
+    return;
+}
+
+function hideNav(scrollDir){
+    if($('nav').hasClass('stickToTop') && scrollDir === 'down'){
+        $('nav').addClass('hideNav');
+    }else{
+        $('nav').removeClass('hideNav');
+    }
+    return;
+}
+
+
 
 $("#navbar").hover(function(){
     $("#navbar,#navbarIcon0, #navbarIcon1, #navbarIcon2, #menuList").addClass('toggle');

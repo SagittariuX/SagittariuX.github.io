@@ -1,84 +1,27 @@
 
 html, body{
-  overflow-x: hidden;
   margin: 0;
   padding: 0;
   font-family: 'Oxygen', Arial, sans-serif;
 }
 
-div#menuList{
-  display:none;
-  padding: 0;
-  margin: 0;
-  max-width:100%;
-  min-width:100px;
-  overflow: hidden;
-  text-align: center;
-}
-div#menuList.toggle{
-  display:block;
-}
-
-div#menuList a{
-  display:block;
-  margin: 10px 5px;
-  color: white;
+nav{
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  max-width: 1000px;
   background-color: orange;
-  text-decoration: none;
-  font-size: larger;
+  height: 7vh;
+  z-index: 100;
+  transition: 1s;
 }
-div#menuList a:hover{
-  background-color: orangered;
+.stickToTop{
+  position: sticky;
+  position: -webkit-sticky;
+  top:0;
 }
-
-nav#navbar{
-  display:block;
-  position:fixed;
-  bottom:50px;
-  right:50px;
-  width:10vw;
-  height:10vw;
-  max-width: 100px;
-  max-height: 100px;
-  min-width:50px;
-  min-height:50px;
-  overflow: hidden;
-  text-align: center;
-  background-color:rgb(253, 201, 104);
-  cursor: pointer;
-  z-index: 99;
-  transition: .3s;
-}
-
-nav#navbar.toggle{
-  height:30vh;
-  width:auto;
-  max-width: unset;
-  max-height: unset;
-  min-width:100px;
-  background-color: white;
-  border:solid;
-  border-color:rgb(253, 201, 104);
-  border-radius:0;
-}
-
-#navbarIcon0,#navbarIcon1,#navbarIcon2{
-  position: relative;
-  top:35%;
-  margin:0 auto; 
-  width:50%;
-  height:5%;
-  background-color: black;
-  transition: 0s;
-}
-#navbarIcon1{
-  top:45%;
-}
-#navbarIcon2{
-  top:55%;
-}
-#navbarIcon0.toggle, #navbarIcon1.toggle, #navbarIcon2.toggle{
-  opacity: 0;
+.hideNav{
+  top:-7%;
 }
 
 h1{
