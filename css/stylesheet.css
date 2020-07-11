@@ -9,7 +9,6 @@ nav{
   margin: 0 auto;
   display: block;
   width: 100%;
-  max-width: 1000px;
   height: auto;
   z-index: 99;
   transition: 1s;
@@ -31,9 +30,11 @@ nav ul{
   background-color: white;
   border: solid;
   border-top: none;
-  border-color: white orange orange orange ;
+  border-left: none;
+  border-right: none;
+  border-color: orange ;
+  box-shadow: 0px 5px 10px rgba(255, 166, 0, 0.596);
   list-style: none;
-  box-shadow: 0px -10px 5px 3px rgba(255, 166, 0, 0.596);
 }
 nav ul li{
   display: inline-block;
@@ -43,6 +44,7 @@ nav ul li a{
   color: orange;
   padding: 10px 20px;
   text-decoration: none;
+  font-size: large;
 }
 
 h1{
