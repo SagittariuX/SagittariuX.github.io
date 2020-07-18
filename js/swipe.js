@@ -1,6 +1,6 @@
 
 //swipe handler for CompSci
-var compSciHandler = new Hammer($('div#compSci')[0]);
+var compSciHandler = new Hammer($('div#compSciMobile')[0]);
 compSciHandler.on('swipeleft swiperight', function(event){
     console.log('compSci: '+event.type);
     return ;
