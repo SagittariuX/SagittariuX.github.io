@@ -121,14 +121,12 @@ $(document).ready(function (){
 //     $(this).scrollTop(0);
 // });  <--- Add this in later
 
+//things to do with navbar
 $(window).on('scroll', function(){
     var scrollDir = ($(window).scrollTop() > $gLastScroll) ? 'down' : 'up';
     $gLastScroll = $(window).scrollTop();
-    
     stickyNav();
     hideNav(scrollDir);
-    
-
     return; 
 });
 
@@ -140,7 +138,6 @@ function stickyNav(){
     }
     return;
 }
-
 function hideNav(scrollDir){
     if($('nav').hasClass('stickToTop') && scrollDir === 'down'){
         $('nav').addClass('hideNav');
@@ -150,14 +147,7 @@ function hideNav(scrollDir){
     return;
 }
 
-
-
-$("#navbar").hover(function(){
-    $("#navbar,#navbarIcon0, #navbarIcon1, #navbarIcon2, #menuList").addClass('toggle');
-},function(){
-    $("#navbar,#navbarIcon0, #navbarIcon1, #navbarIcon2, #menuList").removeClass('toggle');
-});
-
+//Things to do with experience
 function loadInExperience(json, index){
     var $pos = -1*index-1;
     $('.experienceTitle').eq($pos).html(json.title);
