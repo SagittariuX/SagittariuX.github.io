@@ -130,6 +130,11 @@ $(window).on('scroll', function(){
     return; 
 });
 
+$('div#hamburgerMenu').click(function(){
+    toggleToggle($(this));
+    toggleToggle($('nav ul'));
+});
+
 function stickyNav(){
     if($(window).scrollTop() > $gNavOffset.top){
         $('nav').addClass('stickToTop');
@@ -419,5 +424,15 @@ function transform2dTarget(target, moveX, moveY, rotateAngle){
 
 function addToggle(element){
     $(element).addClass('toggle');
+    return;
+}
+
+function toggleToggle(element){
+    if(element.hasClass('toggle')){
+        element.removeClass('toggle');
+    }
+    else{
+        $(element).addClass('toggle');
+    }
     return;
 }
