@@ -146,6 +146,7 @@ function stickyNav(){
 function hideNav(scrollDir){
     if($('nav').hasClass('stickToTop') && scrollDir === 'down'){
         $('nav').addClass('hideNav');
+        $('nav ul').removeClass('toggle');
     }else{
         $('nav').removeClass('hideNav');
     }
