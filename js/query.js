@@ -426,7 +426,10 @@ function addToggle(element){
     $(element).addClass('toggle');
     return;
 }
-
+function removeToggle(element){
+    $(element).removeClass('toggle');
+    return;
+}
 function toggleToggle(element){
     if(element.hasClass('toggle')){
         element.removeClass('toggle');

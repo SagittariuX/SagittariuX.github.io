@@ -72,10 +72,12 @@ nav ul li a{
     display: block;
   }
   nav ul {
+    position: absolute;
     max-height: 0;
+    width: 100%;
   }
   nav ul.toggle{
-    max-height: 500px;
+    max-height: 300px;
   }
   nav ul li{
     display: block;
