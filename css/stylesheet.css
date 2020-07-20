@@ -239,6 +239,13 @@ div.csoverlayText{
 }
 div#compSciMobile{
   display: none;
+<<<<<<< HEAD
+=======
+  position: relative;
+  max-width: 100%;
+  perspective: 100px;
+  height: auto;
+>>>>>>> e75f8d6879dc67b6ad875a6cd6f985763a940c6a
 }
 div.compSciCard{
   position: relative;
@@ -259,6 +266,7 @@ div.compSciCard img{
 }
 div.csCardText{
   padding: 0 10px;
+  margin-bottom: 30px;
 }
 div.csDots{
   position: absolute;
@@ -294,11 +302,15 @@ img.stars{
     display: none;
   }
   div#compSciMobile{
+<<<<<<< HEAD
     display: block;
     position: relative;
     max-width: 100%;
     perspective: 1000px;
     height: auto;
+=======
+    display: unset;
+>>>>>>> e75f8d6879dc67b6ad875a6cd6f985763a940c6a
   }
 }
 
