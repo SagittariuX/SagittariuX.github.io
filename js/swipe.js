@@ -6,8 +6,7 @@ compSciHandler.on('swipeleft swiperight', function(event){
     var angle = (event.type === 'swipeleft') ? 90 : -90;
     var target = $('div.compSciCard').first();
     target.csCardAnimation(angle, 1000, 'linear', function(){
-        console.log('this removed');
-        target.remove();
+        // target.remove();
     });
     return ;
 });
