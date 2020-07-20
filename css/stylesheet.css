@@ -67,7 +67,7 @@ nav ul li a{
   font-size: large;
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 1024px){
   div#hamburgerMenu{
     display: block;
   }
@@ -109,7 +109,7 @@ h1.bannerText{
   padding: 0;
   font-size: 4vh;
 }
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 1024px){
   .bannerTextBox{
     right:auto;
   }
@@ -128,7 +128,7 @@ h1.bannerText{
 }
 
 /* Changes aboutMe to be vertically centered */
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 1024px){
   .aboutMe{
     width: inherit;
     display: block;
@@ -192,7 +192,7 @@ div.experienceMobileText{
   max-width: 80%;
   margin: 20px auto;
 }
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 1024px){
   .experience{
     display:none;
   }
@@ -240,6 +240,7 @@ div.csoverlayText{
 div#compSciMobile{
   position: relative;
   max-width: 100%;
+  perspective: 1000px;
   height: auto;
 }
 div.compSciCard{
@@ -262,13 +263,23 @@ div.compSciCard img{
 div.csCardText{
   padding: 0 10px;
 }
-
-
-@media only screen and (max-width:1100px){
-  div.csoverlay{
-    font-size: small;
-  }
+div.csDots{
+  position: absolute;
+  bottom: 0;
+  left: 0; right: 0;
+  text-align: center;
 }
+span.smallDots{
+  display: inline-block;
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  background-color: white;
+}
+span.smallDots.toggle{
+  background-color: black;
+}
+
 div.compSciRating{
   margin: auto;
   height: auto;
@@ -281,7 +292,7 @@ img.stars{
   min-width: 20px !important;
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 1024px){
   div#compSci{
     display: none;
   }
@@ -382,7 +393,7 @@ div#artOptions img:hover, div#artOptions img.toggle{
   filter: grayscale(0);
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 1024px){
   div#inspirationsArt{
     display: none;
   }
@@ -436,7 +447,7 @@ div#songInfo a:hover{
   color: red;
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 1024px){
   div#spotifyPlaylist{
     height: 30vh;
     max-width: 100%;
@@ -480,7 +491,7 @@ div.cOption > img{
   width: auto;
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 1024px){
   footer h1, footer h3{
     margin: 10px;
   }

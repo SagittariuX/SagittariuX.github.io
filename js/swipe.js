@@ -3,8 +3,16 @@
 var compSciHandler = new Hammer($('div#compSciMobile')[0]);
 compSciHandler.on('swipeleft swiperight', function(event){
     console.log('compSci: '+event.type);
+    var angle = (event.type === 'swipeleft') ? 90 : -90;
+    var target = $('div.compSciCard').first();
+    target.csCardAnimation(angle, 1000, 'linear', function(){
+        console.log('this removed');
+        target.remove();
+    });
     return ;
 });
+
+
 
 
 //swipe handler for art gallery(mobile)
