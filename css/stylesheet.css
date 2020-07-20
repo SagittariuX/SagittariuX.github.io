@@ -238,9 +238,10 @@ div.csoverlayText{
   margin: 10% 5% 0 5%;
 }
 div#compSciMobile{
+  display: none;
   position: relative;
   max-width: 100%;
-  perspective: 1000px;
+  perspective: 100px;
   height: auto;
 }
 div.compSciCard{
@@ -262,6 +263,7 @@ div.compSciCard img{
 }
 div.csCardText{
   padding: 0 10px;
+  margin-bottom: 30px;
 }
 div.csDots{
   position: absolute;
@@ -295,6 +297,9 @@ img.stars{
 @media only screen and (max-width: 1024px){
   div#compSci{
     display: none;
+  }
+  div#compSciMobile{
+    display: unset;
   }
 }
 

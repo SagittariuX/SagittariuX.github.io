@@ -7,7 +7,7 @@ compSciHandler.on('swipeleft swiperight', function(event){
     var target = $('div.compSciCard').first();
     target.csCardAnimation(angle, 1000, 'linear', function(){
         console.log('this removed');
-        target.remove();
+        // target.remove();
     });
     return ;
 });
