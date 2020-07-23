@@ -1,13 +1,13 @@
 (function($){
-    $.fn.csCardAnimation = function(angle, duration, easing, complete) {
+    $.fn.csCardAnimation = function(displaceX, duration, easing, complete) {
         return this.each(function() {
             var $elem = $(this);
-            $({deg: 0}).animate({deg: angle}, {
+            $({deg: 0}).animate({deg: displaceX}, {
             duration: duration,
             easing: easing,
             step: function(now) {
               $elem.css({
-                 transform: 'rotateY(' + now + 'deg)'
+                 transform: 'translate(' + now + '%, 0%)'
                });
             },
             complete: complete || $.noop

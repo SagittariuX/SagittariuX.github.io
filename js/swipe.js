@@ -3,9 +3,9 @@
 var compSciHandler = new Hammer($('div#compSciMobile')[0]);
 compSciHandler.on('swipeleft swiperight', function(event){
     console.log('compSci: '+event.type);
-    var angle = (event.type === 'swipeleft') ? 90 : -90;
+    var displaceX = (event.type === 'swipeleft') ? -200 : 200;
     var target = $('div.compSciCard').first();
-    target.csCardAnimation(angle, 1000, 'linear', function(){
+    target.csCardAnimation(displaceX, 500, 'linear', function(){
         // target.remove();
     });
     return ;
