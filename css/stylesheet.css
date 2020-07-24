@@ -243,6 +243,7 @@ div#compSciMobile{
 }
 div.compSciCard{
   position: relative;
+  display: inline-block;
   margin: auto;
   left: 0; right: 0;
   width: 70%;
@@ -299,8 +300,9 @@ img.stars{
     display: block;
     position: relative;
     max-width: 100%;
-    perspective: 1000px;
-    height: auto;
+    overflow-x: hidden;
+    padding-top: 50px;
+    padding-bottom: 10px;
   }
 }
 
@@ -520,6 +522,7 @@ div.cOption > img{
 .coolYellow { background: #CDDC39 !important}
 .coolOrange { background: #FFC107 !important}
 .coolRed { background: #FF5722 !important}
+.coolPurple {background: #c929c9 !important}
 
 
 

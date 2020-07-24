@@ -1,18 +1,30 @@
 
 //swipe handler for CompSci
 var compSciHandler = new Hammer($('div#compSciMobile')[0]);
+var $gCompSciCardSwipe = 0;
 compSciHandler.on('swipeleft swiperight', function(event){
+    
+    if($gCompSciCardSwipe) return;
+    
     console.log('compSci: '+event.type);
+
+    $gCompSciCardSwipe = 1;
     var displaceX = (event.type === 'swipeleft') ? -200 : 200;
     var target = $('div.compSciCard').first();
+    var cardID = (event.type === 'swipeleft') ? target.data('id')-1: target.data('id')+1;
+    if(cardID < 0){
+        cardID = $gCompSciInfo.length - 1;
+    }else if (cardID >= $gCompSciInfo.length){
+        cardID = 0;
+    }
+    
     target.csCardAnimation(displaceX, 500, 'linear', function(){
-        // target.remove();
+        target.remove();
+        $gCompSciCardSwipe = 0;
     });
+    loadInCompSciCard(cardID);
     return ;
 });
-
-
-
 
 //swipe handler for art gallery(mobile)
 var galleryHandler = new Hammer($('div#artContainerMobile')[0]);

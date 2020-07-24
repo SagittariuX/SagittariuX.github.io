@@ -86,6 +86,7 @@ $(document).ready(function (){
         });
         console.log('compsci loaded');
         loadInCSOverlayText();
+        loadInCompSciCard();
         return;
     });
 
@@ -178,43 +179,33 @@ function loadInCSOverlayText(){
     return;
 }
 
-function loadInCompSciCard(){
-    var colors = ['coolYellow', 'coolGreen', 'coolOrange', 'coolBlue', 'coolRed'];
-    $.each($gCompSciInfo, function(index, Info){
-        $('div#compSci').append(`<div class="compSciCard ${colors[index]}"></div>`);
-        loadInCompSciCardInterior(index);
-    });
-    return null;
-}
-
-function loadInCompSciCardInterior(fileNum){
-    var target = $('div.compSciCard').last();
+function loadInCompSciCard(index = 0){
+    var colors = ['coolBlue', 'coolGreen', 'coolYellow', 'coolOrange', 'coolRed', 'coolPurple'];
+    var target = $('div#compSciMobile').first();
+    var dots = generateDots(index);
     target.append(`
-        <div class="csCardInterior">
-            <img src="${$gCompSciInfo[fileNum].pic_url}" draggable="false">
-        </div>
-    `);//append the image half
-    var stars = returnCompSciStars($gCompSciInfo[fileNum].stars)
-    target.append(`
-        <div class="csCardInterior">
-            <div class="compSciRating">
-                ${stars}
+        <div class="compSciCard ${colors[index]}" data-id="${index}">
+            <img src="${$gCompSciInfo[index].pic_url}">
+            <div class="csCardText"> text </div>
+            <div class="csDots">
+                ${dots}
             </div>
-            <div class="compSciText">${$gCompSciInfo[fileNum].text}</div>
         </div>
-    `);
+    `)
     return null;
 }
-function returnCompSciStars(stars){
-    var string = '';
-    for(var i = 0; i < 5; i++){
-        string+=(i<stars) ?
-         '<img class="stars" src="pics/misc/goldstar.png" draggable="false">':
-         '<img class="stars" src="pics/misc/blackstar.png" draggable="false">';
-    }
-    return string; 
-}
 
+function generateDots(index){
+    var ans = '';
+    $.each($gCompSciInfo, (i, cs)=>{
+        if(index == i){
+            ans += '<span class="smallDots toggle"></span>';
+        }else{
+            ans += '<span class="smallDots"></span>';
+        }
+    })
+    return ans;
+}
 
 class CompSciInfo{
     constructor(pic_url, stars, text){
