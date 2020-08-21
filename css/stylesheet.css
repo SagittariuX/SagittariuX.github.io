@@ -242,7 +242,7 @@ div#compSciMobile{
   display: none;
 }
 div.compSciCard{
-  position: relative;
+  position: absolute;
   display: inline-block;
   margin: auto;
   left: 0; right: 0;
@@ -274,22 +274,13 @@ span.smallDots{
   height: 7px;
   width: 7px;
   border-radius: 50%;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
   background-color: white;
 }
 span.smallDots.toggle{
   background-color: black;
-}
-
-div.compSciRating{
-  margin: auto;
-  height: auto;
-  max-height: 10%;
-  border: solid;
-}
-img.stars{
-  width: 7% !important;
-  max-width: 40px !important;
-  min-width: 20px !important;
 }
 
 @media only screen and (max-width: 1024px){

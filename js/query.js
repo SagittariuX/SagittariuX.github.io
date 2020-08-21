@@ -192,6 +192,9 @@ function loadInCompSciCard(index = 0){
             </div>
         </div>
     `)
+    target.css('height',  ()=>{
+        return $('div.compSciCard').last().css('height');
+    });
     return null;
 }
 
