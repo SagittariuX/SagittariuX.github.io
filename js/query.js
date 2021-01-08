@@ -217,6 +217,7 @@ class CompSciInfo{
         this.text = text;
     }
 }
+//Things to do with compsci ends
 
 // Things to do with spotify
 function formatTracks(focus, handlerSource = null){
@@ -395,6 +396,8 @@ class ArtInfo{
     }
 }
 //Things to do with artstation ends
+
+//Helper Functions
 
 //target here is a DOM element
 function transform3dTarget(target, moveX, moveY, moveZ, rotateX, rotateY, rotateZ, angle){
