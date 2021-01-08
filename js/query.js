@@ -74,21 +74,7 @@ $(document).ready(function (){
     });
 
     //loads compsci info
-    $.getJSON('text/compSci/cs.json', function(json){
-        $.each(json.items, function(index, item){
-            $gCompSciInfo.push(
-                new CompSciInfo(
-                    item.pic_url,
-                    item.stars,
-                    item.text
-                )
-            );
-        });
-        console.log('compsci loaded');
-        loadInCSOverlayText();
-        loadInCompSciCard();
-        return;
-    });
+    
 
     //loads art Info
     $.getJSON('text/artstation/artstation.json', function(json){
@@ -172,43 +158,7 @@ function loadInExperienceMobile(json, index){
 }
 
 //Things to do with CompSci
-function loadInCSOverlayText(){
-    $('div.csoverlayText').each(function(index){
-        $(this).html($gCompSciInfo[index].text)
-    });
-    return;
-}
 
-function loadInCompSciCard(index = 0){
-    var colors = ['coolBlue', 'coolGreen', 'coolYellow', 'coolOrange', 'coolRed', 'coolPurple'];
-    var target = $('div#compSciMobile').first();
-    var dots = generateDots(index);
-    target.append(`
-        <div class="compSciCard ${colors[index]}" data-id="${index}">
-            <img src="${$gCompSciInfo[index].pic_url}">
-            <div class="csCardText"> text </div>
-            <div class="csDots">
-                ${dots}
-            </div>
-        </div>
-    `)
-    target.css('height',  ()=>{
-        return $('div.compSciCard').last().css('height');
-    });
-    return null;
-}
-
-function generateDots(index){
-    var ans = '';
-    $.each($gCompSciInfo, (i, cs)=>{
-        if(index == i){
-            ans += '<span class="smallDots toggle"></span>';
-        }else{
-            ans += '<span class="smallDots"></span>';
-        }
-    })
-    return ans;
-}
 
 class CompSciInfo{
     constructor(pic_url, stars, text){
