@@ -6,6 +6,11 @@ html, body{
   font-family: 'Oxygen', Arial, sans-serif;
 }
 
+body{
+  background-color: rgb(27, 47, 134);
+  color: rgb(155, 170, 240);
+}
+
 nav{
   margin: 0 auto;
   display: block;
@@ -28,8 +33,10 @@ div#hamburgerMenu{
   display: none;
   padding: 10px 0px;
   text-align: center;
-  background-color: orange;
+  /* background-color: orange; */
   box-shadow: 0px 5px 10px rgba(255, 166, 0, 0.6);
+  background-color: rgb(27, 47, 134);
+  color: rgb(155, 170, 240);
 }
 div#hamburgerBar0, div#hamburgerBar1, div#hamburgerBar2{
   width: 40px;
@@ -47,13 +54,13 @@ nav ul{
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: white;
+  background-color: rgb(27, 47, 134);
   border: solid;
   border-top: none;
   border-left: none;
   border-right: none;
-  border-color: orange ;
-  box-shadow: 0px 5px 10px rgba(255, 166, 0, 0.6);
+  border-color: rgb(155, 170, 240) ;
+  box-shadow: 0px 5px 10px rgba(155, 170, 240,0.6);
   list-style: none;
   transition: 1s;
 }
@@ -62,7 +69,7 @@ nav ul li{
 }
 nav ul li a{
   display: block;
-  color: orange;
+  color: rgb(155, 170, 240);
   padding: 10px 20px;
   text-decoration: none;
   font-size: large;
@@ -205,210 +212,16 @@ div.experienceMobileText{
   }
 }
 
-/* All compsci related things*/
-div#compSci {
-  text-align: center;
-  max-width: 100%;
-  border: solid;
-}
 
-div.compSciBlock {
-  display: inline-block;
-  position: relative;
-  width: 30%;
-  border:solid;
-  overflow: hidden;
-}
-div.compSciBlock > img{
-  width: 100%;
-}
-div.csoverlay{
-  display: block;
-  position: absolute;
-  top: 0%;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,.7);
-  z-index: 10;
-  overflow: hidden;
-  color: white;
-  font-size: large;
-}
-div.csoverlayText{
-  margin: 10% 5% 0 5%;
-}
-div#compSciMobile{
-  display: none;
-}
-div.compSciCard{
-  position: absolute;
-  display: inline-block;
-  margin: auto;
-  left: 0; right: 0;
-  width: 70%;
-  max-width: 500px;
-  min-height: 500px;
-  background-color: rgb(170, 169, 169);
-  border-radius: 15px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-}
-div.compSciCard img{
-  position: relative;
-  width: 70%;
-  left: 50%;
-  transform: translate(-50%, -20%);
-}
-div.csCardText{
-  padding: 0 10px;
-  margin-bottom: 30px;
-}
-div.csDots{
-  position: absolute;
-  bottom: 0;
-  left: 0; right: 0;
-  text-align: center;
-}
-span.smallDots{
-  display: inline-block;
-  height: 7px;
-  width: 7px;
-  border-radius: 50%;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  background-color: white;
-}
-span.smallDots.toggle{
-  background-color: black;
-}
 
-@media only screen and (max-width: 1024px){
-  div#compSci{
-    display: none;
-  }
-  div#compSciMobile{
-    display: block;
-    position: relative;
-    max-width: 100%;
-    overflow-x: hidden;
-    padding-top: 50px;
-    padding-bottom: 10px;
-  }
-}
-
-/* artstation gallery */
-div#galleryBack{
-  padding: 5% 0;
-  max-width: 100%;
-  background: rgb(26, 26, 26);
-  box-shadow: 0 -5px 10px rgba(0,0,0,.60),0 5px 10px rgba(0,0,0,.60);
-}
-div#galleryBack h2{
-  color: white;
-  text-align: center;
-}
-div#inspirationsArt, div#inspirationsArtMobile{
-  width: 80%;
-  max-width: 1300px;
-  margin: 0 auto;
-}
-div#inspirationsArtMobile{
-  width: 100%;
-}
-div#inspirationsArtMobile{
-  display: none;
-}
-div#artContainer, div#artContainerMobile{
-  position:relative;
-  max-width: 100%;
-  overflow: hidden;
-  padding-top: 56.25%;
-}
-img#mainArt, img.mainArtMobile{
-  position: absolute;
-  top: 0; bottom: 0;
-  left: 0; right: 0;
-  margin: 0 auto;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  cursor: pointer;
-}
-img.mainArtMobile{
-  transition: transform .5s ease;
-}
-.topimage{
-  z-index: 99;
-}
-div#artText{
-  position: absolute;
-  background : rgb(26, 26, 26);
-  top: 0;
-  left: 0;right: 0;
-  opacity: .8;
-  max-width: 100%;
-  padding-top: 5%;
-  text-align: center;
-}
-div#artText span{
-  position: absolute;
-  margin: auto;
-  color: white;
-  padding-top: 10px;
-  top: 0; bottom: 0;
-  left: 0; right: 0;
-  font-size: 1.5vw;
-}
-div#artTextMobile{
-  display: block;
-  max-width: 100%;
-  text-align: center;
-}
-div#artTextMobile span{
-  padding: 10px 0;
-  font-size: 1.5em ;
-  color: white;
-}
-div#artOptions{
-  position:relative;
-  overflow: hidden;
-  max-width: 100%;
-  padding-top: 10%;
-
-}
-div#artOptions img{
-  position: absolute;
-  top: 0; bottom: 0;
-  left: 0;
-  height: 100%;
-  opacity: .5;
-  transition: .5s;
-  cursor: pointer;
-  filter: grayscale(1);
-}
-div#artOptions img:hover, div#artOptions img.toggle{
-  opacity: 1;
-  filter: grayscale(0);
-}
-
-@media only screen and (max-width: 1024px){
-  div#inspirationsArt{
-    display: none;
-  }
-  div#inspirationsArtMobile{
-    display: block;
-  }
-  
-}
 /* Spotify Music */
 div#inspirationsMusic{
   max-width:100%;
   overflow: hidden;
   height: auto;
   margin-top: 5%;
-  background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(48,246,81,1) 46%, rgba(255,255,255,1) 100%);
+  /* background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(48,246,81,1) 46%, rgba(255,255,255,1) 100%); */
   padding: 20px;
   font-family: 'Righteous', Arial, sans-serif;
 }
@@ -454,7 +267,6 @@ div#songInfo a:hover{
 }
 /* contact info */
 footer{
-  background: rgb(165, 61, 0);
   overflow: hidden;
   text-align: center;
 }

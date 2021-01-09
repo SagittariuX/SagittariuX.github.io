@@ -76,30 +76,7 @@ $(document).ready(function (){
     //loads compsci info
     
 
-    //loads art Info
-    $.getJSON('text/artstation/artstation.json', function(json){
-        $.each(json.items, function(index, item){ //gather everything into a list
-            $gAllArtInfo.push(
-                new ArtInfo(
-                    item.pic_url,
-                    item.text,
-                    item.dir_url
-                )
-            );
-        });
-        console.log('art loaded');
-        //all the desktop display art
-        loadInArtOptions();
-        loadMainArt($gAllArtInfo[0].pic_url, $gAllArtInfo[0].text, $gAllArtInfo[0].dir_url);
-        $('div#artOptions img').first().addClass('toggle');//manually adding the toggle sigh
-        addingClickHandlerToMainArt();
-        addingClickHandlerToArtOptions();
-
-        //all the mobile display art
-        loadMainArtMobile()
-        return;
-    })
-    addingClickHandlerToMainArtMobile();
+    
     new WOW().init();
 });
 
