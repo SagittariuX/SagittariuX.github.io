@@ -18,7 +18,7 @@ nav{
   height: auto;
   z-index: 99;
   transition: 1s;
-  text-align: center;
+  text-align: right;
 }
 .stickToTop{
   position: sticky;
@@ -33,7 +33,6 @@ div#hamburgerMenu{
   display: none;
   padding: 10px 0px;
   text-align: center;
-  /* background-color: orange; */
   box-shadow: 0px 5px 10px rgba(35, 39, 54, 0.6);
   background-color: rgb(27, 47, 134);
   color: rgb(155, 170, 240);
@@ -52,7 +51,7 @@ div#hamburgerMenu.toggle{
 
 nav ul{
   margin: 0;
-  padding: 0;
+  padding: 0px 20px;
   overflow: hidden;
   background-color: rgb(27, 47, 134);
   border: solid;
@@ -74,13 +73,23 @@ nav ul li a{
   text-decoration: none;
   font-size: large;
 }
+a#resumeButton{
+  border: solid;
+  border-color: rgb(34, 65, 202);
+  color: rgb(27, 47, 134) ;
+  background-color: rgb(155, 170, 240);
+}
 
 @media only screen and (max-width: 1024px){
   div#hamburgerMenu{
     display: block;
   }
+  nav{
+    text-align: center;
+  }
   nav ul {
     position: absolute;
+    padding: 0px 0px;
     max-height: 0;
     width: 100%;
   }
