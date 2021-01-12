@@ -7,7 +7,7 @@ html, body{
 }
 
 body{
-  background-color: rgb(27, 47, 134);
+  background-color: rgb(26, 39, 100);
   color: rgb(155, 170, 240);
 }
 
@@ -34,7 +34,7 @@ div#hamburgerMenu{
   padding: 10px 0px;
   text-align: center;
   /* background-color: orange; */
-  box-shadow: 0px 5px 10px rgba(255, 166, 0, 0.6);
+  box-shadow: 0px 5px 10px rgba(35, 39, 54, 0.6);
   background-color: rgb(27, 47, 134);
   color: rgb(155, 170, 240);
 }
@@ -59,8 +59,8 @@ nav ul{
   border-top: none;
   border-left: none;
   border-right: none;
-  border-color: rgb(155, 170, 240) ;
-  box-shadow: 0px 5px 10px rgba(155, 170, 240,0.6);
+  border-color: rgb(27, 47, 134) ;
+  box-shadow: 0px 5px 10px rgba(35, 39, 54, 0.6);
   list-style: none;
   transition: 1s;
 }
@@ -212,6 +212,20 @@ div.experienceMobileText{
   }
 }
 
+/* CompSci */
+div#compSci{
+  text-align: center;
+}
+
+div#softwareSkills, div#technicalSkills{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+div#softwareSkills img, div#technicalSkills img{
+  width: 100px;
+}
 
 
 /* Spotify Music */
