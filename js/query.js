@@ -102,10 +102,8 @@ $('div#hamburgerMenu').click(function(){
 function stickyNav(){
     if($(window).scrollTop() > $gNavOffset.top){
         $('nav').addClass('stickToTop');
-        // $('nav ul').addClass('toggle');
     }else{
         $('nav').removeClass('stickToTop');
-        // $('nav ul').removeClass('toggle');
     }
     return;
 }
