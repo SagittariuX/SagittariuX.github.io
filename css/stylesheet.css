@@ -4,6 +4,7 @@ html, body{
   padding: 0;
   max-width: 100%;
   font-family: 'Oxygen', Arial, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body{
@@ -67,7 +68,7 @@ nav ul.toggle{
   background-color: rgba(27, 47, 134, 0.5);
   border-color: rgb(27, 47, 134);
   backdrop-filter: blur(7px);
-  box-shadow: 0px 5px 10px rgba(35, 39, 54, 0.6);
+  box-shadow: 0px 5px 10px rgba(35, 39, 54, 0.8);
 }
 nav ul li{
   display: inline-block;
@@ -88,6 +89,7 @@ nav ul li a{
 }
 .standOutButton:hover{
   background-color: rgb(222, 231, 239);
+  color: rgb(27, 47, 134);
 }
 
 @media only screen and (max-width: 1024px){
@@ -114,11 +116,24 @@ nav ul li a{
   }
 }
 
+
 h1{
+  display: flex;
+  border:solid;
+  
   font-weight: 100;
   padding:5vh 0 5vh 0;
-  text-align: center;
   color: rgb(0, 204, 255);
+}
+h1:before{
+  content: "";
+  display: block;
+  
+  width: 5px;
+  height: 40px;
+  margin-right: 20px;
+  color: white;
+  background-color: white;
 }
 #banner{
   height: 100vh;
