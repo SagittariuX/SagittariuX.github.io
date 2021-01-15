@@ -70,6 +70,7 @@ nav ul{
   border-right: none;
   border-color: black; */
   background-color:rgba(26, 39, 100, 0.5);
+  backdrop-filter: blur(7px);
   list-style: none;
   transition: 1s;
 }
