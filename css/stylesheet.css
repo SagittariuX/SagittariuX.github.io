@@ -1,15 +1,24 @@
 
+:root{
+ --myWhite:rgb(155, 170, 240);
+ --myLightblue:rgb(0, 204, 255); 
+ --myBlue:rgb(27, 47, 134);
+ --myDarkblue:rgb(26, 39, 100);
+}
+
+
 html, body{
   margin: 0;
   padding: 0;
   max-width: 100%;
-  font-family: 'Oxygen', Arial, sans-serif;
+  font-family: Calibri ,'Oxygen', Arial, sans-serif;
+  font-size: 20px;
   scroll-behavior: smooth;
 }
 
 body{
-  background-color: rgb(26, 39, 100);
-  color: rgb(155, 170, 240);
+  background-color: var(--myDarkblue);
+  color: var(--myWhite);
 }
 
 nav{
@@ -35,8 +44,8 @@ div#hamburgerMenu{
   padding: 10px 0px;
   text-align: center;
   box-shadow: 0px 5px 10px rgba(35, 39, 54, 0.6);
-  background-color: rgb(27, 47, 134);
-  color: rgb(155, 170, 240);
+  background-color: var(--myBlue);
+  color: var(--myWhite);
 }
 div#hamburgerBar0, div#hamburgerBar1, div#hamburgerBar2{
   width: 40px;
@@ -66,7 +75,7 @@ nav ul{
 }
 nav ul.toggle{
   background-color: rgba(27, 47, 134, 0.5);
-  border-color: rgb(27, 47, 134);
+  border-color: var(--myBlue);
   backdrop-filter: blur(7px);
   box-shadow: 0px 5px 10px rgba(35, 39, 54, 0.8);
 }
@@ -75,21 +84,21 @@ nav ul li{
 }
 nav ul li a{
   display: block;
-  color: rgb(155, 170, 240);
+  color: var(--myWhite);
   padding: 10px 20px;
   text-decoration: none;
-  font-size: large;
+  font-size: larger;
 }
 .standOutButton{
   border: solid;
-  border-color: rgb(155, 170, 240);
-  color: rgb(155, 170, 240) ;
+  border-color: var(--myWhite);
+  color: var(--myWhite);
   background-color: rgba(0,0,0,0) ;
   border-radius: 10px;
 }
 .standOutButton:hover{
   background-color: rgb(222, 231, 239);
-  color: rgb(27, 47, 134);
+  color: var(--myBlue);
 }
 
 @media only screen and (max-width: 1024px){
@@ -117,24 +126,35 @@ nav ul li a{
 }
 
 
-h1{
-  display: flex;
-  border:solid;
+h1.sectionHeader{
+  display: flex;  
+  justify-content: center;
+  font-weight: bolder;
   
-  font-weight: 100;
   padding:5vh 0 5vh 0;
-  color: rgb(0, 204, 255);
+  color: var(--myLightblue);
 }
-h1:before{
+h1.sectionHeader:before{
   content: "";
   display: block;
-  
+  top: -20px;
   width: 5px;
   height: 40px;
   margin-right: 20px;
-  color: white;
-  background-color: white;
+  color: var(--myWhite);
+  background-color: var(--myWhite);
 }
+h1.sectionHeader:after{
+  content: "";
+  display: block;
+  top: 20px;
+  width: 5px;
+  height: 40px;
+  margin-left: 20px;
+  color: var(--myWhite);
+  background-color: var(--myWhite);
+}
+
 #banner{
   height: 100vh;
   
