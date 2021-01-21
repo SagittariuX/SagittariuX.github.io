@@ -76,7 +76,7 @@ $(document).ready(function (){
     //loads compsci info
     
 
-    
+    feather.replace();
     new WOW().init();
 });
 

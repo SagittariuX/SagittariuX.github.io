@@ -288,11 +288,11 @@ div#inspirationsMusic{
   max-width:100%;
   overflow: hidden;
   height: auto;
-  margin-top: 5%;
+  margin-top: 0;
   /* background: rgb(255,255,255);
   background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(48,246,81,1) 46%, rgba(255,255,255,1) 100%); */
   padding: 20px;
-  font-family: 'Righteous', Arial, sans-serif;
+  /* font-family: 'Righteous', Arial, sans-serif; */
 }
 
 div#spotifyPlaylist{
@@ -321,11 +321,11 @@ div#songInfo{
 }
 div#songInfo a{
   margin: 10px;
-  color: black;
+  color: var(--myWhite);
   text-decoration: none;
 }
 div#songInfo a:hover{
-  color: red;
+  color: var(--myLightblue);
 }
 
 @media only screen and (max-width: 1024px){
@@ -344,49 +344,38 @@ footer h1, footer h3, footer h4{
   word-wrap: break-word;
 }
 div#contactOptions{
-  width: 100%;
+  max-width: 100%;
   padding-bottom: 50px;
 }
-div#contactOptions a{
-  display:inline-block;
-  max-height: 10%;
-  text-decoration: none;
-  color: black;
+ul#contactList{
+  list-style: none;
+  text-align: center;
+  padding-inline-start: 0px;
 }
-div.cOption{
-  display: flex;
-  width: auto;
-  height: auto;
-  margin: 20px;
-  border-radius: 10px;
-  padding: 10px 20px;
-  background-color: rgb(167, 92, 49);
-  align-items: center;
+ul#contactList li{
+  margin: 0px 10px;
+  display: inline-block;
+  
 }
-div.cOption:hover{
-  box-shadow: 0px 0px 10px rgba(0,0,0,.60);
+ul#contactList li a{
+  display: block;
+  transition: .5s;
+  position: relative;
+  color: var(--myWhite);
 }
-div.cOption > img{
-  height: 50px;
-  width: auto;
+ul#contactList li a:hover{
+  transform: translateY(10px);
+  color: var(--myLightblue);
 }
+
+
+
+
 
 @media only screen and (max-width: 1024px){
   footer h1, footer h3{
     margin: 10px;
   }
-  div.cOption {
-    margin: 10px 10px;
-    border-radius: 50%;
-    padding: 20px;
-  }
-  div.cOption > img{
-    margin-right: unset;
-  }
-  div.cOption > span{
-    display: none;
-  }
-  
 }
 
 .coolBlue { background: #00BCD4 !important}
