@@ -132,8 +132,7 @@ h1.sectionHeader{
   display: flex;  
   justify-content: center;
   font-weight: bolder;
-  
-  padding:5vh 0 5vh 0;
+  padding:25px 0 25px 0;
   color: var(--myLightblue);
 }
 h1.sectionHeader:before{
@@ -270,11 +269,11 @@ div.experienceMobileText{
 
 /* CompSci */
 div#compSci{
+  border: solid red;
   text-align: center;
 }
 
 ul#skillsList{
-  border:solid;
   position: relative;
   padding: 10px 0px;
   list-style: none;
@@ -311,9 +310,26 @@ ul#skillsList li{
   background-color: var(--myDarkblueAccent);
 }
 
+.skillsText{
+  position: relative;
+  margin: 0 auto;
+  width: 700px;
+  background-color: var(--myDarkblueAccent);
+}
+.skillsText span{
+  display: block;
+  font-size: 17px;
+}
+
+
+
 @media only screen and (max-width: 1024px){
   ul#skillsList{
     overflow-x: auto;
+  }
+
+  .skillsText{
+    
   }
 }
 
