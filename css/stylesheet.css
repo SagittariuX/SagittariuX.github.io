@@ -135,7 +135,7 @@ h1.sectionHeader{
   padding:25px 0 25px 0;
   color: var(--myLightblue);
 }
-h1.sectionHeader:before{
+h1.sectionHeader::before{
   content: "";
   display: block;
   top: -20px;
@@ -145,7 +145,7 @@ h1.sectionHeader:before{
   color: var(--myWhite);
   background-color: var(--myWhite);
 }
-h1.sectionHeader:after{
+h1.sectionHeader::after{
   content: "";
   display: block;
   top: 20px;
@@ -279,6 +279,7 @@ ul#skillsList{
   list-style: none;
   white-space: nowrap;
   padding-inline-start: 0px;
+  padding: 0 20px;
 }
 
 ul#skillsList li{
@@ -315,10 +316,20 @@ ul#skillsList li{
   margin: 0 auto;
   width: 700px;
   background-color: var(--myDarkblueAccent);
+  text-align: left;
+  padding: 10px 10px;
 }
 .skillsText span{
   display: block;
   font-size: 17px;
+  margin-bottom: 5px;
+}
+.skillsText span::before{
+  content: '\2022';
+  padding-right: 5px;
+}
+.skillsText span:last-child{
+  margin-bottom: 0px;
 }
 
 
@@ -329,7 +340,8 @@ ul#skillsList li{
   }
 
   .skillsText{
-    
+    max-width: 700px;
+    width: 70%;
   }
 }
 
