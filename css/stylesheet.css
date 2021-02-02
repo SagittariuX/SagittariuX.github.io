@@ -269,7 +269,6 @@ div.experienceMobileText{
 
 /* CompSci */
 div#compSci{
-  border: solid red;
   text-align: center;
 }
 
@@ -319,17 +318,17 @@ ul#skillsList li{
   text-align: left;
   padding: 10px 10px;
 }
-.skillsText span{
-  display: block;
-  font-size: 17px;
-  margin-bottom: 5px;
+.skillsText ul{
+  list-style: none;
 }
-.skillsText span::before{
-  content: '\2022';
-  padding-right: 5px;
+.skillsText ul li{
+  margin-bottom: 7px;
 }
-.skillsText span:last-child{
+.skillsText ul li:last-child{
   margin-bottom: 0px;
+}
+.skillsText ul li::marker{
+  content: '▶  ';
 }
 
 
