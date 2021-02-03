@@ -2,33 +2,53 @@
     "items":[
         {
             "pic_url": "pics/compSci/pic0.png",
+            "name": "java",
             "stars": 3,
-            "text" : "text 0"
+            "text": [
+                "text 0",
+                "text 1",
+                "text 2"
+            ]
         },
         {
             "pic_url": "pics/compSci/pic1.png",
+            "name":"php",
             "stars": 3,
-            "text" : "text 1"
+            "text" : [
+                "text 0",            
+                "text 1",
+                "text 2"
+             ]
         },
         {
             "pic_url": "pics/compSci/pic2.png",
+            "name": "html",
             "stars": 3,
-            "text" : "text 2"
+            "text" : [
+                "text 0",            
+                "text 1",
+                "text 2"
+             ]
         },
         {
             "pic_url": "pics/compSci/pic3.png",
+            "name": "python",
             "stars": 3,
-            "text" : "text 3"
+            "text" : [
+                "text 0",            
+                "text 1",
+                "text 2"
+             ]
         },
         {
             "pic_url": "pics/compSci/pic4.png",
+            "name": "javascript",
             "stars": 3,
-            "text" : "text 4"
-        },
-        {
-            "pic_url": "pics/compSci/pic5.png",
-            "stars": 2,
-            "text": "text 5"
+            "text" : [
+                "text 0",            
+                "text 1",
+                "text 2"
+             ]
         }
     ]
 }

@@ -2,8 +2,7 @@
 var $gNavOffset = $('nav').offset();
 var $gLastScroll = 0;
 var $gExperiences = 5;
-var $gCompSciInfo = [];
-var $gAllArtInfo = [];
+var $gCompSciSkills = 5
 var $gFocusTrack;
 var $gSwipeTimeout = 0;
 //getting the site ready
@@ -72,12 +71,26 @@ $(document).ready(function (){
             $(element).addClass('wow fadeInLeft');
         }
     });
+    //end loading experience
 
     //loads compsci info
+    for(var $i = 0; $i < $gCompSciSkills; $i++){
+        $('#compSci').append(`
+        <div class="skillsText" data-name="">
+            <ul class="skillsTextList">
+            </ul>
+        </div>
+        `);
+    }
+    
+    $.getJSON("text/compSci/cs.json", function(json){
+        loadInCompSci(json);
+    });
     
 
-    feather.replace();
-    new WOW().init();
+
+    feather.replace(); //replaces icons with feather svg
+    new WOW().init(); // activates wow animations
 });
 
 // Makes sure to rewind viewing history to top so animations could playout
@@ -133,17 +146,14 @@ function loadInExperienceMobile(json, index){
     $('.experienceMobileText').eq($pos).html(json.text);
     return null;
 }
+//Things to do with experience ends
 
 //Things to do with CompSci
+function loadInCompSci(json, element){
 
-
-class CompSciInfo{
-    constructor(pic_url, stars, text){
-        this.pic_url = pic_url;
-        this.stars = stars;
-        this.text = text;
-    }
 }
+
+
 //Things to do with compsci ends
 
 // Things to do with spotify
@@ -222,107 +232,6 @@ function changeSongInfo(focus){
     return;
 }
 //Things to do with spotify ends
-
-//Things to do with artstation
-function loadMainArt(pic_url, text, dir_url){
-    var canvas = $('img#mainArt')[0];
-    var textBox = $('div#artText span')[0];
-    $(canvas).prop('src', pic_url);
-    $(canvas).data("dirurl", dir_url);
-    $(textBox).empty();
-    $(textBox).html(text);
-    $('div#artOptions img').each(function(index, element){
-        $(element).removeClass('toggle');
-        return;
-    });
-    return;
-}
-
-function loadInArtOptions(){
-    var width = 100/($gAllArtInfo.length) ;
-    var offset = 0;
-    var options = $('div#artOptions')[0];
-    $.each($gAllArtInfo, function(index, art){
-        offset = index*width;
-        $(options).append(`
-            <img style="left:${offset}%; width:${width}%" 
-                 src="${art.pic_url}"
-                 data-picurl="${art.pic_url}"
-                 data-text="${art.text}"
-                 data-dirurl="${art.dir_url}">
-        `);
-    });
-}
-
-function loadMainArtMobile(artnum = 0){
-    appendMainArtMobile($gAllArtInfo[artnum].pic_url, $gAllArtInfo[artnum].text, $gAllArtInfo[artnum].dir_url, artnum);
-    //change the flavour text
-    var target = $('img.mainArtMobile').last();//the current element in display
-    $('div#artTextMobile span').html(target.data('text'));
-
-    return;
-}
-
-function alterMainArtMobile(src,text,dirurl,artnum){
-    var target = $('img.mainArtMobile').last();
-    target.prop('src', src);
-    target.data('text', text);
-    target.data('dirurl', dirurl);
-    target.data('artnum', artnum);
-    return;
-}
-
-function appendMainArtMobile(src,text,dirurl,artnum){
-    $('div#artContainerMobile').append(`
-        <img class="mainArtMobile"
-             draggable="false"
-             data-artnum="${artnum}"
-             data-dirurl="${dirurl}"
-             data-text="${text}"
-             src="${src}"
-        >
-    `);
-    return;
-}
-
-function addingClickHandlerToArtOptions(){
-    $('div#artOptions img').each(function (index, element){
-        $(element).click(function(){
-            loadMainArt($(this).data('picurl'),$(this).data('text'), $(this).data('dirurl'));
-            addToggle($(this));
-            alterMainArtMobile($(this).data('picurl'),$(this).data('text'), $(this).data('dirurl'),index);
-        });
-        return;
-    });
-    return;
-}
-function addingClickHandlerToMainArt(){
-    var canvas = $('img#mainArt')[0];
-    $(canvas).click(function(){
-        window.open($(this).data('dirurl'));
-    });
-    return;
-}
-function addingClickHandlerToMainArtMobile(){
-    $('img.mainArtMobile').each(function(index, element){
-        $(element).off('click');
-        $(element).on('click', function(){
-            if(Date.now() < $gSwipeTimeout) return;//prevents ghostclicks
-            window.open($(this).data('dirurl'));
-        })
-        return;
-    });
-    return;
-}
-
-class ArtInfo{
-    constructor(pic_url, text, dir_url){
-        this.pic_url = pic_url;
-        this.text = text;
-        this.dir_url = dir_url;
-    }
-}
-//Things to do with artstation ends
 
 //Helper Functions
 

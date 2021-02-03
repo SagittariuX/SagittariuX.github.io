@@ -277,7 +277,6 @@ ul#skillsList{
   padding: 10px 0px;
   list-style: none;
   white-space: nowrap;
-  padding-inline-start: 0px;
   padding: 0 20px;
 }
 
@@ -304,7 +303,7 @@ ul#skillsList li{
   color: var(--myLightblue);
   background-color: var(--myDarkblueAccent);
 }
-.skillsListButton:focus{
+.skillsListButton:focus, .skillsListButton.toggle{
   outline: 0px;
   color: var(--myLightblue);
   background-color: var(--myDarkblueAccent);
@@ -318,16 +317,16 @@ ul#skillsList li{
   text-align: left;
   padding: 10px 10px;
 }
-.skillsText ul{
+ul.skillsTextList{
   list-style: none;
 }
-.skillsText ul li{
+ul.skillsTextList li{
   margin-bottom: 7px;
 }
-.skillsText ul li:last-child{
+ul.skillsTextList li:last-child{
   margin-bottom: 0px;
 }
-.skillsText ul li::marker{
+ul.skillsTextList li::marker{
   content: '▶  ';
 }
 
