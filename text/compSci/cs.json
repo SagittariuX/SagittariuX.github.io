@@ -5,7 +5,7 @@
             "name": "java",
             "stars": 3,
             "text": [
-                "text 0",
+                "java",
                 "text 1",
                 "text 2"
             ]
@@ -15,7 +15,7 @@
             "name":"php",
             "stars": 3,
             "text" : [
-                "text 0",            
+                "php",            
                 "text 1",
                 "text 2"
              ]
@@ -25,7 +25,7 @@
             "name": "html",
             "stars": 3,
             "text" : [
-                "text 0",            
+                "html",            
                 "text 1",
                 "text 2"
              ]
@@ -35,7 +35,7 @@
             "name": "python",
             "stars": 3,
             "text" : [
-                "text 0",            
+                "python",            
                 "text 1",
                 "text 2"
              ]
@@ -45,7 +45,7 @@
             "name": "javascript",
             "stars": 3,
             "text" : [
-                "text 0",            
+                "javascript",            
                 "text 1",
                 "text 2"
              ]

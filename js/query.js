@@ -79,6 +79,15 @@ $(document).ready(function (){
         addToggle($('.skillsText').first());
     });
 
+    $('.skillsListButton').click( function(){
+        if ($(this).hasClass('toggle')) return ;
+
+        removeToggle($('.skillsListButton.toggle'));
+        addToggle($(this));
+
+        removeToggle($('.skillsText.toggle'));
+        addToggle($('.skillsText[data-name="'+$(this).data('name')+'"]'));
+    });
     
     
 
