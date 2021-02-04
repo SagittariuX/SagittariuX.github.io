@@ -75,11 +75,11 @@ $(document).ready(function (){
     //loads compsci info
     $.getJSON("text/compSci/cs.json", function(json){
         loadInCompSci(json);
-        addToggle($('.skillsListButton').first());
+        addToggle($('.skillsListButton').first());//Dangerous assumption, should also create buttons dynamically
         addToggle($('.skillsText').first());
     });
 
-    $('.skillsListButton').click( function(){
+    $('.skillsListButton').click(function(){
         if ($(this).hasClass('toggle')) return ;
 
         removeToggle($('.skillsListButton.toggle'));
@@ -93,7 +93,6 @@ $(document).ready(function (){
 
 
     //end loading experience
-
 
     feather.replace(); //replaces icons with feather svg
     new WOW().init(); // activates wow animations

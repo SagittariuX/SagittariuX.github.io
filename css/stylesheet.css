@@ -309,7 +309,6 @@ ul#skillsList li{
   background-color: var(--myDarkblueAccent);
 }
 
-
 .skillsText{
   display:none;
   position: relative;
@@ -318,7 +317,9 @@ ul#skillsList li{
   background-color: var(--myDarkblueAccent);
   text-align: left;
   padding: 10px 10px;
+  box-shadow: 0 0 7px rgba(0,0,0,.5);
 }
+
 .skillsText.toggle{
   display: block;
 }
@@ -434,10 +435,6 @@ ul#contactList li a:hover{
   transform: translateY(10px);
   color: var(--myLightblue);
 }
-
-
-
-
 
 @media only screen and (max-width: 1024px){
   footer h1, footer h3{
