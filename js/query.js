@@ -2,7 +2,6 @@
 var $gNavOffset = $('nav').offset();
 var $gLastScroll = 0;
 var $gExperiences = 5;
-var $gCompSciSkills = 5
 var $gFocusTrack;
 var $gSwipeTimeout = 0;
 //getting the site ready
@@ -74,19 +73,17 @@ $(document).ready(function (){
     //end loading experience
 
     //loads compsci info
-    for(var $i = 0; $i < $gCompSciSkills; $i++){
-        $('#compSci').append(`
-        <div class="skillsText" data-name="">
-            <ul class="skillsTextList">
-            </ul>
-        </div>
-        `);
-    }
-    
     $.getJSON("text/compSci/cs.json", function(json){
         loadInCompSci(json);
+        addToggle($('.skillsListButton').first());
+        addToggle($('.skillsText').first());
     });
+
     
+    
+
+
+    //end loading experience
 
 
     feather.replace(); //replaces icons with feather svg
@@ -149,8 +146,21 @@ function loadInExperienceMobile(json, index){
 //Things to do with experience ends
 
 //Things to do with CompSci
-function loadInCompSci(json, element){
+function loadInCompSci(json){
+    for(var $i = 0; $i < json.items.length; $i++){
+        $('#compSci').append(`
+            <div class="skillsText" data-name="${json.items[$i].name}">
+                <ul class="skillsTextList">
+                </ul>
+            </div>
+         `);
 
+        $.each(json.items[$i].text, function(index, value){
+            $('.skillsTextList').last().append(`
+                <li>${value}</li>
+            `);
+        });
+    }
 }
 
 
