@@ -1,10 +1,15 @@
 
 :root{
- --myWhite:rgb(155, 170, 240);
- --myLightblue:rgb(0, 204, 255); 
- --myBlue:rgb(27, 47, 134);
- --myDarkblue:rgb(26, 39, 100);
- --myDarkblueAccent:rgb(32, 48, 121);
+ --myPrimaryText:rgb(155, 170, 240);
+ --myPrimaryTitle:rgb(0, 204, 255); 
+ --myPrimaryHighlight: rgb(0, 204, 255); 
+ --myNormal:rgb(27, 47, 134);
+ --myPrimary:rgb(26, 39, 100);
+ --myPrimaryAccent:rgb(32, 48, 121);
+
+ --myNormalFontSize: 20px;
+ --mySmallFontSize: 14px;
+
 }
 
 
@@ -13,14 +18,20 @@ html, body{
   padding: 0;
   max-width: 100%;
   font-family: Calibri ,'Oxygen', Arial, sans-serif;
-  font-size: 20px;
+  font-size: var(--myNormalFontSize);
   scroll-behavior: smooth;
 }
-
 body{
-  background-color: var(--myDarkblue);
-  color: var(--myWhite);
+  background-color: var(--myPrimary);
+  color: var(--myPrimaryText);
 }
+
+@media only screen and (max-width: 1024px){
+  body{
+    font-size: var(--mySmallFontSize);
+  }
+}
+
 
 nav{
   margin: 0 auto;
@@ -45,8 +56,8 @@ div#hamburgerMenu{
   padding: 10px 0px;
   text-align: center;
   box-shadow: 0px 5px 10px rgba(35, 39, 54, 0.6);
-  background-color: var(--myBlue);
-  color: var(--myWhite);
+  background-color: var(--myNormal);
+  color: var(--myPrimaryText);
 }
 div#hamburgerBar0, div#hamburgerBar1, div#hamburgerBar2{
   width: 40px;
@@ -65,19 +76,14 @@ nav ul{
   padding: 10px 20px;
   overflow: hidden;
   border: none;
-  /* border-width: 2px;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-color: black; */
   background-color:rgba(26, 39, 100, 0.5);
-  backdrop-filter: blur(7px);
+  backdrop-filter: blur(10px);
   list-style: none;
   transition: 1s;
 }
 nav ul.toggle{
   background-color: rgba(27, 47, 134, 0.5);
-  border-color: var(--myBlue);
+  border-color: var(--myNormal);
   backdrop-filter: blur(7px);
   box-shadow: 0px 5px 10px rgba(35, 39, 54, 0.8);
 }
@@ -86,21 +92,21 @@ nav ul li{
 }
 nav ul li a{
   display: block;
-  color: var(--myWhite);
+  color: var(--myPrimaryText);
   padding: 10px 20px;
   text-decoration: none;
   font-size: larger;
 }
 .standOutButton{
   border: solid;
-  border-color: var(--myWhite);
-  color: var(--myWhite);
+  border-color: var(--myPrimaryText);
+  color: var(--myPrimaryText);
   background-color: rgba(0,0,0,0) ;
   border-radius: 10px;
 }
 .standOutButton:hover{
   background-color: rgb(222, 231, 239);
-  color: var(--myBlue);
+  color: var(--myNormal);
 }
 
 @media only screen and (max-width: 1024px){
@@ -129,31 +135,11 @@ nav ul li a{
 
 
 h1.sectionHeader{
-  display: flex;  
-  justify-content: center;
+  display: block;  
+  text-align: center;
   font-weight: bolder;
   padding:25px 0 25px 0;
-  color: var(--myLightblue);
-}
-h1.sectionHeader::before{
-  content: "";
-  display: block;
-  top: -20px;
-  width: 5px;
-  height: 40px;
-  margin-right: 20px;
-  color: var(--myWhite);
-  background-color: var(--myWhite);
-}
-h1.sectionHeader::after{
-  content: "";
-  display: block;
-  top: 20px;
-  width: 5px;
-  height: 40px;
-  margin-left: 20px;
-  color: var(--myWhite);
-  background-color: var(--myWhite);
+  color: var(--myPrimaryTitle);
 }
 
 #banner{
@@ -274,10 +260,9 @@ div#compSci{
 
 ul#skillsList{
   position: relative;
-  padding: 10px 0px;
   list-style: none;
   white-space: nowrap;
-  padding: 0 20px;
+  padding: 10px 20px;
 }
 
 ul#skillsList li{
@@ -290,8 +275,8 @@ ul#skillsList li{
   border-top: none;
   border-right: none;
   border-left: none;
-  color: var(--myWhite);
-  background-color: var(--myDarkBlue);
+  color: var(--myPrimaryText);
+  background-color: var(--myPrimary);
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -300,13 +285,13 @@ ul#skillsList li{
 }
 
 .skillsListButton:hover{
-  color: var(--myLightblue);
-  background-color: var(--myDarkblueAccent);
+  color: var(--myPrimaryHighlight);
+  background-color: var(--myPrimaryAccent);
 }
 .skillsListButton:focus, .skillsListButton.toggle{
   outline: 0px;
-  color: var(--myLightblue);
-  background-color: var(--myDarkblueAccent);
+  color: var(--myPrimaryHighlight);
+  background-color: var(--myPrimaryAccent);
 }
 
 .skillsText{
@@ -314,7 +299,7 @@ ul#skillsList li{
   position: relative;
   margin: 0 auto;
   width: 700px;
-  background-color: var(--myDarkblueAccent);
+  background-color: var(--myPrimaryAccent);
   text-align: left;
   padding: 10px 10px;
   box-shadow: 0 0 7px rgba(0,0,0,.5);
@@ -334,7 +319,7 @@ ul.skillsTextList li:last-child{
   margin-bottom: 0px;
 }
 ul.skillsTextList li::marker{
-  content: '▶  ';
+  content: '\27A4  ';
 }
 
 
@@ -389,11 +374,11 @@ div#songInfo{
 }
 div#songInfo a{
   margin: 10px;
-  color: var(--myWhite);
+  color: var(--myPrimaryText);
   text-decoration: none;
 }
 div#songInfo a:hover{
-  color: var(--myLightblue);
+  color: var(--myPrimaryHighlight);
 }
 
 @media only screen and (max-width: 1024px){
@@ -429,11 +414,11 @@ ul#contactList li a{
   display: block;
   transition: .5s;
   position: relative;
-  color: var(--myWhite);
+  color: var(--myPrimaryText);
 }
 ul#contactList li a:hover{
-  transform: translateY(10px);
-  color: var(--myLightblue);
+  transform: translateY(-10px);
+  color: var(--myPrimaryHighlight);
 }
 
 @media only screen and (max-width: 1024px){
