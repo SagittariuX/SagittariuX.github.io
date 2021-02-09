@@ -298,7 +298,7 @@ ul#skillsList li{
   display:none;
   position: relative;
   margin: 0 auto;
-  width: 700px;
+  width: 1000px;
   background-color: var(--myPrimaryAccent);
   text-align: left;
   padding: 10px 10px;
@@ -398,7 +398,8 @@ footer h1, footer h3, footer h4{
 }
 div#contactOptions{
   max-width: 100%;
-  padding-bottom: 50px;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 ul#contactList{
   list-style: none;
@@ -427,13 +428,10 @@ ul#contactList li a:hover{
   }
 }
 
+
 .coolBlue { background: #00BCD4 !important}
 .coolGreen { background: #4CAF50 !important}
 .coolYellow { background: #CDDC39 !important}
 .coolOrange { background: #FFC107 !important}
 .coolRed { background: #FF5722 !important}
 .coolPurple {background: #c929c9 !important}
-
-
-
-
