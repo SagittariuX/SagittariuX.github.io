@@ -7,6 +7,8 @@
  --myPrimary:rgb(26, 39, 100);
  --myPrimaryAccent:rgb(32, 48, 121);
 
+ --myPrimaryTransparent: rgba(27, 47, 134, 0.5);
+
  --myNormalFontSize: 20px;
  --mySmallFontSize: 14px;
 
@@ -40,7 +42,6 @@ nav{
   height: auto;
   z-index: 99;
   transition: 1s;
-  text-align: right;
 }
 .stickToTop{
   position: sticky;
@@ -56,9 +57,15 @@ div#hamburgerMenu{
   padding: 10px 0px;
   text-align: center;
   box-shadow: 0px 5px 10px rgba(35, 39, 54, 0.6);
-  background-color: var(--myNormal);
+  background-color: var(--myPrimary);
   color: var(--myPrimaryText);
+  backdrop-filter: blur(20px);
+  cursor: pointer;
 }
+div#hamburgerMenu img{
+  height:35px;
+}
+
 div#hamburgerBar0, div#hamburgerBar1, div#hamburgerBar2{
   width: 40px;
   height: 5px;
@@ -72,17 +79,19 @@ div#hamburgerMenu.toggle{
 }
 
 nav ul{
+  position: relative;
   margin: 0;
   padding: 10px 20px;
   overflow: hidden;
   border: none;
-  background-color:rgba(26, 39, 100, 0.5);
+  background-color:var(--myPrimary);
   backdrop-filter: blur(10px);
   list-style: none;
   transition: 1s;
+  text-align: right;
 }
 nav ul.toggle{
-  background-color: rgba(27, 47, 134, 0.5);
+  background-color: var(--myPrimaryTransparent);
   border-color: var(--myNormal);
   backdrop-filter: blur(7px);
   box-shadow: 0px 5px 10px rgba(35, 39, 54, 0.8);
@@ -113,11 +122,9 @@ nav ul li a{
   div#hamburgerMenu{
     display: block;
   }
-  nav{
-    text-align: center;
-  }
   nav ul {
     position: absolute;
+    text-align: center;
     padding: 0px 0px;
     max-height: 0;
     width: 100%;
