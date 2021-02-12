@@ -34,103 +34,13 @@ body{
 
 
 nav{
-  margin: 0 auto;
-  display: block;
-  width: 100%;
-  height: auto;
-  z-index: 99;
-  transition: 1s;
-  text-align: right;
-}
-.stickToTop{
-  position: sticky;
-  position: -webkit-sticky;
-  top:0;
-}
-.hideNav{
-  top:-70px;
-}
-
-div#hamburgerMenu{
-  display: none;
-  padding: 10px 0px;
-  text-align: center;
-  box-shadow: 0px 5px 10px rgba(35, 39, 54, 0.6);
-  background-color: var(--myNormal);
-  color: var(--myPrimaryText);
-}
-div#hamburgerBar0, div#hamburgerBar1, div#hamburgerBar2{
-  width: 40px;
-  height: 5px;
-  background-color: black;
-  margin: 5px auto;
-  transition: .4s;
-}
-
-div#hamburgerMenu.toggle{
-  box-shadow: unset;
-}
-
-nav ul{
-  margin: 0;
-  padding: 10px 20px;
-  overflow: hidden;
-  border: none;
-  background-color:rgba(26, 39, 100, 0.5);
-  backdrop-filter: blur(10px);
-  list-style: none;
-  transition: 1s;
-}
-nav ul.toggle{
-  background-color: rgba(27, 47, 134, 0.5);
-  border-color: var(--myNormal);
-  backdrop-filter: blur(7px);
-  box-shadow: 0px 5px 10px rgba(35, 39, 54, 0.8);
-}
-nav ul li{
-  display: inline-block;
-}
-nav ul li a{
-  display: block;
-  color: var(--myPrimaryText);
-  padding: 10px 20px;
-  text-decoration: none;
-  font-size: larger;
-}
-.standOutButton{
   border: solid;
-  border-color: var(--myPrimaryText);
-  color: var(--myPrimaryText);
-  background-color: rgba(0,0,0,0) ;
-  border-radius: 10px;
-}
-.standOutButton:hover{
-  background-color: rgb(222, 231, 239);
-  color: var(--myNormal);
+  display: flex;
+  justify-content: space-between;
 }
 
 @media only screen and (max-width: 1024px){
-  div#hamburgerMenu{
-    display: block;
-  }
-  nav{
-    text-align: center;
-  }
-  nav ul {
-    position: absolute;
-    padding: 0px 0px;
-    max-height: 0;
-    width: 100%;
-  }
-  nav ul.toggle{
-    max-height: 300px;
-  }
-  nav ul li{
-    display: block;
-  }
-  .hideNav{
-    top:-60px;
-  }
+  
 }
 
 
