@@ -3,11 +3,11 @@
  --myPrimaryText:rgb(155, 170, 240);
  --myPrimaryTitle:rgb(0, 204, 255); 
  --myPrimaryHighlight: rgb(0, 204, 255); 
- --myNormal:rgb(27, 47, 134);
+ --myPrimaryLight:rgb(27, 47, 134);
  --myPrimary:rgb(26, 39, 100);
  --myPrimaryAccent:rgb(32, 48, 121);
 
- --myPrimaryTransparent: rgba(27, 47, 134, 0.5);
+ --myPrimaryLightTransparent: rgba(27, 47, 134, 0.5);
 
  --myNormalFontSize: 20px;
  --mySmallFontSize: 14px;
@@ -37,14 +37,77 @@ body{
 nav{
   border: solid;
   display: flex;
-  justify-content: space-between;
   position: relative;
-  width: 100%;
-  padding: 0px 30px;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  padding: 10px 30px;
+  background-color: var(--myPrimary);
+  transition-duration: 1s;
+  z-index: 99;
+}
+.stickToTop{
+  position: sticky;
+  position: -webkit-sticky;
+  background-color: var(--myPrimaryLightTransparent);
+  backdrop-filter: blur(10px);
+  top: 0;
+}
+.hideNav{
+  top: -100px;
 }
 
+nav img{
+  height: 50px;
+}
+
+nav ul{
+  display: inline-block;
+  list-style: none;
+  padding-inline-start: 0px;
+  cursor: pointer;
+}
+nav ul li{
+  display: inline-block
+}
+nav ul li a{
+  color: var(--myPrimaryText);
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: larger;
+}
+nav ul li a:hover{
+  color: var(--myPrimaryHighlight);
+}
+
+#navigationSection{
+  display: flex;
+  align-items: center;
+}
+
+#resumeButton{
+  display: flex;
+  align-items: center;
+}
+.standOutButton{
+  border: solid;
+  border-color: var(--myPrimaryText);
+  color: var(--myPrimaryText);
+  background-color: rgba(0,0,0,0);
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.standOutButton:hover{
+  background-color: var(--myPrimaryText);
+  color: var(--myPrimary);
+}
+
+
 @media only screen and (max-width: 1024px){
-  
+  nav ul{
+    display: none;
+  }
 }
 
 
