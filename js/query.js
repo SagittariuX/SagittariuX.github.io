@@ -104,7 +104,7 @@ $(document).ready(function (){
 // });  <--- Add this in later
 
 //things to do with navbar
-$(window).on('scroll', function(){
+$(window).scroll(function(){
     var scrollDir = ($(window).scrollTop() > $gLastScroll) ? 'down' : 'up';
     $gLastScroll = $(window).scrollTop();
     stickyNav();
@@ -112,9 +112,18 @@ $(window).on('scroll', function(){
     return; 
 });
 
-$('div#hamburgerMenu').click(function(){
+$(window).resize(function(){
+    if ($(window).width() > 1024){//resets mobile view navigation
+        removeToggle($('#myLogo'));
+        removeToggle($('#navigationSection'));
+    }
+})
+
+
+$('#myLogo').click(function(){
+    if ($(window).width() > 1024) return;
     toggleToggle($(this));
-    toggleToggle($('nav ul'));
+    toggleToggle($('#navigationSection'));
 });
 
 function stickyNav(){
@@ -128,7 +137,8 @@ function stickyNav(){
 function hideNav(scrollDir){
     if($('nav').hasClass('stickToTop') && scrollDir === 'down'){
         $('nav').addClass('hideNav');
-        $('nav ul').removeClass('toggle');
+        $('#myLogo').removeClass('toggle');
+        $('#navigationSection').removeClass('toggle');
     }else{
         $('nav').removeClass('hideNav');
     }

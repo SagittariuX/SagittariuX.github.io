@@ -12,6 +12,8 @@
  --myNormalFontSize: 20px;
  --mySmallFontSize: 14px;
 
+ --myNavbarHeight: 90px;
+
 }
 
 
@@ -35,34 +37,39 @@ body{
 }
 
 nav{
-  border: solid;
+  border: none;
   display: flex;
   position: relative;
   justify-content: space-between;
   align-items: center;
   max-width: 100%;
-  padding: 10px 30px;
-  background-color: var(--myPrimary);
+  height: var(--myNavbarHeight);
+  padding: 0px 100px;
+  /* background-color: var(--myPrimaryLightTransparent);
+  backdrop-filter: blur(10px); */
   transition-duration: 1s;
+  transition-timing-function: linear;
   z-index: 99;
 }
 .stickToTop{
   position: sticky;
   position: -webkit-sticky;
-  background-color: var(--myPrimaryLightTransparent);
-  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 50px rgba(0,0,0,.5);
   top: 0;
 }
 .hideNav{
   top: -100px;
 }
 
-nav img{
-  height: 50px;
+#myLogo{
+  position: relative;
+  height: 80%;
+  transition-duration: 1s;
 }
 
 nav ul{
   display: inline-block;
+  position: relative;
   list-style: none;
   padding-inline-start: 0px;
   cursor: pointer;
@@ -83,6 +90,9 @@ nav ul li a:hover{
 #navigationSection{
   display: flex;
   align-items: center;
+  overflow: hidden;
+  transition-duration: 1s;
+  transition-timing-function: linear;
 }
 
 #resumeButton{
@@ -105,11 +115,39 @@ nav ul li a:hover{
 
 
 @media only screen and (max-width: 1024px){
-  nav ul{
-    display: none;
+  nav{
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: var(--myPrimary);
   }
-}
+  #navigationSection{
+    max-height: 0;
+    position: absolute;
+    top: var(--myNavbarHeight);
+    width: 100%;
+    flex-direction: column;
+    /* background-color: var(--myPrimaryLightTransparent);
+    backdrop-filter: blur(10px); */
+  }
+  #navigationSection.toggle{
+    max-height: 400px;
+  }
 
+  nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  nav ul li{
+    text-align: center;
+    padding: 10px 0px;
+  }
+
+  #resumeButton{
+    margin-bottom: 10px;
+  }
+  
+}
 
 h1.sectionHeader{
   display: block;  
