@@ -223,12 +223,20 @@ h1.bannerText{
 
 .experienceItem{
   display:flex;
-  margin: 20px auto;
+  margin: 20px 20vw;
   align-items: center
 }
 
-.experienceItemSplit{
-  flex:1;
+.experienceItem > span{
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+.experienceItem > span > img{
+  width: 100%;
+  max-width: 400px;
+
 }
 
 .experiencePicture{
