@@ -15,57 +15,38 @@ $(document).ready(function (){
 
     //loads experience info
     //dynamically create experienceItems & experienceMobileItem
-    for(var $i = 0; $i < $gExperiences; $i++){
-        $('.experience').append(`
-        <div class="experienceItem">
-            <div class="experienceItemSplit">
-                <img class="experiencePicture"/>
-            </div>
-            <div class="experienceItemSplit">
-                <h3 class="experienceTitle"></h3>
-                <h3 class="experiencePosition"></h3>
-                <div class="experienceText"></div>
-            </div>
-        </div>
-        `);
-
-        $('.experienceMobile').append(`
-        <div class="experienceMobileItem">
-            <img class="experienceMobilePicture"/>
-            <h3 class="experienceMobileTitle"></h3>
-            <h3 class="experienceMobilePosition"></h3>
-            <div class="experienceMobileText"></div>
-        </div>
-        `);
-    }
+    // for(var $i = 0; $i < $gExperiences; $i++){
+    //     $('.experience').append(`
+    //     <div class="experienceItem">
+    //         <div class="experienceItemSplit">
+    //             <img class="experiencePicture"/>
+    //         </div>
+    //         <div class="experienceItemSplit">
+    //             <h3 class="experienceTitle"></h3>
+    //             <h3 class="experiencePosition"></h3>
+    //             <div class="experienceText"></div>
+    //         </div>
+    //     </div>
+    //     `);
+    // }
     
-    //Note pictures are in reverse order
-    $($('.experiencePicture').get().reverse()).each(function(index, element){
-        $(element).prop('src', 'pics/experience/experience'+index+'.png');
-    });
-    $($('.experienceMobilePicture').get().reverse()).each(function(index, element){
-        $(element).prop('src', 'pics/experience/experience'+index+'.png');
-    });
-    $($('.experienceItem').get().reverse()).each(function(index, element){
-        $.getJSON("text/experience/experience"+index+".json", function(json){
-            loadInExperience(json, index);
-        });
-    });
-    $('.experienceItemSplit').each(function(index, element){
-        if (index%2){
-            $(element).addClass('wow fadeInRight');
-        }
-        else{
-            $(element).addClass('wow fadeInLeft');
-        }
-    });
-    $('.experienceMobileItem').each(function(index, element){
-        $.getJSON("text/experience/experience"+index+".json", function(json){
-            loadInExperienceMobile(json, index);
-        });
-        $(element).addClass('wow fadeInLeft');
-        
-    });
+    // //Note pictures are in reverse order
+    // $($('.experiencePicture').get().reverse()).each(function(index, element){
+    //     $(element).prop('src', 'pics/experience/experience'+index+'.png');
+    // });
+    // $($('.experienceItem').get().reverse()).each(function(index, element){
+    //     $.getJSON("text/experience/experience"+index+".json", function(json){
+    //         loadInExperience(json, index);
+    //     });
+    // });
+    // $('.experienceItemSplit').each(function(index, element){
+    //     if (index%2){
+    //         $(element).addClass('wow fadeInRight');
+    //     }
+    //     else{
+    //         $(element).addClass('wow fadeInLeft');
+    //     }
+    // });
     //end loading experience
 
     //loads compsci info

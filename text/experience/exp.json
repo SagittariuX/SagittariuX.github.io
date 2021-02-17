@@ -1,0 +1,40 @@
+{
+    "items":[
+        {
+            "title": "University Of Windsor",
+            "position" : "Bachelor Student",
+            "pic" : "uwin.png",
+            "text": "Right after high school I attended the University of Windsor. In truth I just wanted to attend an university close to home, and expected to spend the next 4 to 5 years of my life drudging through another academic institution. However, UWin has proved to be much more life changing than my original imaginations. At UWin, I was able to meet fellow students from all walks of life, to participate in meaningful extracurricular activities, and to experiment freely.  In the end, I earned a double degree in computer science and business administration, graduated with distinction, and walked away with a love for learning."
+        },
+        {
+            "title" : "Windsor Enactus",
+            "position" : "Mentor/Website Developer",
+            "pic" : "enactus.png",
+            "text" : "Enactus Windsor is a student-led, non-for-profit organization. I worked with elementary students, teaching essential life skills and tutoring academic subjects. I am immensely proud of my contributions to this organization. The most valuable lesson I learned during this time was the difficulty of being an educator. Teaching is an art, it is the amalgamation of personal knowledge, an understanding of the audience, and excellent communication skills. Even now, I often refer back to this experience when writing a report or preparing a presentation to ensure I am properly educating the audience."
+        },
+        {
+            "title" : "UWin Tech Club",
+            "position" : "Software Developer",
+            "pic" : "techclub.png",
+            "text" : "json"
+        },
+        {
+            "title" : "Youthrive",
+            "position" : "Team Leader/Mentor",
+            "pic" : "youthrive.png",
+            "text" : "json"
+        },
+        {
+            "title" : "StockX",
+            "position" : "Software Engineer Intern",
+            "pic" : "stockx.png",
+            "text" : "I’m truly blessed to have been given the chance to intern at StockX. This was my first chance to experience the life of a professional software engineer. In my eyes, everything I did here could be described as a spectacular flop. I struggled with basic coding principles, I didn’t understand the technology stack very well, and barely completed my assignment before the internship ended. However, I learned more in those 4 months than my entire computer science studies in college. I learned new programming languages, new development methodologies, and a new appreciation for computer science. Special shout out to my teammates, who were extremely helpful and were willing to sacrifice their time to sort out my problems. "
+        },
+        {
+            "title" : "QMSC",
+            "position" : "Software Engineer Intern",
+            "pic" : "qmsc.png",
+            "text" : "json"
+        }
+    ]
+}

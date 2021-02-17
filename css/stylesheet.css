@@ -215,26 +215,20 @@ h1.bannerText{
 /* All Experiences */
 
 .experience {
-  display:block;
+  display:flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  
 }
 
 .experienceItem{
   display:flex;
   margin: 20px auto;
+  align-items: center
 }
 
 .experienceItemSplit{
   flex:1;
-}
-
-.experienceMobile {
-  display:none;
-  max-width: inherit;
-  text-align: center;
-}
-
-.experienceMobileItem{
-  margin: 20px 0;
 }
 
 .experiencePicture{
@@ -244,11 +238,11 @@ h1.bannerText{
 .experiencePicture{
   width: 20vw;
 }
-h3.experienceTitle, h3.experienceMobileTitle {
+h3.experienceTitle{
   margin: 0 0 0 0;
   color: orange;
 }
-h3.experiencePosition, h3.experienceMobilePosition {
+h3.experiencePosition{
   margin: 0 0 0 0;
   color: #dd6b4f;
 }
@@ -259,20 +253,8 @@ div.experienceText{
   width:60%;
   text-align: justify;
 }
-div.experienceMobileText{
-  max-width: 80%;
-  margin: 20px auto;
-}
 @media only screen and (max-width: 1024px){
-  .experience{
-    display:none;
-  }
-  .experienceMobile { 
-    display:block;
-  }
-  .experienceMobilePicture {
-    width: 50vw;
-  }
+  
 }
 
 /* CompSci */
