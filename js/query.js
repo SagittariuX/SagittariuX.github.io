@@ -63,34 +63,28 @@ $(document).ready(function (){
         $.getJSON("text/experience/experience"+index+".json", function(json){
             loadInExperienceMobile(json, index);
         });
-        if (index%2){
-            $(element).addClass('wow fadeInRight');
-        }
-        else{
-            $(element).addClass('wow fadeInLeft');
-        }
+        $(element).addClass('wow fadeInLeft');
+        
     });
     //end loading experience
 
     //loads compsci info
     $.getJSON("text/compSci/cs.json", function(json){
         loadInCompSci(json);
-        addToggle($('.skillsListButton').first());//Dangerous assumption, should also create buttons dynamically
+        addToggle($('.skillsListButton').first());
         addToggle($('.skillsText').first());
-    });
 
-    $('.skillsListButton').click(function(){
-        if ($(this).hasClass('toggle')) return ;
-
-        removeToggle($('.skillsListButton.toggle'));
-        addToggle($(this));
-
-        removeToggle($('.skillsText.toggle'));
-        addToggle($('.skillsText[data-name="'+$(this).data('name')+'"]'));
-    });
+        $('.skillsListButton').click(function(){
+            if ($(this).hasClass('toggle')) return ;
+            
+            removeToggle($('.skillsListButton.toggle'));
+            addToggle($(this));
     
-    
+            removeToggle($('.skillsText.toggle'));
+            addToggle($('.skillsText[data-name="'+$(this).data('name')+'"]'));
+        });
 
+    });
 
     //end loading experience
 
@@ -166,6 +160,16 @@ function loadInExperienceMobile(json, index){
 //Things to do with CompSci
 function loadInCompSci(json){
     for(var $i = 0; $i < json.items.length; $i++){
+
+        $('#skillsList').append(`
+            <li>
+                <button class="skillsListButton" data-name="${json.items[$i].name}">
+                    <span>${json.items[$i].title}</span>
+                </button>
+            </li>
+        `);
+
+
         $('#compSci').append(`
             <div class="skillsText" data-name="${json.items[$i].name}">
                 <ul class="skillsTextList">

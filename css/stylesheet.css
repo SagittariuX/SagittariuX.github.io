@@ -155,12 +155,14 @@ nav ul li a:hover{
 }
 
 h1.sectionHeader{
-  display: block;  
-  text-align: center;
+  display: flex;  
+  justify-content: space-around;
   font-weight: bolder;
+  font-style: italic;
   padding:25px 0 25px 0;
   color: var(--myPrimaryTitle);
 }
+
 
 #banner{
   height: 100vh;
@@ -413,7 +415,7 @@ footer{
   text-align: center;
 }
 footer h1, footer h3, footer h4{
-  color: white;
+  color: var(--myPrimaryText);
   word-wrap: break-word;
 }
 div#contactOptions{

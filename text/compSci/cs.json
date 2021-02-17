@@ -3,6 +3,7 @@
         {
             "pic_url": "pics/compSci/pic0.png",
             "name": "java",
+            "title": "Java",
             "stars": 3,
             "text": [
                 "java",
@@ -13,6 +14,7 @@
         {
             "pic_url": "pics/compSci/pic1.png",
             "name":"php",
+            "title": "PHP",
             "stars": 3,
             "text" : [
                 "php",            
@@ -23,6 +25,7 @@
         {
             "pic_url": "pics/compSci/pic2.png",
             "name": "html",
+            "title": "HTML+CSS",
             "stars": 3,
             "text" : [
                 "html",            
@@ -33,6 +36,7 @@
         {
             "pic_url": "pics/compSci/pic3.png",
             "name": "python",
+            "title": "Python",
             "stars": 3,
             "text" : [
                 "python",            
@@ -43,6 +47,7 @@
         {
             "pic_url": "pics/compSci/pic4.png",
             "name": "javascript",
+            "title": "JavaScript",
             "stars": 3,
             "text" : [
                 "javascript",            

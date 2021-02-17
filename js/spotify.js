@@ -17,7 +17,7 @@ function getSpotifyAccess (){
             'Authorization': $gAuthorization
         },
         success: function(data){
-            console.log(data.access_token);
+            // console.log(data.access_token);
             getSpotifyPlaylist(data.access_token);
             return;
         },
