@@ -1,7 +1,7 @@
 //Global Variables
 var $gNavOffset = $('nav').offset();
 var $gLastScroll = 0;
-var $gExperiences = 5;
+var $gExperiences = 6;
 var $gFocusTrack;
 var $gSwipeTimeout = 0;
 //getting the site ready
