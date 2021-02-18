@@ -242,7 +242,7 @@ h1.bannerText{
 .experienceText{
   display: flex;
   flex-direction: column;
-  text-align: ;
+  text-align: justify;
 }
 
 h3.experiencePosition{
