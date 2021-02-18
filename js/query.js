@@ -1,7 +1,6 @@
 //Global Variables
 var $gNavOffset = $('nav').offset();
 var $gLastScroll = 0;
-var $gExperiences = 6;
 var $gFocusTrack;
 var $gSwipeTimeout = 0;
 //getting the site ready
@@ -15,6 +14,14 @@ $(document).ready(function (){
 
     //loads experience info
     //dynamically create experienceItems & experienceMobileItem
+    $.getJSON("text/experience/exp.json", (json) => {
+        loadInExperience(json);
+
+    });
+
+
+
+
     // for(var $i = 0; $i < $gExperiences; $i++){
     //     $('.experience').append(`
     //     <div class="experienceItem">
@@ -50,7 +57,7 @@ $(document).ready(function (){
     //end loading experience
 
     //loads compsci info
-    $.getJSON("text/compSci/cs.json", function(json){
+    $.getJSON("text/compSci/cs.json", (json) => {
         loadInCompSci(json);
         addToggle($('.skillsListButton').first());
         addToggle($('.skillsText').first());
@@ -121,21 +128,28 @@ function hideNav(scrollDir){
 }
 
 //Things to do with experience
-function loadInExperience(json, index){
-    var $pos = -1*index-1;
-    $('.experienceTitle').eq($pos).html(json.title);
-    $('.experiencePosition').eq($pos).html(json.position);
-    $('.experienceText').eq($pos).html(json.text);
-    return null;
+function loadInExperience(json){
+
+    picuri = "pics/experience/";
+    for(var $i = 0; $i < json.items.length; $i++){
+        $('#experience').append(`
+            <div class="experienceItem wow fadeInUp">
+                <div>
+                    <img class="experiencePic" src="${picuri + json.items[$i].pic}">
+                </div>
+            
+                <div class="experienceText">
+                    <h3 class="experiencePosition">${json.items[$i].position}</h3>
+                    <div>
+                        ${json.items[$i].text}
+                    </div>
+                </div>
+            </div>
+        `);
+
+    }
 }
 
-function loadInExperienceMobile(json, index){
-    var $pos = -1*index-1;
-    $('.experienceMobileTitle').eq($pos).html(json.title);
-    $('.experienceMobilePosition').eq($pos).html(json.position);
-    $('.experienceMobileText').eq($pos).html(json.text);
-    return null;
-}
 //Things to do with experience ends
 
 //Things to do with CompSci
