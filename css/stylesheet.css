@@ -242,7 +242,7 @@ h1.bannerText{
 .experienceText{
   display: flex;
   flex-direction: column;
-  text-align: justify;
+  text-align: ;
 }
 
 h3.experiencePosition{
@@ -253,6 +253,7 @@ h3.experiencePosition{
 @media only screen and (max-width: 1024px){
   .experienceItem{
     flex-direction: column;
+    margin: 20px;
   }
 
   .experienceItem > div{
@@ -347,17 +348,13 @@ ul.skillsTextList li::marker{
   }
 }
 
-
 /* Spotify Music */
 div#inspirationsMusic{
   max-width:100%;
   overflow: hidden;
   height: auto;
   margin-top: 0;
-  /* background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(48,246,81,1) 46%, rgba(255,255,255,1) 100%); */
   padding: 20px;
-  /* font-family: 'Righteous', Arial, sans-serif; */
 }
 
 div#spotifyPlaylist{
