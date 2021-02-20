@@ -11,10 +11,10 @@ $(document).ready(function (){
 
     $('#banner').prop('src', 'pics/banner/ComputerText.svg?ver='+$.now());
     setTimeout(() => {
-        console.log('hello');
-        $('#contentWrapper').show();
-        $('#contentWrapper').scrollTo();
-    }, 4000);
+        $('nav').css('display', 'flex');
+        $('#contentWrapper').css('display', 'block');
+        $('nav').scrollTo();
+    }, 5000);
     
     //Loads aboutme info
     $('.aboutMeText').each(function(index, element){

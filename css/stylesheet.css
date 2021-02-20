@@ -38,6 +38,7 @@ body{
 
 #contentWrapper{
   display: none;
+  position: relative;
   overflow: hidden;
 }
 
@@ -74,7 +75,7 @@ body{
 
 nav{
   border: none;
-  display: flex;
+  display: none;
   position: relative;
   justify-content: space-between;
   align-items: center;
@@ -91,7 +92,7 @@ nav{
 .stickToTop{
   position: sticky;
   position: -webkit-sticky;
-  top: 0;
+  top: 0px;
 }
 .hideNav{
   top: -100px;
