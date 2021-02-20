@@ -12,48 +12,13 @@ $(document).ready(function (){
         $(element).load("text/intro/aboutme1.txt");
     });
 
+    $('#banner').prop('src', 'pics/banner/ComputerText.svg?ver='+$.now());
+
     //loads experience info
     //dynamically create experienceItems & experienceMobileItem
     $.getJSON("text/experience/exp.json", (json) => {
         loadInExperience(json);
-
     });
-
-
-
-
-    // for(var $i = 0; $i < $gExperiences; $i++){
-    //     $('.experience').append(`
-    //     <div class="experienceItem">
-    //         <div class="experienceItemSplit">
-    //             <img class="experiencePicture"/>
-    //         </div>
-    //         <div class="experienceItemSplit">
-    //             <h3 class="experienceTitle"></h3>
-    //             <h3 class="experiencePosition"></h3>
-    //             <div class="experienceText"></div>
-    //         </div>
-    //     </div>
-    //     `);
-    // }
-    
-    // //Note pictures are in reverse order
-    // $($('.experiencePicture').get().reverse()).each(function(index, element){
-    //     $(element).prop('src', 'pics/experience/experience'+index+'.png');
-    // });
-    // $($('.experienceItem').get().reverse()).each(function(index, element){
-    //     $.getJSON("text/experience/experience"+index+".json", function(json){
-    //         loadInExperience(json, index);
-    //     });
-    // });
-    // $('.experienceItemSplit').each(function(index, element){
-    //     if (index%2){
-    //         $(element).addClass('wow fadeInRight');
-    //     }
-    //     else{
-    //         $(element).addClass('wow fadeInLeft');
-    //     }
-    // });
     //end loading experience
 
     //loads compsci info

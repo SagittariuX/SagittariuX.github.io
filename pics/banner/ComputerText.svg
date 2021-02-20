@@ -11,9 +11,9 @@
    inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
    id="svg8"
    version="1.1"
-   viewBox="0 0 320.42941 240"
+   viewBox="0 0 281.21824 240"
    height="907.08661"
-   width="1211.0718">
+   width="1062.8721">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -28,9 +28,9 @@
      inkscape:document-rotation="0"
      inkscape:current-layer="g916"
      inkscape:document-units="px"
-     inkscape:cy="470.47761"
-     inkscape:cx="284.04646"
-     inkscape:zoom="0.58437866"
+     inkscape:cy="350.52359"
+     inkscape:cx="280.9358"
+     inkscape:zoom="0.5538889"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
      borderopacity="1.0"
@@ -65,7 +65,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -77,24 +77,26 @@
     <g
        id="g916">
       <path
+         style="fill:#cccccc;fill-opacity:0.125;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 254.61147,37.000001 346.41016,210 C 346.41016,210 398.37169,182 410.49604,147 422.6204,109 254.61147,37.000001 254.61147,37.000001 Z"
+         id="path906"
+         sodipodi:nodetypes="cccc" />
+      <path
          style="fill:#3d3d3d;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="M 346.41017,200 V 100 L 216.50635,25 V 125 Z"
          id="path835" />
-
       <path
          style="fill:#7eb8f5;fill-opacity:0;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
          d="M 225.1666,39.999999 V 120 L 337.74991,185 V 105 Z"
-         id="computerSVGScreen" >
-         
-         <animate 
-            id='animationScreenFlicker' 
-            attributeName='fill-opacity'
-            values='0 ; 1; 0; 1' 
-            begin='0.5s'
-            dur='1.5s' 
-            fill='freeze'/> 
+         id="computerSVGScreen">
+        <animate
+           id="animationScreenFlicker"
+           attributeName="fill-opacity"
+           values="0 ; 1; 0; 1"
+           begin="0.5s"
+           dur="1.5s"
+           fill="freeze" />
       </path>
-
       <path
          style="fill:#c3c3c3;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="M 216.50635,25 225.1666,20 355.07041,94.999999 346.41017,100 Z"
@@ -123,10 +125,6 @@
          style="fill:#b7b7b7;fill-opacity:1;stroke:#4e4e4e;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="M 199.18584,185 242.48711,210 225.1666,220 181.86533,195 Z"
          id="path851" />
-      <path
-         style="fill:#cccccc;fill-opacity:0.233871;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 355.07041,94.999999 V 205 L 441.67295,155 450.33321,150 Z"
-         id="path906" />
       <path
          style="fill:#282828;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="M 179.26726,160.5 187.06149,156 197.45379,162 189.65956,166.5 Z"
@@ -247,79 +245,78 @@
          sodipodi:nodetypes="ccccccccccccc"
          id="letter1"
          d="M 228.6307,47.999999 233.82686,50.999999 V 60 L 239.02301,63 V 54.000001 L 244.21916,57 V 81 L 239.02301,78 V 69 L 233.82686,66 V 75 L 228.63071,72 Z"
-         style="fill:#566af7;fill-opacity:0;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" >
-         <animate 
-            id='animationLetter1' 
-            attributeName='fill-opacity'
-            values='1' 
-            begin='animationScreenFlicker.end + 0.2s'
-            dur='0.2s' 
-            fill='freeze'/> 
+         style="fill:#566af7;fill-opacity:0;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1">
+        <animate
+           id="animationLetter1"
+           attributeName="fill-opacity"
+           values="1"
+           begin="animationScreenFlicker.end + 0.2s"
+           dur="0.2s"
+           fill="freeze" />
       </path>
       <path
          sodipodi:nodetypes="ccccccccccccc"
          id="letter2"
          d="M 246.81724,58.499999 262.4057,67.5 V 73.5 L 252.01339,67.5 V 70.5 L 262.4057,76.5 V 82.5 L 252.01339,76.5 V 79.5 L 262.4057,85.5 V 91.5 L 246.81724,82.5 Z"
-         style="fill:#566af7;fill-opacity:0;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" >
-         <animate 
-            id='animationLetter2' 
-            attributeName='fill-opacity'
-            values='1' 
-            begin='animationLetter1.end' 
-            dur='0.2s' 
-            fill='freeze'/>    
+         style="fill:#566af7;fill-opacity:0;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1">
+        <animate
+           id="animationLetter2"
+           attributeName="fill-opacity"
+           values="1"
+           begin="animationLetter1.end"
+           dur="0.2s"
+           fill="freeze" />
       </path>
       <path
          sodipodi:nodetypes="ccccccc"
          id="letter3"
          d="M 265.00378,68.999999 V 92.999999 L 280.59224,102 V 95.999998 L 270.19993,90 V 72 Z"
          style="fill:#566af7;fill-opacity:0;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1">
-         <animate 
-            id='animationLetter3' 
-            attributeName='fill-opacity'
-            values='1' 
-            begin='animationLetter2.end' 
-            dur='0.2s' 
-            fill='freeze'/>     
+        <animate
+           id="animationLetter3"
+           attributeName="fill-opacity"
+           values="1"
+           begin="animationLetter2.end"
+           dur="0.2s"
+           fill="freeze" />
       </path>
       <path
          style="fill:#566af7;fill-opacity:0;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="M 283.19031,79.499999 V 103.5 L 298.77877,112.5 V 106.5 L 288.38646,100.5 V 82.5 Z"
          id="letter4"
-         sodipodi:nodetypes="ccccccc" >
-         <animate 
-            id='animationLetter4' 
-            attributeName='fill-opacity'
-            values='1' 
-            begin='animationLetter3.end' 
-            dur='0.2s' 
-            fill='freeze'/>     
+         sodipodi:nodetypes="ccccccc">
+        <animate
+           id="animationLetter4"
+           attributeName="fill-opacity"
+           values="1"
+           begin="animationLetter3.end"
+           dur="0.2s"
+           fill="freeze" />
       </path>
       <path
          d="M 301.37692,90.000034 V 114.00012 L 316.96511,123.00009 V 99 Z M 306.57299,99 311.76904,102.00034 V 114.00012 L 306.57299,111.0003 Z"
          style="fill:#566af7;fill-opacity:0;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         id="letter5" >
-         <animate 
-            id='animationLetter5' 
-            attributeName='fill-opacity'
-            values='1' 
-            begin='animationLetter4.end' 
-            dur='0.2s' 
-            fill='freeze'/>     
+         id="letter5">
+        <animate
+           id="animationLetter5"
+           attributeName="fill-opacity"
+           values="1"
+           begin="animationLetter4.end"
+           dur="0.2s"
+           fill="freeze" />
       </path>
       <path
          sodipodi:nodetypes="ccccc"
          id="consoleLine"
          d="M 319.56337,121.5 335.15183,130.5 V 133.5 L 319.56338,124.5 Z"
-         style="fill:#566af7;fill-opacity:0;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" >
-         <animate 
-            id='animationConsoleLine' 
-            attributeName='fill-opacity'
-            values='1;0' 
-            begin='animationLetter5.end' 
-            dur='1s'
-            repeatCount='indefinite' 
-            />     
+         style="fill:#566af7;fill-opacity:0;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1">
+        <animate
+           id="animationConsoleLine"
+           attributeName="fill-opacity"
+           values="1;0"
+           begin="animationLetter5.end"
+           dur="1s"
+           repeatCount="indefinite" />
       </path>
     </g>
   </g>

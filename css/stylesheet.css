@@ -9,6 +9,9 @@
 
  --myPrimaryLightTransparent: rgba(27, 47, 134, 0.5);
 
+ --myBannerBackground: rgba(75, 75, 75, 1);
+
+
  --myNormalFontSize: 20px;
  --mySmallFontSize: 14px;
 
@@ -34,9 +37,12 @@ body{
 }
 
 #contentWrapper{
-  display: none;
   overflow: hidden;
+  animation-name: showContent;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
 }
+
 @media only screen and (max-width: 1024px){
   body{
     font-size: var(--mySmallFontSize);
@@ -49,10 +55,12 @@ body{
   justify-content: space-around;
   height: 100vh;
   max-width: 100vw;
-  background: rgb(43, 42, 42);
-  transition-property: background-color;
-  transition-duration: 1s;
-  transition-delay: 2s;
+  background-color: var(--myBannerBackground);
+
+  animation-name: changeBannerBackground;
+  animation-delay: 3.5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 #banner{
@@ -447,10 +455,11 @@ ul#contactList li a:hover{
   }
 }
 
-
-.coolBlue { background: #00BCD4 !important}
-.coolGreen { background: #4CAF50 !important}
-.coolYellow { background: #CDDC39 !important}
-.coolOrange { background: #FFC107 !important}
-.coolRed { background: #FF5722 !important}
-.coolPurple {background: #c929c9 !important}
+@keyframes changeBannerBackground{
+  from {
+    background-color: var(--myBannerBackground);
+  }
+  to {
+    background-color: var(--myPrimary);
+  }
+}
