@@ -90,7 +90,7 @@
             id='animationScreenFlicker' 
             attributeName='fill-opacity'
             values='0 ; 1; 0; 1' 
-            begin='0s'
+            begin='0.5s'
             dur='1.5s' 
             fill='freeze'/> 
       </path>
@@ -252,7 +252,7 @@
             id='animationLetter1' 
             attributeName='fill-opacity'
             values='1' 
-            begin='1.7s'
+            begin='animationScreenFlicker.end + 0.2s'
             dur='0.2s' 
             fill='freeze'/> 
       </path>
