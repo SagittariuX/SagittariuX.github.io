@@ -7,12 +7,19 @@ var $gSwipeTimeout = 0;
 $(document).ready(function (){
     //Starts up the Spotify access process
     getSpotifyAccess(); 
+
+
+    $('#banner').prop('src', 'pics/banner/ComputerText.svg?ver='+$.now());
+    setTimeout(() => {
+        console.log('hello');
+        $('#contentWrapper').show();
+        $('#contentWrapper').scrollTo();
+    }, 4000);
+    
     //Loads aboutme info
     $('.aboutMeText').each(function(index, element){
         $(element).load("text/intro/aboutme1.txt");
     });
-
-    $('#banner').prop('src', 'pics/banner/ComputerText.svg?ver='+$.now());
 
     //loads experience info
     //dynamically create experienceItems & experienceMobileItem

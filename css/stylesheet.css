@@ -37,10 +37,8 @@ body{
 }
 
 #contentWrapper{
+  display: none;
   overflow: hidden;
-  animation-name: showContent;
-  animation-duration: 4s;
-  animation-fill-mode: forwards;
 }
 
 @media only screen and (max-width: 1024px){
