@@ -1,5 +1,5 @@
 //Global Variables
-var $gNavOffset = $('nav').offset();
+var $gNavOffset;
 var $gLastScroll = 0;
 var $gFocusTrack;
 var $gSwipeTimeout = 0;
@@ -14,7 +14,8 @@ $(document).ready(function (){
         $('nav').css('display', 'flex');
         $('#contentWrapper').css('display', 'block');
         $('nav').scrollTo();
-    }, 5000);
+        $gNavOffset = $('nav').offset()
+    }, 4500);
     
     //Loads aboutme info
     $('.aboutMeText').each(function(index, element){

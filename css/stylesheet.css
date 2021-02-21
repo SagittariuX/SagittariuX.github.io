@@ -3,11 +3,11 @@
  --myPrimaryText:rgb(155, 170, 240);
  --myPrimaryTitle:rgb(0, 204, 255); 
  --myPrimaryHighlight: rgb(0, 204, 255); 
- --myPrimaryLight:rgb(27, 47, 134);
+ --myPrimaryDark:rgb(27, 47, 134);
  --myPrimary:rgb(0, 79, 153);
  --myPrimaryAccent:rgb(32, 48, 121);
 
- --myPrimaryLightTransparent: rgba(27, 47, 134, 0.5);
+ --myPrimaryLightTransparent: rgba(0, 79, 153, 0.5);
 
  --myBannerBackground: rgba(75, 75, 75, 1);
 
@@ -84,7 +84,6 @@ nav{
   padding: 0px 100px;
   background-color: var(--myPrimaryLightTransparent);
   backdrop-filter: blur(10px);
-  box-shadow: 0 0 10px 4px rgba(0,0,0,.5);
   transition-duration: .5s;
   transition-timing-function: linear;
   z-index: 99;
@@ -96,6 +95,10 @@ nav{
 }
 .hideNav{
   top: -100px;
+}
+
+nav.stickToTop{
+  box-shadow: 0 0 10px 4px rgb(0, 0, 0, .5);
 }
 
 #myLogo{
@@ -155,7 +158,7 @@ nav ul li a:hover{
   nav{
     justify-content: space-around;
     flex-direction: column;
-    background-color: var(--myPrimaryLight);
+    background-color: var(--myPrimaryDark);
   }
 
   #myLogo.toggle{
@@ -168,7 +171,7 @@ nav ul li a:hover{
     top: var(--myNavbarHeight);
     width: 100%;
     flex-direction: column;
-    background-color: var(--myPrimaryLight);
+    background-color: var(--myPrimaryDark);
     box-shadow: 0 10px 10px rgba(0,0,0,.2);
   }
   #navigationSection.toggle{
