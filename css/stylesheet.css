@@ -4,7 +4,7 @@
  --myPrimaryTitle:rgb(0, 204, 255); 
  --myPrimaryHighlight: rgb(0, 204, 255); 
  --myPrimaryLight:rgb(27, 47, 134);
- --myPrimary:rgb(26, 39, 100);
+ --myPrimary:rgb(0, 79, 153);
  --myPrimaryAccent:rgb(32, 48, 121);
 
  --myPrimaryLightTransparent: rgba(27, 47, 134, 0.5);
@@ -12,13 +12,13 @@
  --myBannerBackground: rgba(75, 75, 75, 1);
 
 
- --myNormalFontSize: 20px;
- --mySmallFontSize: 14px;
+ --myNormalFontSize: 16px;
+ --mySmallFontSize: 13px;
 
  --myNavbarHeight: 90px;
 
- --fontSans: "Calibre", Arial, sans-serif;
- --fontMono: "SF Mono", monospace;
+ --fontText: "Roboto","Calibri", Arial, sans-serif;
+ --fontTitle: "Montserrat", sans-serif;
 
 }
 
@@ -27,7 +27,7 @@ html, body{
   margin: 0;
   padding: 0;
   max-width: 100%;
-  font-family: var(--fontSans);
+  font-family: var(--fontText);
   font-size: var(--myNormalFontSize);
   scroll-behavior: smooth;
 }
@@ -192,7 +192,7 @@ nav ul li a:hover{
 }
 
 h1, h2, h3, h4, h5{
-  font-family: var(--fontMono);
+  font-family: var(--fontTitle);
 }
 
 h1.sectionHeader{
@@ -259,7 +259,7 @@ h1.sectionHeader{
 .experienceText{
   display: flex;
   flex-direction: column;
-  text-align: justify;
+  text-align: left;
 }
 
 h3.experiencePosition{
@@ -328,7 +328,7 @@ ul#skillsList li{
   display:none;
   position: relative;
   margin: 0 auto;
-  width: 1000px;
+  max-width: 700px;
   background-color: var(--myPrimaryAccent);
   text-align: left;
   padding: 10px 10px;
@@ -361,7 +361,7 @@ ul.skillsTextList li::marker{
 
   .skillsText{
     max-width: 700px;
-    width: 70%;
+    width: 85%;
   }
 }
 

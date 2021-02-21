@@ -62,8 +62,21 @@ $(window).scroll(function(){
     var scrollDir = ($(window).scrollTop() > $gLastScroll) ? 'down' : 'up';
     $gLastScroll = $(window).scrollTop();
     stickyNav();
-    hideNav(scrollDir);
+    (scrollDir == 'down') ? hideNav() : showNav();
     return; 
+});
+
+$('#navigationSection ul li a').click(function(){
+    console.log('triggered');
+    var section = $(this).data('section');
+    if($(section).scrollTop() < $(window).scrollTop()){// scrolling to a previous section
+        hideNav();
+        $('nav').addClass('manual');
+        setTimeout(() => {
+            $('nav').removeClass('manual');
+        }, 1000);
+    }
+    return;
 });
 
 $(window).resize(function(){
@@ -88,20 +101,24 @@ function stickyNav(){
     }
     return;
 }
-function hideNav(scrollDir){
-    if($('nav').hasClass('stickToTop') && scrollDir === 'down'){
+
+function hideNav(){
+    if($('nav').hasClass('stickToTop')){
         $('nav').addClass('hideNav');
         $('#myLogo').removeClass('toggle');
         $('#navigationSection').removeClass('toggle');
-    }else{
-        $('nav').removeClass('hideNav');
     }
     return;
 }
 
+function showNav(){
+    if(!$('nav').hasClass('manual')){
+        $('nav').removeClass('hideNav');
+    }
+}
+
 //Things to do with experience
 function loadInExperience(json){
-
     picuri = "pics/experience/";
     for(var $i = 0; $i < json.items.length; $i++){
         $('#experience').append(`
@@ -118,7 +135,6 @@ function loadInExperience(json){
                 </div>
             </div>
         `);
-
     }
 }
 
