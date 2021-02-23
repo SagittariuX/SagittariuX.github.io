@@ -207,8 +207,8 @@ h1.sectionHeader{
 #goToAboutMe {
   display: flex;
   flex-direction: column;
-  
-  padding: 30vh 0px 30vh 0px;
+  align-items: center;
+  padding: 30vh 0 0 0;
 }
 
 .aboutMeLight{
@@ -222,7 +222,18 @@ h1.sectionHeader{
   font-size: clamp(20px, 8vw, 60px);
   font-weight: bold;
   padding: 20px 0px;
-  text-align: center;
+  /* text-align: center; */
+}
+
+.aboutMeProfile{
+  display: flex;
+  padding: 50px 0 0 0;
+}
+
+.aboutMeProfile > img{
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
 }
 
 /* Changes aboutMe to be vertically centered */
@@ -238,7 +249,7 @@ h1.sectionHeader{
 #experience {
   display:flex;
   flex-direction: column-reverse;
-  justify-content: space-around;
+  align-items: center;
   
 }
 
