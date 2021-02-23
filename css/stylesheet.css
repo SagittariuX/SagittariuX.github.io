@@ -1,16 +1,13 @@
 
 :root{
- --myPrimaryText:rgb(155, 170, 240);
- --myPrimaryTitle:rgb(0, 204, 255); 
- --myPrimaryHighlight: rgb(0, 204, 255); 
- --myPrimaryDark:rgb(27, 47, 134);
- --myPrimary:rgb(0, 79, 153);
- --myPrimaryAccent:rgb(32, 48, 121);
-
- --myPrimaryLightTransparent: rgba(0, 79, 153, 0.5);
- --myPrimaryLightFakeBlur: rgba(0, 79, 153, 0.9);
-
- --myBannerBackground: rgba(75, 75, 75, 1);
+  --myPrimaryText: #9baaf0;
+  --myPrimaryTitle: #00ccff;
+  --myPrimaryHighlight: #00ccff;
+  --myPrimary: #185690;
+  --myPrimaryAccent: #203079;
+  --myPrimaryLightTransparent: #18569080;
+  --myPrimaryLightFakeBlur: #185690e6;
+  --myBannerBackground: #4b4b4b;
 
 
  --myNormalFontSize: 16px;
@@ -104,7 +101,7 @@ nav.stickToTop{
 
 #myLogo{
   position: relative;
-  height: 80%;
+  height: 75%;
   transition-duration: .2s;
 }
 
@@ -207,31 +204,34 @@ h1.sectionHeader{
   color: var(--myPrimaryTitle);
 }
 
-.aboutMe {
-  width: inherit;
+#goToAboutMe {
   display: flex;
-  padding: 0 5vw 0 5vw;
+  flex-direction: column;
+  
+  padding: 30vh 0px 30vh 0px;
 }
-.aboutMeText{
- width: 33%;
- flex: 1;
- padding: 0vh 1vw 0vh 1vw;
- text-align: justify;
+
+.aboutMeLight{
+  font-family: var(--fontTitle);
+  font-size: clamp(10px, 4vw, 20px);
+  text-align: center;
+}
+
+.aboutMeHeavy{
+  font-family: var(--fontTitle);
+  font-size: clamp(20px, 8vw, 60px);
+  font-weight: bold;
+  padding: 20px 0px;
+  text-align: center;
 }
 
 /* Changes aboutMe to be vertically centered */
 @media only screen and (max-width: 1024px){
   .aboutMe{
-    width: inherit;
-    display: block;
     padding: 0 10vw 0 10vw;
     text-align: justify;
   }
-  .aboutMeText{
-    width:inherit;
-    padding: 0vh 0vw 2vh 0vw;
-    margin: auto;
-  }
+  
 }
 
 /* All Experiences */
@@ -284,6 +284,9 @@ h3.experiencePosition{
   h3.experiencePosition{
     text-align: center;
   }
+  .experienceText{
+    text-align: justify;
+  }
 
 }
 
@@ -291,7 +294,6 @@ h3.experiencePosition{
   .experienceItem{
     margin: 10px;
   }
-
 }
 /* CompSci */
 div#compSci{

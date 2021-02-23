@@ -15,6 +15,8 @@ $(document).ready(function (){
         $('#contentWrapper').css('display', 'block');
         $('nav').scrollTo();
         $gNavOffset = $('nav').offset()
+
+        new WOW().init(); // activates wow animations
     }, 4500);
     
     //Loads aboutme info
@@ -50,7 +52,6 @@ $(document).ready(function (){
     //end loading experience
 
     feather.replace(); //replaces icons with feather svg
-    new WOW().init(); // activates wow animations
 });
 
 // Makes sure to rewind viewing history to top so animations could playout
