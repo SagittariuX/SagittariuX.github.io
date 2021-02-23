@@ -80,6 +80,7 @@ nav{
   max-width: 100%;
   height: var(--myNavbarHeight);
   padding: 0px 100px;
+  font-family: var(--fontTitle);
   background-color: var(--myPrimaryLightTransparent);
   backdrop-filter: blur(10px);
   transition-duration: .5s;
@@ -157,6 +158,7 @@ nav ul li a:hover{
     justify-content: space-around;
     flex-direction: column;
     background-color: var(--myPrimaryLightFakeBlur);
+    font-family: var(--fontTitle);
   }
 
   #myLogo.toggle{
@@ -219,6 +221,7 @@ h1.sectionHeader{
 
 .aboutMeHeavy{
   font-family: var(--fontTitle);
+  color: var(--myPrimaryTitle);
   font-size: clamp(20px, 8vw, 60px);
   font-weight: bold;
   padding: 20px 0px;
@@ -227,20 +230,57 @@ h1.sectionHeader{
 
 .aboutMeProfile{
   display: flex;
+  align-items: center;
   padding: 50px 0 0 0;
+  margin: 0 20vw;
 }
 
-.aboutMeProfile > img{
+.aboutMeProfile > div{
+  flex: 1;
+  margin: 10px;
+}
+.aboutMeProfile > div:nth-child(1){
+  text-align: center;
+}
+
+#profilePic{
+  flex: 1;
   width: 100%;
   max-width: 300px;
   border-radius: 10px;
+  box-shadow: 0 0 7px rgba(0,0,0,.5);
 }
+
+#profileText{
+  display: flex;
+  flex-direction: column;
+}
+
+.gridList{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 150px));
+  gap: 10px;
+}
+
+.profileList{
+  list-style: none;
+  color: var(--myPrimaryTitle);
+}
+
+.profileList li::marker{
+  content: '\27A4   ';
+}
+
 
 /* Changes aboutMe to be vertically centered */
 @media only screen and (max-width: 1024px){
   .aboutMe{
     padding: 0 10vw 0 10vw;
     text-align: justify;
+  }
+
+  .aboutMeProfile{
+    flex-direction: column;
   }
   
 }
@@ -306,87 +346,8 @@ h3.experiencePosition{
     margin: 10px;
   }
 }
-/* CompSci */
-div#compSci{
-  text-align: center;
-}
+/* Projects */
 
-ul#skillsList{
-  position: relative;
-  list-style: none;
-  white-space: nowrap;
-  padding: 10px 20px;
-}
-
-ul#skillsList li{
-  display: inline-block;
-}
-
-.skillsListButton{
-  min-width: 130px;
-  border: solid;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  color: var(--myPrimaryText);
-  background-color: var(--myPrimary);
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.skillsListButton:hover{
-  color: var(--myPrimaryHighlight);
-  background-color: var(--myPrimaryAccent);
-}
-.skillsListButton:focus, .skillsListButton.toggle{
-  outline: 0px;
-  color: var(--myPrimaryHighlight);
-  background-color: var(--myPrimaryAccent);
-}
-
-.skillsText{
-  display:none;
-  position: relative;
-  margin: 0 auto;
-  max-width: 700px;
-  background-color: var(--myPrimaryAccent);
-  text-align: left;
-  padding: 10px 10px;
-  box-shadow: 0 0 7px rgba(0,0,0,.5);
-}
-
-.skillsText.toggle{
-  display: block;
-}
-
-ul.skillsTextList{
-  list-style: none;
-}
-ul.skillsTextList li{
-  margin-bottom: 7px;
-}
-ul.skillsTextList li:last-child{
-  margin-bottom: 0px;
-}
-ul.skillsTextList li::marker{
-  content: '\27A4  ';
-}
-
-
-
-@media only screen and (max-width: 1024px){
-  ul#skillsList{
-    overflow-x: auto;
-  }
-
-  .skillsText{
-    max-width: 700px;
-    width: 85%;
-  }
-}
 
 /* Spotify Music */
 div#inspirationsMusic{

@@ -31,25 +31,7 @@ $(document).ready(function (){
     });
     //end loading experience
 
-    //loads compsci info
-    $.getJSON("text/compSci/cs.json", (json) => {
-        loadInCompSci(json);
-        addToggle($('.skillsListButton').first());
-        addToggle($('.skillsText').first());
 
-        $('.skillsListButton').click(function(){
-            if ($(this).hasClass('toggle')) return ;
-            
-            removeToggle($('.skillsListButton.toggle'));
-            addToggle($(this));
-    
-            removeToggle($('.skillsText.toggle'));
-            addToggle($('.skillsText[data-name="'+$(this).data('name')+'"]'));
-        });
-
-    });
-
-    //end loading experience
 
     feather.replace(); //replaces icons with feather svg
 });
@@ -140,38 +122,13 @@ function loadInExperience(json){
     }
 }
 
-//Things to do with experience ends
+//Things to do with experience end
 
-//Things to do with CompSci
-function loadInCompSci(json){
-    for(var $i = 0; $i < json.items.length; $i++){
-
-        $('#skillsList').append(`
-            <li>
-                <button class="skillsListButton" data-name="${json.items[$i].name}">
-                    <span>${json.items[$i].title}</span>
-                </button>
-            </li>
-        `);
+//Things to do with Projects
 
 
-        $('#compSci').append(`
-            <div class="skillsText" data-name="${json.items[$i].name}">
-                <ul class="skillsTextList">
-                </ul>
-            </div>
-         `);
 
-        $.each(json.items[$i].text, function(index, value){
-            $('.skillsTextList').last().append(`
-                <li>${value}</li>
-            `);
-        });
-    }
-}
-
-
-//Things to do with compsci ends
+//Things to do with Projects end
 
 // Things to do with spotify
 function formatTracks(focus, handlerSource = null){
