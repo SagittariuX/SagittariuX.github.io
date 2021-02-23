@@ -125,7 +125,7 @@ function loadInExperience(json){
 //Things to do with experience end
 
 //Things to do with Projects
-
+function loadInExperience
 
 
 //Things to do with Projects end

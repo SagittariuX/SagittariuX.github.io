@@ -5,10 +5,10 @@
   --myPrimaryHighlight: #00ccff;
   --myPrimary: #185690;
   --myPrimaryAccent: #203079;
+
   --myPrimaryLightTransparent: #18569080;
   --myPrimaryLightFakeBlur: #185690e6;
   --myBannerBackground: #4b4b4b;
-
 
  --myNormalFontSize: 16px;
  --mySmallFontSize: 13px;
@@ -315,6 +315,7 @@ h1.sectionHeader{
   display: flex;
   flex-direction: column;
   text-align: left;
+  line-height: 1.5;
 }
 
 h3.experiencePosition{
@@ -347,7 +348,38 @@ h3.experiencePosition{
   }
 }
 /* Projects */
+div#projects{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 0 20vw;
+}
 
+.projectItem{
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px;
+  align-items: center;
+  max-width: 1000px;
+}
+
+.projectPictureFrame{
+  /* display: flex; */
+  grid-area: 1 / 7 / -1 / span 6;
+  justify-self: start;
+}
+.projectPictureFrame > img{
+  max-width: 400px;
+  width: 80%;
+  box-shadow: 0 0 17px rgba(0,0,0,.5);
+}
+.projectDescription{
+  display: flex;
+  grid-area: 1 / 1 / -1 / span 7;
+  background-color: var(--myPrimaryAccent);
+  padding: 15px;
+  box-shadow: 0 0 17px rgba(0,0,0,.5);
+}
 
 /* Spotify Music */
 div#inspirationsMusic{
