@@ -208,7 +208,7 @@ h1.sectionHeader{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30vh 0 0 0;
+  padding: 10vh 0 0 0;
 }
 
 .aboutMeLight{
