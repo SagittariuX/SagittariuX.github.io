@@ -210,7 +210,7 @@ h1.sectionHeader{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10vh 0 0 0;
+  padding: 20vh 0 0 0;
 }
 
 .aboutMeLight{
@@ -231,7 +231,7 @@ h1.sectionHeader{
 .aboutMeProfile{
   display: flex;
   align-items: center;
-  padding: 50px 0 0 0;
+  padding: 20vh 0 0 0;
   margin: 0 20vw;
 }
 
@@ -248,7 +248,7 @@ h1.sectionHeader{
   width: 100%;
   max-width: 300px;
   border-radius: 10px;
-  box-shadow: 0 0 7px rgba(0,0,0,.5);
+  box-shadow: 0 0 17px rgba(0,0,0,.5);
 }
 
 #profileText{
