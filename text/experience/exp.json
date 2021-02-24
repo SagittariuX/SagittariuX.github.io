@@ -16,13 +16,13 @@
             "title" : "UWin Tech Club",
             "position" : "Software Developer",
             "pic" : "techclub.png",
-            "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "text" : "One of the best clubs I have attended while at UWin. I had always been a solo programmer working on my own projects, but that all changed when I joined the UWin Tech Club. The club’s main focus is to help small local businesses explore possible computer science solutions that may further improve their operations. These solutions could range from building them a website, to increase their online presence, to adding analytical software to existing websites, which may help the businesses understand their consumers. Being able to work with like-minded developers was a lot of fun and definitely helped improve my skills as a developer."
         },
         {
             "title" : "Youthrive",
             "position" : "Team Leader/Mentor",
             "pic" : "youthrive.png",
-            "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "text" : "Youthrive is a community centered organization based on educating high school students. I was able to personally work with a wide variety of students and teach them about the basics of business administration. Throughout the semester I coached student to think of innovative business ideas and how to realize them, and at the very end of the course we host an organization wide presentation to allow the students the opportunity to present to school faculty as well as some local angel investors."
         },
         {
             "title" : "StockX",
@@ -34,7 +34,7 @@
             "title" : "QMSC",
             "position" : "Software Engineer Intern",
             "pic" : "qmsc.png",
-            "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "text" : "QMSC is a start-up company that embodies the phrase “Move fast break things,” and I loved that. The CEO is always pursuing that next major improvement we can bring to market. Every sprint was loaded with tickets ranging from new enhancements to bug fixes. I was able to quickly deliver my portion of the tickets and move on to assist other engineers. I also contributed regularly during sprint planning, bring up new ideas that could relieve certain pain-points. My time here really emphasized my growth as a software engineer, I was able to think more clearly and offer solutions I wouldn’t have been able to think of a year ago."
         }
     ]
 }
