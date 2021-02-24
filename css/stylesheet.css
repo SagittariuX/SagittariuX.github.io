@@ -205,6 +205,7 @@ h1.sectionHeader{
   text-align: center;
   font-weight: bolder;
   padding:25px 0 25px 0;
+  margin: 100px 0 0 0;
   color: var(--myPrimaryTitle);
 }
 
@@ -242,11 +243,12 @@ h1.sectionHeader{
 .aboutMeProfile > div{
   flex: 1;
   display: flex;
+  max-width: 700px;
 }
 
 .profilePictureFrame{
   justify-content: flex-end;
-  margin: 0 20px 0 0;
+  margin: 0 80px 0 0;
 }
 #profilePic{
   flex: 1;
@@ -289,7 +291,7 @@ h1.sectionHeader{
     margin: 0 20vw;
   }
   .profilePictureFrame{
-    margin: 0
+    margin: 0;
   } 
 }
 
@@ -317,6 +319,7 @@ h1.sectionHeader{
   flex: 1;
   display: flex;
   margin: 0 20px;
+  max-width: 700px;
 }
 
 .experiencePictureFrame{
@@ -378,9 +381,7 @@ div#projects{
   max-width: 1000px;
   margin: 50px 0 0 0;
 }
-.projectItem:last-child{
-  margin: 0;
-}
+
 
 .projectPictureFrame{
   /* display: flex; */
@@ -494,6 +495,7 @@ div#spotifyPlaylist{
   max-width: 40%;
   margin: auto;
   height: 50vh;
+  max-height: 700px;
   perspective: 1000px;
   transform-style: preserve-3d;
 }
@@ -506,6 +508,7 @@ div#spotifyPlaylist img{
   transition: transform .5s ease;
   box-shadow: 0 0 10px 4px rgba(0,0,0,.5);
   pointer-events: all;
+  --horizontalTranslate : 400px;
 }
 div#songInfo{
   display: block;
@@ -527,11 +530,15 @@ div#songInfo a:hover{
     height: 30vh;
     max-width: 100%;
   }
+  div#spotifyPlaylist img{
+    --horizontalTranslate :100px;
+  }
 }
 /* contact info */
 footer{
   overflow: hidden;
   text-align: center;
+  margin: 0 0 50px 0;
 }
 footer h1, footer h3, footer h4{
   color: var(--myPrimaryText);
