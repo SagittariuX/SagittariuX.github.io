@@ -7,7 +7,7 @@
   --myPrimaryAccent: #203079;
   --myPrimaryAccentTransparent: #203079e6;
   --myPrimaryTransparent: #18569080;
-  --myPrimaryFakeBlur: #185690e6;
+  --myPrimaryFakeBlur: #185690c4;
   --myBannerBackground: #4b4b4b;
 
  --myNormalFontSize: 16px;
@@ -171,7 +171,7 @@ nav ul li a:hover{
     top: var(--myNavbarHeight);
     width: 100%;
     flex-direction: column;
-    background-color: var(--myPrimaryLightFakeBlur);
+    background-color: var(--myPrimaryFakeBlur);
     box-shadow: 0 10px 10px rgba(0,0,0,.2);
   }
   #navigationSection.toggle{
