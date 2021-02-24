@@ -456,6 +456,7 @@ div#projects{
   }
 }
 
+/* if phone just completely cover image */
 @media only screen and (max-width:480px){
   .projectPictureFrame{
     width: 100%;
@@ -478,8 +479,6 @@ div#projects{
     background-color: unset;
   }
 }
-
-
 
 /* Spotify Music */
 div#inspirationsMusic{
