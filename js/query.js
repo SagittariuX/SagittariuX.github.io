@@ -147,7 +147,7 @@ function loadInProjects(json){
             console.log('running')
             $('.projectLanguages').last().append(`
                 <li class="link">
-                    <a href="${links[$j].href}" class="myIcons"><i data-feather="${links[$j].domain}"></i></a>
+                    <a href="${links[$j].href}" class="myIcons" target="_blank"><i data-feather="${links[$j].domain}"></i></a>
                 </li>
             `);
         }
