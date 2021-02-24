@@ -5,7 +5,7 @@
   --myPrimaryHighlight: #00ccff;
   --myPrimary: #185690;
   --myPrimaryAccent: #203079;
-  --myPrimaryAccentTransparent: #203079e6;
+  --myPrimaryAccentTransparent: #203079cc;
   --myPrimaryTransparent: #18569080;
   --myPrimaryFakeBlur: #185690e0;
   --myBannerBackground: #4b4b4b;
@@ -392,6 +392,10 @@ div#projects{
   width: 80%;
   box-shadow: 0 0 17px rgba(0,0,0,.5);
 }
+.projectPictureFrame > img:hover{
+  z-index: 99;
+}
+
 .projectText{
   display: flex;
   flex-direction: column;
@@ -402,8 +406,7 @@ div#projects{
 .projectTitle{
   font-family: var(--fontTitle);
   font-size: 2em;
-  margin: 0 0 10px 0;
-  padding: 0 0 0 15px;
+  padding: 10px 0 10px 15px;
 }
 
 .projectDescription{
@@ -435,6 +438,48 @@ div#projects{
   transition: .5s;
   position: relative;
 }
+
+@media only screen and (max-width:1024px){
+  .projectPictureFrame{
+    grid-area: 1 / 1 / -1 / -1;
+    justify-self: center;
+    text-align: center;
+  }
+  .projectText{
+    grid-area: 1 / 1 / -1 / -1;
+  }
+  .projectTitle{
+    background-color: var(--myPrimaryAccentTransparent);
+  }
+  .projectDescription{
+    box-shadow: none;
+  }
+}
+
+@media only screen and (max-width:480px){
+  .projectPictureFrame{
+    width: 100%;
+    height: 100%;
+  }
+  .projectPictureFrame > img {
+    width: 100%;
+    height: 100%;
+  }
+  .projectText {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    background-color: var(--myPrimaryAccentTransparent);
+  }
+  .projectDescription {
+    background-color: unset;
+  }
+  .projectTitle{
+    background-color: unset;
+  }
+}
+
+
 
 /* Spotify Music */
 div#inspirationsMusic{

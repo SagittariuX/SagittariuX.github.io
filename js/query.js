@@ -124,7 +124,7 @@ function loadInProjects(json){
     picuri = "pics/projects/";
     for(var $i = 0; $i < json.items.length; $i++){
         $('#projects').append(`
-            <div class="projectItem">
+            <div class="projectItem wow fadeInUp">
                 <div class="projectPictureFrame">
                     <img src="${picuri + json.items[$i].pic}">
                 </div>
