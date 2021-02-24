@@ -8,6 +8,15 @@ $(document).ready(function (){
     //Starts up the Spotify access process
     getSpotifyAccess(); 
 
+    //loads experience info
+    //dynamically create experienceItems & experienceMobileItem
+    $.getJSON("text/experience/exp.json", (json) => {
+        loadInExperience(json);
+    });
+    //end loading experience
+    $.getJSON("text/projects/projects.json", (json) => {
+        loadInProjects(json);
+    });
 
     $('#banner').prop('src', 'pics/banner/ComputerText.svg?ver='+$.now());
     setTimeout(() => {
@@ -17,23 +26,9 @@ $(document).ready(function (){
         $gNavOffset = $('nav').offset()
 
         new WOW().init(); // activates wow animations
+        feather.replace(); //replaces icons with feather svg
     }, 4500);
-    
-    //Loads aboutme info
-    $('.aboutMeText').each(function(index, element){
-        $(element).load("text/intro/aboutme1.txt");
-    });
 
-    //loads experience info
-    //dynamically create experienceItems & experienceMobileItem
-    $.getJSON("text/experience/exp.json", (json) => {
-        loadInExperience(json);
-    });
-    //end loading experience
-
-
-
-    feather.replace(); //replaces icons with feather svg
 });
 
 // Makes sure to rewind viewing history to top so animations could playout
@@ -126,7 +121,46 @@ function loadInExperience(json){
 
 //Things to do with Projects
 function loadInProjects(json){
+    picuri = "pics/projects/";
+    for(var $i = 0; $i < json.items.length; $i++){
+        $('#projects').append(`
+            <div class="projectItem">
+                <div class="projectPictureFrame">
+                    <img src="${picuri + json.items[$i].pic}">
+                </div>
+                <div class="projectText">
+                    <div class="projectTitle">
+                        ${json.items[$i].title}
+                    </div> 
+                    <div class="projectDescription">
+                        ${json.items[$i].description}
+                        <ul class="projectLanguages">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        `);
 
+        links = json.items[$i].links;
+        // console.log(links);
+        for(var $j = 0; $j < links.length; $j++){
+            console.log('running')
+            $('.projectLanguages').last().append(`
+                <li class="link">
+                    <a href="${links[$j].href}" class="myIcons"><i data-feather="${links[$j].domain}"></i></a>
+                </li>
+            `);
+        }
+
+        languages = json.items[$i].languages;
+        for(var $j = 0; $j < languages.length; $j++){
+            $('.projectLanguages').last().append(`
+                <li>
+                    ${languages[$j]}
+                </li>
+            `);
+        }
+    }
 }
 
 

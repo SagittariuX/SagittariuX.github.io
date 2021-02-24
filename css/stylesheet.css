@@ -401,14 +401,26 @@ div#projects{
 
 .projectLanguages{
   list-style: none;
+  text-decoration: none;
   font-family: var(--fontTitle);
   font-size: 1.2em;
   text-align: right;
-  margin: 0;
+  color: var(--myPrimaryText);
+  margin: 20px 0 0 0;
+  padding-inline-start: 0;
+  
 }
 .projectLanguages li{
-  display: inline;
+  display: inline-block;
   margin: 0 5px;
+}
+.projectLanguages li.link{
+  float: left;
+}
+.projectLanguages li a{
+  display: block;
+  transition: .5s;
+  position: relative;
 }
 
 /* Spotify Music */
@@ -489,9 +501,12 @@ ul#contactList li a{
   position: relative;
   color: var(--myPrimaryText);
 }
-ul#contactList li a:hover{
+.myIcons{
+  color: var(--myPrimaryText);
+}
+.myIcons:hover{
   transform: translateY(-10px);
-  color: var(--myPrimaryHighlight);
+  color: var(--myPrimaryHighlight) !important;
 }
 
 @media only screen and (max-width: 1024px){
