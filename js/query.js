@@ -107,7 +107,7 @@ function loadInExperience(json){
     for(var $i = 0; $i < json.items.length; $i++){
         $('#experience').append(`
             <div class="experienceItem wow fadeInUp">
-                <div>
+                <div class="experiencePictureFrame">
                     <img class="experiencePic" src="${picuri + json.items[$i].pic}">
                 </div>
             
@@ -125,7 +125,9 @@ function loadInExperience(json){
 //Things to do with experience end
 
 //Things to do with Projects
-function loadInExperience
+function loadInProjects(json){
+
+}
 
 
 //Things to do with Projects end

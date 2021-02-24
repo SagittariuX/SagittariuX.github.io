@@ -5,9 +5,9 @@
   --myPrimaryHighlight: #00ccff;
   --myPrimary: #185690;
   --myPrimaryAccent: #203079;
-
-  --myPrimaryLightTransparent: #18569080;
-  --myPrimaryLightFakeBlur: #185690e6;
+  --myPrimaryAccentTransparent: #203079e6;
+  --myPrimaryTransparent: #18569080;
+  --myPrimaryFakeBlur: #185690e6;
   --myBannerBackground: #4b4b4b;
 
  --myNormalFontSize: 16px;
@@ -81,7 +81,7 @@ nav{
   height: var(--myNavbarHeight);
   padding: 0px 100px;
   font-family: var(--fontTitle);
-  background-color: var(--myPrimaryLightTransparent);
+  background-color: var(--myPrimaryTransparent);
   backdrop-filter: blur(10px);
   transition-duration: .5s;
   transition-timing-function: linear;
@@ -157,7 +157,7 @@ nav ul li a:hover{
   nav{
     justify-content: space-around;
     flex-direction: column;
-    background-color: var(--myPrimaryLightFakeBlur);
+    background-color: var(--myPrimaryFakeBlur);
     font-family: var(--fontTitle);
   }
 
@@ -237,12 +237,13 @@ h1.sectionHeader{
 
 .aboutMeProfile > div{
   flex: 1;
-  margin: 10px;
-}
-.aboutMeProfile > div:nth-child(1){
-  text-align: center;
+  display: flex;
 }
 
+.profilePictureFrame{
+  justify-content: flex-end;
+  margin: 0 20px 0 0;
+}
 #profilePic{
   flex: 1;
   width: 100%;
@@ -252,8 +253,8 @@ h1.sectionHeader{
 }
 
 #profileText{
-  display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
 .gridList{
@@ -302,19 +303,20 @@ h1.sectionHeader{
 .experienceItem > div{
   flex: 1;
   display: flex;
-  justify-content: space-around;
   margin: 0 20px;
 }
 
+.experiencePictureFrame{
+  justify-content: flex-end;
+}
 .experiencePic{
   width: 100%;
   max-width: 400px;
 }
 
 .experienceText{
-  display: flex;
   flex-direction: column;
-  text-align: left;
+  justify-content: flex-start;
   line-height: 1.5;
 }
 
@@ -361,6 +363,10 @@ div#projects{
   gap: 10px;
   align-items: center;
   max-width: 1000px;
+  margin: 50px 0 0 0;
+}
+.projectItem:last-child{
+  margin: 0;
 }
 
 .projectPictureFrame{
@@ -373,12 +379,36 @@ div#projects{
   width: 80%;
   box-shadow: 0 0 17px rgba(0,0,0,.5);
 }
-.projectDescription{
+.projectText{
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   grid-area: 1 / 1 / -1 / span 7;
-  background-color: var(--myPrimaryAccent);
+}
+
+.projectTitle{
+  font-family: var(--fontTitle);
+  font-size: 2em;
+  margin: 0 0 10px 0;
+  padding: 0 0 0 15px;
+}
+
+.projectDescription{
+  background-color: var(--myPrimaryAccentTransparent);
   padding: 15px;
   box-shadow: 0 0 17px rgba(0,0,0,.5);
+}
+
+.projectLanguages{
+  list-style: none;
+  font-family: var(--fontTitle);
+  font-size: 1.2em;
+  text-align: right;
+  margin: 0;
+}
+.projectLanguages li{
+  display: inline;
+  margin: 0 5px;
 }
 
 /* Spotify Music */
