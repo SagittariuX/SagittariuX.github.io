@@ -491,7 +491,7 @@ div#spotifyPlaylist img{
 div#songInfo{
   display: block;
   width:auto;
-  margin: 0 auto;
+  margin: 20px auto 0 auto;
   text-align: center;
 }
 div#songInfo a{
