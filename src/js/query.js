@@ -10,15 +10,15 @@ $(document).ready(function (){
 
     //loads experience info
     //dynamically create experienceItems & experienceMobileItem
-    $.getJSON("text/experience/exp.json", (json) => {
+    $.getJSON("src/text/experience/exp.json", (json) => {
         loadInExperience(json);
     });
     //end loading experience
-    $.getJSON("text/projects/projects.json", (json) => {
+    $.getJSON("src/text/projects/projects.json", (json) => {
         loadInProjects(json);
     });
 
-    $('#banner').prop('src', 'pics/banner/ComputerText.svg?ver='+$.now());
+    $('#banner').prop('src', 'src/pics/banner/ComputerText.svg?ver='+$.now());
     setTimeout(() => {
         $('nav').css('display', 'flex');
         $('#contentWrapper').css('display', 'block');
@@ -98,7 +98,7 @@ function showNav(){
 
 //Things to do with experience
 function loadInExperience(json){
-    picuri = "pics/experience/";
+    picuri = "src/pics/experience/";
     for(var $i = 0; $i < json.items.length; $i++){
         $('#experience').append(`
             <div class="experienceItem wow fadeInUp">
@@ -121,7 +121,7 @@ function loadInExperience(json){
 
 //Things to do with Projects
 function loadInProjects(json){
-    picuri = "pics/projects/";
+    picuri = "src/pics/projects/";
     for(var $i = 0; $i < json.items.length; $i++){
         $('#projects').append(`
             <div class="projectItem wow fadeInUp">

@@ -1,0 +1,20 @@
+:root{
+    --myPrimaryText: #9baaf0;
+    --myPrimaryTitle: #00ccff;
+    --myPrimaryHighlight: #00ccff;
+    --myPrimary: #185690;
+    --myPrimaryAccent: #203079;
+    --myPrimaryAccentTransparent: #203079cc;
+    --myPrimaryTransparent: #18569080;
+    --myPrimaryFakeBlur: #185690e0;
+    --myBannerBackground: #4b4b4b;
+  
+   --myNormalFontSize: 16px;
+   --mySmallFontSize: 13px;
+  
+   --myNavbarHeight: 90px;
+  
+   --fontText: "Roboto","Calibri", Arial, sans-serif;
+   --fontTitle: "Montserrat", sans-serif;
+  
+}
