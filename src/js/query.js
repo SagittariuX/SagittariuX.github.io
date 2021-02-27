@@ -3,6 +3,7 @@ var $gNavOffset;
 var $gLastScroll = 0;
 var $gFocusTrack;
 var $gSwipeTimeout = 0;
+
 //getting the site ready
 $(document).ready(function (){
     //Starts up the Spotify access process
