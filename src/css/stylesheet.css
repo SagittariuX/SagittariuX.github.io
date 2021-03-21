@@ -371,7 +371,7 @@ div#projects{
   width: 80%;
   box-shadow: 0 0 17px rgba(0,0,0,.5);
 }
-.projectPictureFrame > img:hover{
+.projectPictureFrame:hover{
   z-index: 99;
 }
 
