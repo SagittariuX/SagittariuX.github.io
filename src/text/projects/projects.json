@@ -4,6 +4,7 @@
             "title": "StreamFlix",
             "description": "StreamFlix is an app me and 3 other fellow students built. This app allows users to stream directly onto the FireCast cloud and broadcast live. Other users can choose to join the channel and watch the stream. This app also filters based on user preferences such as topics, viewer count, and geographic location.",
             "pic" : "streamflix.png",
+            "orientation" : "portrait",
             "languages":["Java", "Android", "FireBase", "FireCast", "Google API"],
             "links": [
                 {
@@ -16,11 +17,29 @@
             "title": "BookKeep",
             "description": "This app is my solo effort. This app allows the user to keep track of financial transactions and store the information into their own FireBase database. The app also provides statistics related to recurring transactions. Users have the option to export csv files based on varies configurable settings.",
             "pic" : "bookkeep.png",
+            "orientation" : "portrait",
             "languages":["Java", "Android", "FireBase", "NoSQL"],
             "links": [
                 {
                     "domain": "github",
                     "href" : "https://github.com/SagittariuX/rental" 
+                }
+            ]
+        },
+        {
+            "title": "Sort Me",
+            "description": "A lightweight sorting algorithm visualizer. Allows users to customize options and view how the selected sorting method works.",
+            "pic" : "sortme.png",
+            "orientation" : "portrait",
+            "languages":["ReactJS", "JavaScript", "React-Bootstrap"],
+            "links": [
+                {
+                    "domain": "github",
+                    "href" : "https://github.com/SagittariuX/Sorting" 
+                },
+                {
+                    "domain": "external-link",
+                    "href": "https://aasorting.netlify.app/"
                 }
             ]
         }   

@@ -366,13 +366,23 @@ div#projects{
   grid-area: 1 / 7 / -1 / span 6;
   justify-self: start;
 }
-.projectPictureFrame > img{
+.projectPictureFrame > img.portrait{
   max-width: 400px;
+  max-height: 450px;
   width: 80%;
   box-shadow: 0 0 17px rgba(0,0,0,.5);
 }
+.projectPictureFrame > img.landscape{
+  max-height: 250px;
+  max-width: 250px;
+  height: 50%;
+  width: 50%;
+
+  box-shadow: 0 0 17px rgba(0,0,0,.5);
+}
+
 .projectPictureFrame:hover{
-  z-index: 99;
+  z-index: 98;
 }
 
 .projectText{
@@ -418,6 +428,11 @@ div#projects{
   position: relative;
 }
 
+#additionalProjects {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
 @media only screen and (max-width:1024px){
   .projectPictureFrame{
     grid-area: 1 / 1 / -1 / -1;
@@ -442,8 +457,8 @@ div#projects{
     height: 100%;
   }
   .projectPictureFrame > img {
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
   }
   .projectText {
     width: 100%;
